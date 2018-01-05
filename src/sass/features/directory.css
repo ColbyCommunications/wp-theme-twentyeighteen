@@ -1,3 +1,7 @@
+#directoryListing > li {
+  border: 1px solid var(--border-color);
+}
+
 #directoryListing {
   @extend .list-unstyled, .px-3;
 
@@ -46,4 +50,12 @@
 
 .directory-title {
   @extend .mb-2;
+}
+
+.directory-row > * {
+  padding: 1.125rem 1.5rem;
+}
+
+#directoryListing > li:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.1);
 }
