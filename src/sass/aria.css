@@ -1,0 +1,4 @@
+[aria-hidden="true"] {
+  max-height: 0;
+  visibility: hidden;
+}

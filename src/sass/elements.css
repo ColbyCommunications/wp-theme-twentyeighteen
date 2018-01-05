@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 119%;
+  line-height: 1.888;
+  color: var(--black);
+  background: var(--white);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+button {
+  font-size: 1em;
+  text-align: left;
+  cursor: pointer;
+  border-color: unset;
+  border-style: none;
+  border-width: 0;
+}
+
+input {
+  padding: 0.5em;
+  font-size: 1.06em;
+  border-radius: 0.125em;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+ul {
+  margin-top: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+main {
+  overflow: hidden;
+}
+
+main::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+hr {
+  margin: 2.25rem 0;
+}

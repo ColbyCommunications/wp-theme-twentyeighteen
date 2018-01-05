@@ -1,0 +1,49 @@
+.welcome-container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+div.welcome {
+  color: map-get($themeColors, 'white');
+
+  h2 {
+    @extend .h5, .mb-0;
+  }
+}
+
+.search-form {
+  display: flex;
+
+  .search-field {
+    @extend .form-control;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 0;
+
+    .search-field {
+      width: 100%;
+    }
+  }
+
+  button.search-submit {
+    width: 3rem;
+    color: $gray800;
+    background: transparent;
+    border: none;
+    transform: translateX(-3rem);
+  }
+}
+
+.search-submit svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: map-get($themeColors, 'black');
+}
+
+.form-control::placeholder {
+  font-size: 0.944rem;
+}

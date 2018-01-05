@@ -1,0 +1,62 @@
+<?php
+/**
+ * ThemeOptions.php
+ *
+ * @package colbycomms/wp-theme-twentyeighteen
+ */
+
+namespace ColbyComms\TwentyEighteen;
+
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+use Carbon_Fields\Carbon_Fields;
+
+/**
+ * Sets up an options page using Carbon Fields.
+ */
+class ThemeOptions {
+	/**
+	 * Adds hooks.
+	 */
+	public function __construct() {
+		add_action( 'after_setup_theme', [ $this, 'init' ] );
+		add_action( 'carbon_fields_register_fields', [ $this, 'create_container' ] );
+		add_action( 'carbon_fields_register_fields', [ $this, 'add_plugin_options' ] );
+	}
+
+	/**
+	 * Ensures Carbon is booted.
+	 */
+	public function init() {
+		Carbon_Fields::boot();
+	}
+
+	/**
+	 * Creates the options page.
+	 */
+	public function create_container() {
+		$this->container = Container::make( 'theme_options', 'Theme Options' );
+	}
+
+	/**
+	 * Adds the plugin options.
+	 */
+	public function add_plugin_options() {
+		$this->container->add_fields(
+			[
+				Field::make( 'radio', 'menu_type', 'Navigation Display' )
+					->add_options(
+						[
+							'none' => 'No site navigation.',
+							'fixed-bottom' => 'In a bar across the bottom of the page (limited to six items with no subnavigation).',
+							'hamburger' => 'In a full-screen modal revealed by a menu button (ideal for sites with complex navigation).'
+						]
+					)
+					->set_default_value( 'none' )
+					->set_help_text( 'Choose the type of navigation to display on this site for the main site menu ("Site Menu" under Appearance -> Menus).' ),
+				Field::make( 'textarea', 'sub_footer_content', 'Content below the footer.')
+					->set_help_text( 'Add content at the very bottom of the page. Useful for fixed items. Shortcodes are allowed.' )
+			]
+		);
+	}
+}

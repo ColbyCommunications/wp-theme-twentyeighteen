@@ -1,0 +1,33 @@
+{
+  "name": "colbycomms/wp-theme-twentyeighteen",
+  "description": "A WordPress theme created for TwentyEighteen 2018.",
+  "type": "wordpress-theme",
+  "authors": [
+    {
+      "name": "John Watkins",
+      "email": "jwohn.watkins@colby.edu"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/Users/jwatkins/colby-wp-schedule/"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "colbycomms/colby-wp-schedule": "*",
+    "colbycomms/colby-svg": "dev-master",
+    "htmlburger/carbon-fields": "^2.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "ColbyComms\\TwentyEighteen\\": "wp-autoload/classes"
+    },
+    "files": ["wp-autoload/index.php"]
+  }
+}

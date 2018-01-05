@@ -1,0 +1,25 @@
+.wp-caption-text {
+  font-size: 84.1%;
+  margin-bottom: 0;
+  color: var(--color);
+}
+
+.alignleft {
+  float: left;
+  margin: 0.375rem 1.5rem 1.5rem 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0.375rem 0 1.5rem 1.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .alignleft {
+    margin-left: -4.5rem;
+  }
+
+  .alignright {
+    margin-right: -4.5rem;
+  }
+}

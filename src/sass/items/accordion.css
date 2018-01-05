@@ -1,0 +1,43 @@
+.accordion + br {
+  display: none;
+}
+
+.accordion-heading {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.accordion-heading::after {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  bottom: 0;
+  font-size: 126%;
+  display: flex;
+  align-items: center;
+  content: "+";
+}
+
+.accordion-heading:focus {
+  z-index: 10;
+}
+
+.accordion-heading[aria-pressed="true"]::after {
+  content: "-";
+  font-size: 168.2%;
+}
+
+.accordion-panel p:empty {
+  display: none;
+}
+
+.accordion-panel p:last-of-type,
+.accordion-panel p:not(:empty):last-of-type {
+  margin-bottom: 0;
+}
+
+[aria-hidden="false"].accordion-panel {
+  padding-bottom: 1rem;
+  padding-top: 0.75rem;
+}

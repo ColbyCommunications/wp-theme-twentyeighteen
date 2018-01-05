@@ -1,0 +1,15 @@
+.columned-list {
+  margin-top: 0;
+}
+
+.list-columns-2 {
+  column-count: 2;
+}
+
+.list-columns-3 {
+  column-count: 3;
+}
+
+.list-columns-4 {
+  column-count: 4;
+}

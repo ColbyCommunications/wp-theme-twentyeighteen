@@ -1,0 +1,32 @@
+.search-form {
+  display: flex;
+}
+
+.search-form label {
+  margin-bottom: 0;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-form button.search-submit {
+  width: 0;
+  border: none;
+  transform: translateX(-2.25rem);
+  background: transparent;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.search-field {
+  width: 100%;
+  border: none;
+}
+
+.search-submit svg {
+  height: 1.125rem;
+  width: 1.125rem;
+}
+
+.search-field::placeholder {
+  font-size: 89.1%;
+}

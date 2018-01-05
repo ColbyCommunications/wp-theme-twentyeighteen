@@ -1,0 +1,10 @@
+.site-header {
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 8;
+}
+
+.site-header.dark-transparent {
+  border-bottom: 1px solid color(white a(20%));
+}

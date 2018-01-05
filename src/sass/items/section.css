@@ -1,0 +1,29 @@
+.section {
+  position: relative;
+  padding-top: 2.625rem;
+  padding-bottom: 2.25rem;
+  color: var(--color);
+  background-color: var(--background);
+}
+
+.section-title {
+  position: relative;
+  padding: 0 0 2rem;
+  margin: 0 0 2.25rem;
+  font-size: 225%;
+  text-align: center;
+
+  @extend .col-12;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 140px;
+    height: 1px;
+    content: '';
+    border-bottom: 1px solid var(--heading-color);
+    transform: translate(-50%);
+  }
+}
