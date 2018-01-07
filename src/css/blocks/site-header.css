@@ -1,8 +1,8 @@
 .site-header {
-  border-bottom: 1px solid var(--border-color);
-  text-transform: uppercase;
   position: absolute;
   z-index: 8;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .site-header.dark-transparent {

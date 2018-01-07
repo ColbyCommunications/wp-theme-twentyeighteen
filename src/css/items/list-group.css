@@ -12,12 +12,12 @@
 .list-group > li,
 .list-group > a,
 .list-group > button {
-  color: var(--color);
   position: relative;
   z-index: 4;
   display: block;
   font-weight: 600;
   line-height: 1.35;
+  color: var(--color);
   text-transform: uppercase;
 }
 
@@ -55,8 +55,8 @@
 .list-group > a:last-child,
 .list-group > button:last-child {
   padding-bottom: 0.875em;
-  border-radius: 0 0 0.125em 0.125em;
   border-bottom-width: 1px;
+  border-radius: 0 0 0.125em 0.125em;
 }
 
 .list-group > a:focus,

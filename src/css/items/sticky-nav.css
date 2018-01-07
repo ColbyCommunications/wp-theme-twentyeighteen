@@ -3,14 +3,14 @@
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1111;
   display: flex;
   flex-wrap: wrap;
-  z-index: 1111;
 }
 
 .sticky-nav-item {
   flex: 1 1 200px;
+  padding: 0.25rem;
   text-align: center;
   border-radius: 0;
-  padding: 0.25rem;
 }

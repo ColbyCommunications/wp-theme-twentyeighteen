@@ -1,6 +1,7 @@
 module.exports = {
   extends: ['stylelint-config-standard'],
   plugins: ['stylelint-order'],
+  fix: true,
   rules: {
     'order/properties-order': [
       'position',

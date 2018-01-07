@@ -2,56 +2,6 @@
   border: 1px solid var(--border-color);
 }
 
-#directoryListing {
-  @extend .list-unstyled, .px-3;
-
-  font-size: 1rem;
-  line-height: 1.4;
-
-  img {
-    @extend .mb-2;
-  }
-
-  > li {
-    @extend .d-flex, .flex-wrap, .row, .white, .border-theme;
-
-    padding-top: 1.125rem;
-    padding-bottom: 1.125rem;
-    color: var(--color);
-    background-color: var(--background);
-
-    &:nth-of-type(even) {
-      @extend .light;
-    }
-
-    &:first-of-type {
-      @extend .primary;
-    }
-
-    &:not(:last-of-type) {
-      border-bottom-width: 0;
-    }
-  }
-
-  .headerline {
-    @extend .font-weight-bold;
-
-    > div:first-of-type {
-      @extend .col-md-4;
-
-      margin-left: auto;
-    }
-  }
-}
-
-.directory-name {
-  @extend .h5;
-}
-
-.directory-title {
-  @extend .mb-2;
-}
-
 .directory-row > * {
   padding: 1.125rem 1.5rem;
 }

@@ -10,7 +10,10 @@
       "postcss src/css/main.css -o dist/wp-theme-twentyeighteen.css -w",
     "start":
       "npm postcss & parcel src/js/index.js & postcss src/css/main.css -o dist/wp-theme-twentyeighteen.css -w",
-    "deploy": "node_modules/node-autodeploy-wp"
+    "deploy": "node_modules/node-autodeploy-wp",
+    "pretest": "eslint src/js/",
+    "stylelint": "stylelint src/css --fix",
+    "test": "echo 'No test script.'"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
