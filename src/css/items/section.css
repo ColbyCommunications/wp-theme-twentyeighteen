@@ -13,8 +13,6 @@
   font-size: 225%;
   text-align: center;
 
-  @extend .col-12;
-
   &::after {
     position: absolute;
     bottom: 0;

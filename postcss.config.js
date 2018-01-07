@@ -6,14 +6,14 @@ module.exports = {
     require('postcss-nesting')(),
     require('postcss-bootstrap-4-grid')(),
     require('postcss-color-function'),
-    require('./src/sass/postcss/sizing')({
+    require('./src/css/postcss/sizing')({
       breakpoints: {
         sm: '576px',
         md: '768px',
         lg: '992px',
       },
     }),
-    require('./src/sass/postcss/containers')(),
+    require('./src/css/postcss/containers')(),
     require('postcss-custom-props-themes')({
       defaultTheme: 'light',
       themes: [

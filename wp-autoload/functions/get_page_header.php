@@ -1,56 +1,86 @@
 <?php
+/**
+ * Function get_page_header
+ *
+ * @package colbycomms/wp-theme-twentyeighteen
+ */
 
 namespace ColbyComms\TwentyEighteen\Functions;
 
-function default_header_content( $options ) {
-	?>
-	<div class="container<?php echo $options['width'] ? "-{$options['width']}" : ''; ?> text-center">
-	<?php echo get_parent_page_link(); ?>
-		<div class="<?php echo esc_attr( $options['title_size'] ); ?>">
-			<h1><?php the_title(); ?></h1>
-		</div>
-
-		<?php if ($subtitle = get_post_meta(get_the_id(), 'subtitle', true) ) : ?>
-		<div class="large-2 text-uppercase">
-			<h2><?php echo $subtitle; ?></h2>
-		</div>
-		<?php endif; ?>
-	</div>
-	<?php
-}
-
-function get_page_header( $options = [] ) {
-	$options = array_merge(
+/**
+ * Adds defaults to passed-in array.
+ *
+ * @param array $options The passed in array.
+ * @return array The complete set of options.
+ */
+function _do_option_defaults( $options = [] ) {
+	return array_merge(
 		[
 			'do_background_image' => true,
 			'title_size' => 'large 1 large-md-6',
 			'width' => '',
-			'header_content' => get_post_meta( get_the_id(), 'header_content', true )
+			'header_content' => get_post_meta( get_the_id(), 'header_content', true ),
 		],
 		$options
 	);
+}
 
+/**
+ * Builds inline CSS for the featured image.
+ *
+ * @param array $options The passed-in options for the page header.
+ * @return string The style attribute or an empty string.
+ */
+function _get_featured_image_style( $options ) {
+	$featured_image_style = '';
 
-    $featured_image_style = '';
-    if ( $options['do_background_image'] && has_post_thumbnail() ) {
-        $url = get_the_post_thumbnail_url( get_the_id(), 'large');
-        $featured_image_style = " style=\"background-image: url($url)\"";
-    }
+	if ( $options['do_background_image'] && has_post_thumbnail() ) {
+		$url = get_the_post_thumbnail_url( get_the_id(), 'large' );
+		$featured_image_style = " style=\"background-image: url($url)\"";
+	}
 
-    $padding_classes = empty($featured_image_style) ? 'pb-3 pt-7' : 'pb-8 pt-9';
+	return $featured_image_style;
+}
 
+/**
+ * Echoes extra classes to the buffer.
+ *
+ * @param bool $featured_image_exists Whether there's a featured image.
+ */
+function _extra_classes( $featured_image_exists ) {
+	$padding_classes = $featured_image_exists
+		? 'pb-8 pt-9'
+		: 'pb-3 pt-7';
 
-    ob_start();
-    ?>
+	echo $padding_classes;
+	echo $featured_image_exists
+		? ' has-featured-image'
+		: '';
+}
 
-    <header class="container-fluid largest primary <?php echo $padding_classes; ?><?php echo empty($featured_image_style) ? '' : ' has-featured-image'; ?>"<?php echo $featured_image_style; ?>>
+/**
+ * Builds a header for the current page.
+ *
+ * @param array $options Passed-in options.
+ * @return string HTML.
+ */
+function get_page_header( $options = [] ) {
+	$options = _do_option_defaults( $options );
+	$featured_image_style = _get_featured_image_style( $options );
+
+	ob_start();
+
+	?>
+	<header
+		class="container-fluid largest primary <?php _extra_classes( ! ! $featured_image_style ); ?>"
+		<?php echo $featured_image_style; ?>>
 		<?php if ( empty( $options['header_content'] ) ) : ?>
-		<?php default_header_content( $options ); ?>
+			<?php default_page_header_content( $options ); ?>
 		<?php else : ?>
 			<?php echo $options['header_content']; ?>
 		<?php endif; ?>
-    </header>
+	</header>
+	<?php
 
-    <?php
-    return ob_get_clean();
+	return ob_get_clean();
 }

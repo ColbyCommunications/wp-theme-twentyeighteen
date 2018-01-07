@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "postcss":
-      "postcss src/sass/main.css -o dist/wp-theme-twentyeighteen.css -w",
-    "develop":
-      "parcel src/js/index.js & postcss src/sass/main.css -o dist/wp-theme-twentyeighteen.css -w",
+      "postcss src/css/main.css -o dist/wp-theme-twentyeighteen.css -w",
+    "start":
+      "npm postcss & parcel src/js/index.js & postcss src/css/main.css -o dist/wp-theme-twentyeighteen.css -w",
     "deploy": "node_modules/node-autodeploy-wp"
   },
   "devDependencies": {

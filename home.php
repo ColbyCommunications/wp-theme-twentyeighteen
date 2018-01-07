@@ -1,3 +1,9 @@
 <?php
+/**
+ * Template for page set through the home option
+ *
+ * @package colbycomms/wp-theme-twentyeighteen
+ */
 
-include 'archive.php';
+// Fallback until a more specific template is needed.
+require 'archive.php';

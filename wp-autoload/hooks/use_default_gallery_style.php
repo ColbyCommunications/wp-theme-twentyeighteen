@@ -1,7 +1,4 @@
 <?php
+// @codingStandardsIgnoreFile
 
-add_filter(
-	'use_default_gallery_style', function() {
-		return false;
-	}
-);
+add_filter( 'use_default_gallery_style', '__return_false' );

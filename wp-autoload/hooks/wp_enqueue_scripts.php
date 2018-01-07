@@ -1,24 +1,51 @@
 <?php
+/**
+ * Hooks functions to the wp_enqueue_scripts action.
+ *
+ * @package colbycomms/wp-theme-twentyeighteen
+ */
 
-add_action(
-	'wp_enqueue_scripts', function() {
-		wp_enqueue_style(
-			'open-sans',
-			'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300'
-		);
-		wp_enqueue_style(
-			'wp-theme-twentyeighteen',
-			get_template_directory_uri() . '/dist/wp-theme-twentyeighteen.css',
-			[],
-			'1.0.1'
-		);
+namespace ColbyComms\TwentyEighteen\Hooks;
 
-		wp_enqueue_script(
-			'wp-theme-twentyeighteen',
-			get_template_directory_uri() . '/dist/index.js',
-			[],
-			'1.0.1',
-			true
-		);
-	}
-);
+use ColbyComms\TwentyEighteen\TEXT_DOMAIN;
+use ColbyComms\TwentyEighteen\VERSION;
+
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_open_sans' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_typekit' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_styles' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_scripts' );
+
+// phpcs:disable Squiz.Commenting.FunctionComment.Missing
+
+function _open_sans() {
+	wp_enqueue_style(
+		'open-sans',
+		'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300'
+	);
+}
+
+function _typekit() {
+	wp_enqueue_style(
+		'open-sans',
+		'//use.typekit.net/mko7rzv.css'
+	);
+}
+
+function _theme_styles() {
+	wp_enqueue_style(
+		TEXT_DOMAIN,
+		get_template_directory_uri() . '/dist/wp-theme-twentyeighteen.css',
+		[],
+		VERSION
+	);
+}
+
+function _theme_scripts() {
+	wp_enqueue_script(
+		TEXT_DOMAIN,
+		get_template_directory_uri() . '/dist/index.js',
+		[],
+		VERSION,
+		true
+	);
+}

@@ -1,3 +1,9 @@
 <?php
+/**
+ * Template for single pages
+ *
+ * @package colbycomms/wp-theme-twentyeighteen
+ */
 
-include 'singular.php';
+// Fallback until a more specific template is needed.
+require 'singular.php';

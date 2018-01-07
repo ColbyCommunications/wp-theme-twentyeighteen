@@ -1,12 +1,17 @@
 <?php
 /**
- * get_post_pagination.php
+ * Function get_post_pagination.
  *
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen\Functions;
 
+/**
+ * Builds the HTML for archive pagination.
+ *
+ * @return string HTML.
+ */
 function get_post_pagination() {
 	$pagination = get_the_posts_pagination(
 		[

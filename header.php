@@ -1,6 +1,13 @@
 <?php
+/**
+ * Header template
+ *
+ * @package colbycomms/wp-theme-twentyeighteen
+ */
+
 use ColbyComms\SVG\SVG;
 use function ColbyComms\TwentyEighteen\Functions\get_head_title;
+
 ?><!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
@@ -17,7 +24,7 @@ use function ColbyComms\TwentyEighteen\Functions\get_head_title;
 				<?php SVG::show( 'colby-logo' ); ?>
 			</a>
 			<a style="line-height: 1.5;" class="home-link col-8 justify-flex-end d-flex text-right"
-				 href="<?php bloginfo( 'url' ); ?>">
+				href="<?php bloginfo( 'url' ); ?>">
 				<?php bloginfo(); ?>
 			</a>
 		</div>

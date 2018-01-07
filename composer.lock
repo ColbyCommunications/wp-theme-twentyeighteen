@@ -53,7 +53,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/jwatkins/colby-wp-schedule",
-                "reference": "48f0ca6da47f050b6a7a57225a47e643a7b1c90f",
+                "reference": "f5e48fff02612431493d72de512945631e539c82",
                 "shasum": null
             },
             "require": {

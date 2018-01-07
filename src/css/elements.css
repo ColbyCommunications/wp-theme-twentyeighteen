@@ -1,3 +1,7 @@
+/**
+ * Styles for HTML elements.
+ */
+
 body {
   margin: 0;
   font-family: var(--sans);

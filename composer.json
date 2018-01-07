@@ -8,6 +8,10 @@
       "email": "jwohn.watkins@colby.edu"
     }
   ],
+  "scripts": {
+    "phpcbf": "./vendor/bin/phpcbf --extensions=php",
+    "lint": "./vendor/bin/phpcs --extensions=php -s"
+  },
   "repositories": [
     {
       "type": "path",

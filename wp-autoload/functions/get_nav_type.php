@@ -1,6 +1,6 @@
 <?php
 /**
- * get_nav_type.php
+ * Function get_nav_type
  *
  * @package colbycomms/wp-theme-twentyeighteen
  */

@@ -1,4 +1,4 @@
-@import 'suitcss-base';
+@import 'suitcss-base'; /* Normalize with extra. */
 @import 'elements';
 @import 'grid';
 @import './root.css';
