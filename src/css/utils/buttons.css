@@ -7,5 +7,5 @@
 
 .btn:hover {
   cursor: pointer;
-  background-color: var(--background-hover-color);
+  background-color: var(--background-hover-color) !important;
 }

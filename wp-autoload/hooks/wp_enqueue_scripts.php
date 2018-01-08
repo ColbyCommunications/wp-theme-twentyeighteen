@@ -11,7 +11,6 @@ use ColbyComms\TwentyEighteen\TEXT_DOMAIN;
 use ColbyComms\TwentyEighteen\VERSION;
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_open_sans' );
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_typekit' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_styles' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_scripts' );
 
@@ -21,13 +20,6 @@ function _open_sans() {
 	wp_enqueue_style(
 		'open-sans',
 		'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300'
-	);
-}
-
-function _typekit() {
-	wp_enqueue_style(
-		'open-sans',
-		'//use.typekit.net/mko7rzv.css'
 	);
 }
 

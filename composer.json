@@ -9,8 +9,9 @@
     }
   ],
   "scripts": {
-    "phpcbf": "./vendor/bin/phpcbf --extensions=php",
-    "lint": "./vendor/bin/phpcs --extensions=php -s"
+    "phpcbf": "phpcbf --extensions=php",
+    "lint": "phpcs --extensions=php -s",
+    "test": "composer lint"
   },
   "repositories": [
     {

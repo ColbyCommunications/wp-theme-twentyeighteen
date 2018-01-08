@@ -8,7 +8,7 @@
   "scripts": {
     "start": "parcel src/js/index.js & parcel src/css/wp-theme-twentyeighteen.css",
     "start-css": "parcel src/css/wp-theme-twentyeighteen.css",
-    "deploy": "node_modules/node-autodeploy-wp",
+    "deploy": "node node_modules/node-autodeploy-wp",
     "pretest": "eslint src/js/",
     "stylelint": "stylelint src/css --fix",
     "test": "echo 'No test script.'"
