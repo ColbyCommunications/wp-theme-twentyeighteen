@@ -1,23 +1,11 @@
 /** Make links inside .text-gray the same color. */
 
-.font-weight-bold {
+.text-bold {
   font-weight: 600;
-}
-
-.bg-black {
-  @extend .black;
 }
 
 .text-uppercase {
   text-transform: uppercase;
-}
-
-.strong {
-  font-weight: 600;
-}
-
-.stronger {
-  font-weight: 700;
 }
 
 .text-center {
@@ -26,10 +14,6 @@
 
 .text-right {
   text-align: right;
-}
-
-.no-wrap {
-  white-space: nowrap;
 }
 
 .text-serif {

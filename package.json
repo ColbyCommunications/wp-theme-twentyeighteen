@@ -6,10 +6,8 @@
   "author": "John Watkins",
   "license": "MIT",
   "scripts": {
-    "postcss":
-      "postcss src/css/main.css -o dist/wp-theme-twentyeighteen.css -w",
-    "start":
-      "npm postcss & parcel src/js/index.js & postcss src/css/main.css -o dist/wp-theme-twentyeighteen.css -w",
+    "start": "parcel src/js/index.js & parcel src/css/wp-theme-twentyeighteen.css",
+    "start-css": "parcel src/css/wp-theme-twentyeighteen.css",
     "deploy": "node_modules/node-autodeploy-wp",
     "pretest": "eslint src/js/",
     "stylelint": "stylelint src/css --fix",
@@ -18,7 +16,6 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.1.2",
-    "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
@@ -38,7 +35,7 @@
     "postcss-color-function": "^4.0.1",
     "postcss-custom-props-themes": "^0.1.2",
     "postcss-import": "^11.0.0",
-    "postcss-spacing-utils": "^0.1.1",
+    "postcss-spacing-utils": "^0.1.4",
     "stylelint": "^8.4.0",
     "stylelint-config-standard": "^18.0.0",
     "stylelint-order": "^0.8.0",

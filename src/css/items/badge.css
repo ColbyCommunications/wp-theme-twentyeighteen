@@ -1,14 +1,12 @@
 .badge,
 a.badge {
   display: inline-block;
-  padding: 0.25em 0.375em;
-  margin-bottom: 0.25em;
+  padding: 0.25rem 0.375rem;
+  margin-bottom: 0.25rem;
   color: var(--color);
   white-space: nowrap;
   background-color: var(--background);
-  border-radius: 0.166em;
-
-  @extend .smallest;
+  border-radius: 0.166rem;
 
   a {
     color: var(--color);

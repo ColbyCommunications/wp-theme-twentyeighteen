@@ -1,20 +1,26 @@
 const color = require('css-color-function');
+const postcssImport = require('postcss-import');
+const grid = require('postcss-bootstrap-4-grid');
+const containers = require('./src/css/postcss/containers');
+const colorFunction = require('postcss-color-function');
+const sizing = require('./src/css/postcss/sizing');
+const themes = require('postcss-custom-props-themes');
+const spacing = require('postcss-spacing-utils');
 
 module.exports = {
   plugins: [
-    require('postcss-import')(),
-    require('postcss-nesting')(),
-    require('postcss-bootstrap-4-grid')(),
-    require('postcss-color-function'),
-    require('./src/css/postcss/sizing')({
+    postcssImport,
+    grid,
+    colorFunction,
+    sizing({
       breakpoints: {
         sm: '576px',
         md: '768px',
         lg: '992px',
       },
     }),
-    require('./src/css/postcss/containers')(),
-    require('postcss-custom-props-themes')({
+    containers,
+    themes({
       defaultTheme: 'light',
       themes: [
         {
@@ -61,9 +67,9 @@ module.exports = {
         },
       ],
     }),
-    require('postcss-spacing-utils')({
+    spacing({
       spacers: [
-        0,
+        '0',
         '0.375rem',
         '0.75rem',
         '1.5rem',

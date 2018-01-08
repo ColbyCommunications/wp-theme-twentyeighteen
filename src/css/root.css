@@ -1,3 +1,6 @@
-.main {
-  overflow-x: hidden;
+:root {
+  --sans: "Open Sans", sans-serif;
+  --serif: "franklin-gothic-urw", sans-serif;
 }
+
+@custom-props-themes;

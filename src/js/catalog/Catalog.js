@@ -9,7 +9,7 @@ class Catalog {
     button.classList.remove('active');
   }
 
-  constructor({container, buttons, contentContainer, defaultContent = ''}) {
+  constructor({ container, buttons, contentContainer, defaultContent = '' }) {
     this.container = container;
     this.buttons = [...buttons].filter(button =>
       button.hasAttribute('data-catalog-content')

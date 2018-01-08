@@ -6,3 +6,4 @@ dist
 fonts
 .deploy-servers.js
 *.log
+.vscode

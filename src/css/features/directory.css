@@ -2,10 +2,15 @@
   border: 1px solid var(--border-color);
 }
 
+ul#directoryListing li:hover {
+  background-color: var(--background-color) !important;
+}
+
 .directory-row > * {
   padding: 1.125rem 1.5rem;
 }
 
-#directoryListing > li:nth-of-type(even) {
-  background-color: rgba(0, 0, 0, 0.1);
+#directoryListing > li:nth-of-type(even),
+#directoryListing > li:nth-of-type(even):hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }

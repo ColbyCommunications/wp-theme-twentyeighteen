@@ -2,7 +2,7 @@
 
 .container-fluid > .container-fluid,
 .container-fluid > .container,
-.container-fluid > [class*='container'] {
+.container-fluid > [class*="container"] {
   padding-right: 0;
   padding-left: 0;
 }

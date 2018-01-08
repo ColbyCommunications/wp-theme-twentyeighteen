@@ -41,10 +41,4 @@ use function ColbyComms\TwentyEighteen\Functions\sub_footer;
 <?php sticky_nav(); ?>
 <?php wp_footer(); ?>
 <?php
-subfooter();
-
-
-$sub_footer = apply_filters( 'sub_footer_content', carbon_get_theme_option( 'sub_footer_content' ) );
-if ( ! empty( $sub_footer ) ) {
-	echo do_shortcode( $sub_footer );
-}
+sub_footer();

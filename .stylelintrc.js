@@ -3,6 +3,7 @@ module.exports = {
   plugins: ['stylelint-order'],
   fix: true,
   rules: {
+    'at-rule-no-unknown': null,
     'order/properties-order': [
       'position',
       'top',
