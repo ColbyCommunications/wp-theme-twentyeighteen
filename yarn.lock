@@ -1286,8 +1286,8 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
 colby-wp-collapsible@^1.0.14:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/colby-wp-collapsible/-/colby-wp-collapsible-1.0.16.tgz#2b5fb20888429a19ed3fd9add1637b6f4d8ecbc0"
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/colby-wp-collapsible/-/colby-wp-collapsible-1.0.17.tgz#6aa07c6ec0f27110d7fa04b988d6c8bf5b0c7cd8"
   dependencies:
     postcss "^6.0.15"
 

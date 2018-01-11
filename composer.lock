@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "16e0ad54a9c8ee443fde0daa8409c63b",
+    "content-hash": "f90352ec07411a6e34fc1cf28e7e03db",
     "packages": [
         {
             "name": "colbycomms/colby-svg",
@@ -53,7 +53,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/jwatkins/colby-wp-schedule",
-                "reference": "f6c70e83e53178fa55890c88d53b2e72af643eed",
+                "reference": "b72b0f76857444aadb9f2d61bba4503de060860c",
                 "shasum": null
             },
             "require": {
@@ -96,16 +96,11 @@
         {
             "name": "colbycomms/wp-collapsible",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ColbyCommunications/wp-collapsible.git",
-                "reference": "0dd01e4b97b6dc6e630a2ed76cb51d053a9ccfa5"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/wp-collapsible/zipball/0dd01e4b97b6dc6e630a2ed76cb51d053a9ccfa5",
-                "reference": "0dd01e4b97b6dc6e630a2ed76cb51d053a9ccfa5",
-                "shasum": ""
+                "type": "path",
+                "url": "/Users/jwatkins/wp-collapsible",
+                "reference": "e205e7cf8a871fa82afa1b8125b74a0cc56f04c3",
+                "shasum": null
             },
             "require": {
                 "colbycomms/colby-svg": "dev-master",
@@ -143,12 +138,7 @@
                     "email": "john.watkins@colby.edu"
                 }
             ],
-            "description": "A WordPress shortcode for collapsible HTML drawers.",
-            "support": {
-                "source": "https://github.com/ColbyCommunications/wp-collapsible/tree/master",
-                "issues": "https://github.com/ColbyCommunications/wp-collapsible/issues"
-            },
-            "time": "2018-01-10T15:03:40+00:00"
+            "description": "A WordPress shortcode for collapsible HTML drawers."
         },
         {
             "name": "doctrine/instantiator",
@@ -1731,12 +1721,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "b0f9b9b8f93dec104c59cb728c60bf0d371bce41"
+                "reference": "818f188f71940f9cf848eca29b037cbaa2cde2f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/b0f9b9b8f93dec104c59cb728c60bf0d371bce41",
-                "reference": "b0f9b9b8f93dec104c59cb728c60bf0d371bce41",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/818f188f71940f9cf848eca29b037cbaa2cde2f2",
+                "reference": "818f188f71940f9cf848eca29b037cbaa2cde2f2",
                 "shasum": ""
             },
             "require": {
@@ -1774,7 +1764,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-01-09T23:49:12+00:00"
+            "time": "2018-01-11T03:29:58+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
@@ -1822,6 +1812,7 @@
     "stability-flags": {
         "colbycomms/colby-wp-schedule": 20,
         "colbycomms/colby-svg": 20,
+        "colbycomms/wp-collapsible": 20,
         "wp-coding-standards/wpcs": 20
     },
     "prefer-stable": false,

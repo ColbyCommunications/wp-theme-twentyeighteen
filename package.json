@@ -8,6 +8,7 @@
   "scripts": {
     "start": "webpack -w",
     "build": "webpack -p",
+    "deploy": "node node_modules/node-autodeploy-wp",
     "lint": "eslint src/js",
     "prepare": "build"
   },

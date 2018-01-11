@@ -17,6 +17,10 @@
     {
       "type": "path",
       "url": "/Users/jwatkins/colby-wp-schedule/"
+    },
+    {
+      "type": "path",
+      "url": "/Users/jwatkins/wp-collapsible/"
     }
   ],
   "minimum-stability": "dev",
@@ -24,7 +28,7 @@
     "colbycomms/colby-wp-schedule": "dev-master",
     "colbycomms/colby-svg": "dev-master",
     "htmlburger/carbon-fields": "*",
-    "colbycomms/wp-collapsible": "*"
+    "colbycomms/wp-collapsible": "dev-master"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
