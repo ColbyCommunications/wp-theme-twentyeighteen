@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for single posts and pages.
+ * Template Name: Page (wider)
  *
  * @package colbycomms/wp-theme-twentyeighteen
  */
@@ -16,7 +16,7 @@ get_header();
 ?>
 <main <?php main_class(); ?>>
 	<?php echo get_page_header(); ?>
-	<div class="container-lg py-5">
+	<div class="container py-3">
 		<article class="pb-3">
 	<?php the_content(); ?>
 		</article>

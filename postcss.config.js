@@ -6,6 +6,8 @@ const colorFunction = require('postcss-color-function');
 const sizing = require('./src/css/postcss/sizing');
 const themes = require('postcss-custom-props-themes');
 const spacing = require('postcss-spacing-utils');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 module.exports = {
   plugins: [
@@ -48,8 +50,16 @@ module.exports = {
           'border-color': color.convert('color(#214280 tint(10%))'),
         },
         {
+          name: 'highlight',
+          inherits: 'primary',
+          color: 'white',
+          'background-color': '#D14124',
+          'background-hover-color': color.convert('color(#D14124 shade(10%))'),
+          'border-color': color.convert('color(#D14124 tint(10%))'),
+        },
+        {
           name: 'gray',
-          inherints: 'light',
+          inherits: 'light',
           'background-color': '#e6e6e6',
           'background-hover-color': '#b3b3b3',
           'border-color': '#cccccc',
@@ -81,5 +91,7 @@ module.exports = {
         '9rem',
       ],
     }),
+    autoprefixer,
+    cssnano,
   ],
 };

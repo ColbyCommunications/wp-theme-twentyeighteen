@@ -5,7 +5,7 @@
   "authors": [
     {
       "name": "John Watkins",
-      "email": "jwohn.watkins@colby.edu"
+      "email": "john.watkins@colby.edu"
     }
   ],
   "scripts": {
@@ -21,9 +21,10 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "colbycomms/colby-wp-schedule": "*",
+    "colbycomms/colby-wp-schedule": "dev-master",
     "colbycomms/colby-svg": "dev-master",
-    "htmlburger/carbon-fields": "^2.1"
+    "htmlburger/carbon-fields": "*",
+    "colbycomms/wp-collapsible": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",

@@ -40,7 +40,7 @@ button {
   border-width: 0;
 }
 
-input {
+input[type*="text"] {
   padding: 0.5em;
   font-size: 1.06em;
   border-radius: 0.125em;
@@ -63,9 +63,9 @@ main {
 main::after {
   display: block;
   clear: both;
-  content: '';
+  content: "";
 }
 
 hr {
-  margin: 2.25rem 0;
+  margin: 1.5rem 0;
 }

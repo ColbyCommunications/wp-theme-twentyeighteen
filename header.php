@@ -30,4 +30,3 @@ use function ColbyComms\TwentyEighteen\Functions\get_head_title;
 		</div>
 	</div>
 </header>
-<main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main' ] ) ) ); ?>">

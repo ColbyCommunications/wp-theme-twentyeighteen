@@ -6,6 +6,7 @@
  */
 
 use function ColbyComms\TwentyEighteen\Functions\get_page_header;
+use function ColbyComms\TwentyEighteen\Functions\main_class;
 
 global $post;
 
@@ -13,6 +14,7 @@ setup_postdata( $post );
 
 get_header();
 ?>
+<main <?php main_class( 'main' ); ?>>
 <?php
 echo get_page_header(
 	[
@@ -28,5 +30,6 @@ echo get_page_header(
 		<?php get_template_part( 'parts/post-footer' ); ?>
 	</article>
 </div>
+</main>
 <?php
 get_footer();

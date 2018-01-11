@@ -15,6 +15,7 @@ if ( ! have_posts() ) {
 }
 
 ?>
+<main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main' ] ) ) ); ?>">
 <div class="row">
 	<?php echo get_archive_header(); ?>
 	<?php while ( have_posts() ) : ?>
@@ -23,6 +24,6 @@ if ( ! have_posts() ) {
 	<?php endwhile; ?>
 </div>
 <?php echo get_post_pagination(); ?>
-
+</main>
 <?php
 get_footer();

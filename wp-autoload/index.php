@@ -20,4 +20,6 @@ foreach ( glob( __DIR__ . '/hooks/*.php', GLOB_NOSORT ) as $file ) {
 new ColbyComms\TwentyEighteen\Shortcodes\Section();
 new ColbyComms\TwentyEighteen\Shortcodes\Catalog();
 new ColbyComms\TwentyEighteen\Shortcodes\Column();
+new ColbyComms\TwentyEighteen\Shortcodes\NoAutoP();
+new ColbyComms\TwentyEighteen\Shortcodes\ColbyDNLogos();
 new ColbyComms\TwentyEighteen\ThemeOptions();

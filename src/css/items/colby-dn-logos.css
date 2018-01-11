@@ -1,0 +1,27 @@
+.colby-dn-logos {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.colby-dn-logos__colby,
+.colby-dn-logos__dn {
+  display: flex;
+  align-items: center;
+}
+
+.colby-dn-logos__colby {
+  padding-right: 1rem;
+  border-right: 1px solid var(--color, white);
+}
+
+.colby-dn-logos__dn {
+  padding-left: 1rem;
+}
+
+.colby-dn-logos__dn svg {
+  width: 5.25rem;
+  height: 3.75rem;
+}

@@ -11,6 +11,7 @@ use function ColbyComms\TwentyEighteen\Functions\get_image_sizes;
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\_add_basic_opt_in_features' );
 add_action( 'after_setup_theme', __NAMESPACE__ . '\_add_custom_image_sizes' );
+add_action( 'after_setup_theme', [ 'Carbon_Fields\\Carbon_Fields', 'boot' ] );
 
 // phpcs:disable Squiz.Commenting.FunctionComment.Missing
 
