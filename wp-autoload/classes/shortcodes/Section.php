@@ -46,17 +46,15 @@ class Section {
 	endif;
 	?>
 	>
-	<div class="container">
-		<?php if ( ! empty( $atts['title'] ) ) : ?>
-		<header>
-			<h1 class="section-title">
-				<?php echo $atts['title']; ?>
-			</h1>
-		</header>
-		<?php endif; ?>
-		<div class="row">
-			<?php echo apply_filters( 'the_content', $content ); ?>
-		</div>
+	<?php if ( ! empty( $atts['title'] ) ) : ?>
+	<header>
+		<h1 class="section-title">
+			<?php echo $atts['title']; ?>
+		</h1>
+	</header>
+	<?php endif; ?>
+	<div class="row">
+		<?php echo apply_filters( 'the_content', $content ); ?>
 	</div>
 </section>
 		<?php

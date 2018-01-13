@@ -1,9 +1,3 @@
 .d-flex {
   display: flex;
 }
-
-.show-lg {
-  @media screen and (max-width: map-get($gridBreakpoints, "lg")) {
-    display: none;
-  }
-}

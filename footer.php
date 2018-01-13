@@ -13,18 +13,20 @@ use function ColbyComms\TwentyEighteen\Functions\get_nav_type;
 use function ColbyComms\TwentyEighteen\Functions\get_social_icons;
 use function ColbyComms\TwentyEighteen\Functions\sticky_nav;
 use function ColbyComms\TwentyEighteen\Functions\sub_footer;
+use function ColbyComms\TwentyEighteen\Functions\super_footer;
 
 ?>
 </main>
-<footer class="site-footer dark pt-4 pb-6 container-fluid dark">
+<?php super_footer(); ?>
+<footer class="site-footer dark pt-5 pb-6 container-fluid dark">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-4 small-4">
+			<div class="col-12 col-md-4 small-4 mb-3">
 				<?php echo get_address_block(); ?>
 				<?php echo get_social_icons(); ?>
 			</div>
 
-			<div class="col-12 col-md-8 mb-2 text-light">
+			<div class="col-12 col-md-8 mb-3 text-light">
 				<?php echo get_global_menu(); ?>
 			</div>
 			<div class="col-12 mb-2 text-center">

@@ -18,14 +18,14 @@ get_header();
 <div class="container-fluid">
 	<div class="container">
 		<div class="row">
-			<main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main col-12 col-md-8' ] ) ) ); ?>">
+			<main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main col-12 col-lg-8' ] ) ) ); ?>">
 				<div class="container py-5">
 					<article class="pb-3">
 						<?php the_content(); ?>
 					</article>
 				</div>
 			</main>
-			<aside class="col-12 col-md-4 py-5">
+			<aside class="col-12 col-lg-4 py-5">
 				<?php echo get_main_sidebar(); ?>
 			</aside>
 		</div>

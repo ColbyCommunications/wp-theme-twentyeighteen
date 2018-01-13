@@ -7,16 +7,16 @@ a.badge {
   white-space: nowrap;
   background-color: var(--background);
   border-radius: 0.166rem;
-
-  a {
-    color: var(--color);
-  }
 }
 
 a.badge {
   color: var(--color);
+}
 
-  &:hover {
-    background-color: var(--hover-color);
-  }
+a.badge:hover {
+  background-color: var(--hover-color);
+}
+
+.badge a {
+  color: var(--color);
 }

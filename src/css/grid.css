@@ -1,5 +1,6 @@
 @bootstrap-4-grid;
 
+/** Don't accumulate padding inside nested containers. */
 .container-fluid > .container-fluid,
 .container-fluid > .container,
 .container-fluid > [class*="container"] {

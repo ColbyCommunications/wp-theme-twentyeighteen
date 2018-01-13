@@ -41,7 +41,7 @@ class ColbyDNLogos {
 
 		<?php
 
-		// Trim newline characters to prevent autop problems. 
-		return str_replace( ["\n", "\r"], '', ob_get_clean() );
+		// Trim newline characters to prevent autop problems.
+		return str_replace( [ "\n", "\r" ], '', ob_get_clean() );
 	}
 }

@@ -7,12 +7,12 @@
 
 use function ColbyComms\TwentyEighteen\Functions\get_archive_header;
 
-get_header();
-
 if ( ! have_posts() ) {
 	include '404.php';
 	return;
 }
+
+get_header();
 
 ?>
 <main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main' ] ) ) ); ?>">
@@ -26,4 +26,5 @@ if ( ! have_posts() ) {
 <?php echo get_post_pagination(); ?>
 </main>
 <?php
+
 get_footer();

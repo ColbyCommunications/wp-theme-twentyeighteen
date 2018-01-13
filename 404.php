@@ -5,9 +5,14 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
+get_header();
+
 ?>
-<main>
-	<article class="container pt-5">
+<main class="pt-6">
+	<article class="container pt-6 pb-4">
 		<p>No posts found.</p>
 	</article>
 </main>
+<?php
+
+get_footer();

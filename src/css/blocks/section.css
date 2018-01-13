@@ -1,3 +1,5 @@
+/** Styles for a section element on a page. */
+
 .section {
   position: relative;
   padding-top: 2.625rem;
@@ -14,6 +16,7 @@
   text-align: center;
 }
 
+/** Makes a line under the title. */
 .section-title::after {
   position: absolute;
   bottom: 0;

@@ -6,7 +6,7 @@
   position: relative;
   display: block;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   padding-right: 2.25rem;
   font-size: 89.1%;
   line-height: 1.4rem;
@@ -26,8 +26,12 @@
   bottom: 0.25rem;
   display: flex;
   align-items: flex-start;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   content: "+";
+}
+
+.schedule .collapsible-heading:after {
+  display: none;
 }
 
 .collapsible-heading:focus {

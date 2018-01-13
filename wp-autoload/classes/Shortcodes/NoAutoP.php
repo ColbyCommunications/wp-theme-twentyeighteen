@@ -22,12 +22,12 @@ class NoAutoP {
 
 	/**
 	 * Trims newline characters from the content and returns the output.
-	 * 
-	 * @param array $_ Unused shortode atts.
+	 *
+	 * @param array  $_ Unused shortode atts.
 	 * @param string $content The shortcode content.
 	 * @return string The modified shortcode content.
 	 */
 	public function shortcode_callback( $_, $content ) {
-		return str_replace( ["\n", "\r"], '', $content );
+		return str_replace( [ "\n", "\r" ], '', $content );
 	}
 }

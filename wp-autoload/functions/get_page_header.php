@@ -19,7 +19,7 @@ function _do_option_defaults( $options = [] ) {
 			'do_background_image' => true,
 			'title_size' => 'large 1 large-md-6',
 			'width' => '',
-			'header_content' => get_post_meta( get_the_id(), 'header_content', true ),
+			'header_content' => do_shortcode( get_post_meta( get_the_id(), 'header_content', true ) ),
 		],
 		$options
 	);

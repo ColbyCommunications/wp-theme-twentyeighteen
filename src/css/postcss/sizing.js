@@ -1,3 +1,7 @@
+/**
+ * Creates classes .small-1, .small-2 etc. / .large-1, .large-2 etc for sizing.
+ */
+
 const postcss = require('postcss');
 
 const makeLargeClasses = (inset = '') =>
@@ -13,7 +17,7 @@ const makeLargeClasses = (inset = '') =>
 `,
         size: output.size * 1.05946,
       }),
-      {css: '', size: 1}
+      { css: '', size: 1 }
     ).css;
 
 const makeSmallClasses = (inset = '') =>
@@ -29,7 +33,7 @@ const makeSmallClasses = (inset = '') =>
 `,
         size: output.size * 0.94387707,
       }),
-      {css: '', size: 1}
+      { css: '', size: 1 }
     ).css;
 
 const makeBreakpointClasses = opts =>

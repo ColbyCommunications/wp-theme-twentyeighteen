@@ -1,3 +1,5 @@
+/** Overrides for the legacy directory plugin. */
+
 #directoryListing > li {
   border: 1px solid var(--border-color);
 }
