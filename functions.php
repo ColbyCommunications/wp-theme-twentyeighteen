@@ -32,8 +32,9 @@ if ( ! function_exists( 'pp' ) ) {
 	 *
 	 * @param mixed $data Any data.
 	 * @param mixed $die Truthy to die after printing.
+	 * @return void
 	 */
-	function pp( $data, $die ) {
+	function pp( $data, $die = 0 ) {
 		echo '<pre>';
 		print_r( $data ); // @codingStandardsIgnoreLine
 		echo '</pre>';

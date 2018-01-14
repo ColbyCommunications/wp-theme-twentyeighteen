@@ -1,6 +1,6 @@
 <?php
 /**
- * Function get_head_title
+ * Function default_page_header_content
  *
  * @package colbycomms/wp-theme-twentyeighteen
  */

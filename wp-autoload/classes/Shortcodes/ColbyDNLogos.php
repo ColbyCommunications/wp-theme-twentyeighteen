@@ -19,14 +19,14 @@ class ColbyDNLogos {
 	 */
 	public function __construct() {
 		if ( ! shortcode_exists( 'colby-dn-logos' ) ) {
-			add_shortcode( 'colby-dn-logos', [ $this, 'shortcode_callback' ] );
+			add_shortcode( 'colby-dn-logos', [ __CLASS__, 'shortcode_callback' ] );
 		}
 	}
 
 	/**
 	 * Renders the shortcode output.
 	 */
-	public function shortcode_callback() {
+	public static function shortcode_callback() {
 		ob_start();
 
 		?>

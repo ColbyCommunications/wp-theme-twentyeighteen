@@ -11,6 +11,7 @@ use function ColbyComms\TwentyEighteen\Functions\get_post_pagination;
 get_header();
 ?>
 <main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main' ] ) ) ); ?>">
+<?php
 echo get_page_header(
 	[
 		'do_background_image' => false,

@@ -18,7 +18,7 @@ get_header();
 	<?php echo get_page_header(); ?>
 	<div class="container py-4">
 		<article class="pb-3">
-	<?php the_content(); ?>
+			<?php the_content(); ?>
 		</article>
 	</div>
 </main>

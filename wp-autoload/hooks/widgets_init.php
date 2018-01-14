@@ -14,7 +14,7 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\_register_main_sidebar' );
 function _register_main_sidebar() {
 	register_sidebar(
 		[
-			'name' => __( 'Main sidebar', 'colby-reunion' ),
+			'name' => __( 'Main sidebar', 'wp-theme-twentyeighteen' ),
 			'id' => 'main-sidebar',
 		]
 	);
