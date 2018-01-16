@@ -60,5 +60,5 @@ class WpFunctions {
 		}
 
 		return array_merge( $args[0], $args[1] );
-    }
+	}
 }

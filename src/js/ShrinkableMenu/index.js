@@ -1,11 +1,12 @@
-import { hamburger } from './hamburger';
+import {hamburger} from './hamburger';
 
 /**
- * Adds a hamburger icon and a togglable submenu when the given menu is wider than the page.
+ * Adds a hamburger icon and a togglable submenu when the given menu is wider
+ * than the page.
  */
 class ShrinkableMenu {
-  handleResize = this.handleResize.bind(this);
-  handleHamburgerClick = this.handleHamburgerClick.bind(this);
+  onResize = this.onResize.bind(this);
+  onHamburgerClick = this.onHamburgerClick.bind(this);
 
   constructor(
     args = {
@@ -17,18 +18,15 @@ class ShrinkableMenu {
     this.list = document.querySelector(`${args.selector} > ul`);
     this.windowSize = 0;
     this.extraMenuClass = args.extraMenuClass;
-    this.innerElements = null;
     this.hamburger = null;
     this.extraMenu = null;
   }
 
-  shouldStart() {
-    return this.container && this.list;
-  }
+  shouldStart = () => this.container && this.list && this.extraMenuClass;
 
   start() {
-    this.handleShrink();
-    window.addEventListener('resize', this.handleResize);
+    this.onShrink();
+    window.addEventListener('resize', this.onResize);
   }
 
   getButtonsWidth = () =>
@@ -47,7 +45,7 @@ class ShrinkableMenu {
     this.hamburger.classList.add('btn');
     this.hamburger.classList.add('primary');
     this.container.appendChild(this.hamburger);
-    this.hamburger.addEventListener('click', this.handleHamburgerClick);
+    this.hamburger.addEventListener('click', this.onHamburgerClick);
   }
 
   addExtraMenu() {
@@ -59,18 +57,18 @@ class ShrinkableMenu {
   initExtraMenu() {
     this.addHamburger();
     this.addExtraMenu();
-    this.handleShrink();
+    this.onShrink();
   }
 
   killExtraMenu() {
-    this.hamburger.removeEventListener('click', this.handleHamburgerClick);
+    this.hamburger.removeEventListener('click', this.onHamburgerClick);
     this.container.removeChild(this.hamburger);
     this.container.removeChild(this.extraMenu);
     this.hamburger = null;
     this.extraMenu = null;
   }
 
-  handleHamburgerClick() {
+  onHamburgerClick() {
     if (this.hamburger.classList.contains('active')) {
       this.hamburger.classList.remove('active');
       this.extraMenu.classList.remove('active');
@@ -80,15 +78,15 @@ class ShrinkableMenu {
     }
   }
 
-  handleResize() {
+  onResize() {
     if (window.innerWidth > this.windowSize) {
-      this.handleGrowth();
+      this.onGrowth();
     } else if (window.innerWidth < this.windowSize) {
-      this.handleShrink();
+      this.onShrink();
     }
   }
 
-  handleShrink() {
+  onShrink() {
     this.windowSize = window.innerWidth;
 
     while (this.getButtonsWidth() > this.windowSize) {
@@ -102,7 +100,7 @@ class ShrinkableMenu {
     }
   }
 
-  handleGrowth() {
+  onGrowth() {
     this.windowSize = window.innerWidth;
 
     while (
