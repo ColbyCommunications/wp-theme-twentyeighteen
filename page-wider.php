@@ -15,7 +15,8 @@ get_header();
 ?>
 <main <?php T18::main_class(); ?>>
 	<?php echo T18::get_page_header(); ?>
-	<div class="container py-4">
+	<?php T18::after_page_header(); ?>
+	<div class="container-xl py-4">
 		<article class="pb-3">
 			<?php the_content(); ?>
 		</article>

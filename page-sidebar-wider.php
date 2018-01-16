@@ -14,10 +14,11 @@ setup_postdata( $post );
 get_header();
 ?>
 <?php echo T18::get_page_header(); ?>
+<?php T18::after_page_header(); ?>
 <div class="container-fluid">
 	<div class="container">
 		<div class="row">
-			<main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main col-12 col-lg-8' ] ) ) ); ?>">
+			<main <?php T18::main_class( 'main col-12 col-lg-8' ); ?>>
 				<div class="container py-5">
 					<article class="pb-3">
 						<?php the_content(); ?>

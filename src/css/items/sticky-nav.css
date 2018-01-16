@@ -1,22 +1,37 @@
-.sticky-nav {
+.sticky-nav-container {
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
+  background: #214280;
+}
+
+.sticky-nav {
   z-index: 1111;
   display: flex;
   flex-wrap: wrap;
 }
 
-.sticky-nav-item {
+.sticky-nav .menu-item {
   display: flex;
   flex: 1 1 150px;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
   line-height: 1.3;
   text-align: center;
+}
+
+.sticky-nav .menu-item a {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  text-transform: uppercase;
   border-radius: 0;
+}
+
+.sticky-nav .menu-item:not(:last-of-type) a {
+  border-right-width: 0;
 }
 
 @media print {

@@ -11,6 +11,7 @@ get_header();
 
 ?>
 <main <?php T18::main_class( 'main pt-6' ); ?>>
+	<?php T18::after_page_header(); ?>
 	<article class="container pt-6 pb-4">
 		<p>No posts found.</p>
 	</article>
