@@ -1,16 +1,12 @@
 <?php
 /**
- * Autoload non-class files.
+ * Autoload hook files and load classes.
  *
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
-}
-
-foreach ( glob( __DIR__ . '/functions/*.php', GLOB_NOSORT ) as $file ) {
-	include_once $file;
 }
 
 foreach ( glob( __DIR__ . '/hooks/*.php', GLOB_NOSORT ) as $file ) {
@@ -24,4 +20,5 @@ new ColbyComms\TwentyEighteen\Shortcodes\Column();
 new ColbyComms\TwentyEighteen\Shortcodes\NoAutoP();
 new ColbyComms\TwentyEighteen\Shortcodes\ColbyDNLogos();
 
+// Theme options page.
 new ColbyComms\TwentyEighteen\ThemeOptions();
