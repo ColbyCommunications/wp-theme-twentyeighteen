@@ -350,7 +350,7 @@ class TwentyEighteen {
 			[ 'a href', '<ul class="sub-menu"' ],
 			[
 				'a class="btn primary" href',
-				'<button class="btn primary submenu-toggler">' . SVG::get( 'down-arrow' ) . '</button><ul class="sub-menu"'
+				'<button class="btn primary submenu-toggler">' . SVG::get( 'down-arrow' ) . '</button><ul class="sub-menu"',
 			],
 			wp_nav_menu(
 				[
@@ -359,7 +359,7 @@ class TwentyEighteen {
 					'echo' => false,
 					'menu_class' => "$class small-5",
 					'container_class' => "$class-container",
-					'depth' => 2
+					'depth' => 2,
 				]
 			)
 		);
@@ -476,11 +476,11 @@ class TwentyEighteen {
 	}
 
 	/**
-     * Adds content after the page header.
-     *
-     * @return void
-     */
-    public static function after_page_header() : void {
-        echo apply_filters( 'colbycomms_twentyeighteen__after_page_header', '' ); 
-    }
+	 * Adds content after the page header.
+	 *
+	 * @return void
+	 */
+	public static function after_page_header() : void {
+		echo apply_filters( 'colbycomms_twentyeighteen__after_page_header', '' );
+	}
 }

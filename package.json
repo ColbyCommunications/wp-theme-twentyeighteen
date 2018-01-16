@@ -10,12 +10,13 @@
     "build": "webpack -p",
     "deploy": "node node_modules/node-autodeploy-wp",
     "lint": "eslint src/js",
+    "stylelint": "stylelint src/css/*.css --fix",
     "prepare": "npm run build"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm prepare"
+      "pre-push": "npm run prepare"
     }
   },
   "devDependencies": {
