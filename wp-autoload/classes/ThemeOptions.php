@@ -38,6 +38,7 @@ class ThemeOptions {
 					->add_options(
 						[
 							'none' => 'No site navigation.',
+							'across-top' => 'Across the top of the main content area.',
 							'fixed-bottom' => 'In a bar across the bottom of the page (limited to six items with no subnavigation).',
 							'hamburger' => 'In a full-screen modal revealed by a menu button (ideal for sites with complex navigation).',
 						]

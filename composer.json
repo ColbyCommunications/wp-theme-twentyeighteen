@@ -16,7 +16,7 @@
   "minimum-stability": "dev",
   "require": {
     "colbycomms/colby-svg": "dev-master",
-    "htmlburger/carbon-fields": "*"
+    "htmlburger/carbon-fields": "^2.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",

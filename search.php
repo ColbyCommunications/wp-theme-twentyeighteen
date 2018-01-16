@@ -23,6 +23,7 @@ echo T18::get_page_header(
 	]
 );
 ?>
+<?php T18::after_page_header(); ?>
 	<div class="container-lg">
 		<div class="pt-4 row pb-4">
 		<?php if ( ! have_posts() ) : ?>

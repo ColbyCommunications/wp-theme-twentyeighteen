@@ -345,22 +345,24 @@ class TwentyEighteen {
 	 *
 	 * @return string Rendered HTML.
 	 */
-	public static function render_sticky_nav() {
-		ob_start();
-
-		foreach ( self::get_site_menu_items() as $item ) {
-			?>
-		<a href="<?php echo $item->url; ?>" class="sticky-nav-item primary text-uppercase btn <?php echo implode( ' ', array_map( 'trim', $item->classes ) ); ?>">
-			<?php echo $item->title; ?>
-		</a>
-			<?php
-		}
-
-		$sticky_nav_items = ob_get_clean();
-
-		return "<nav class=\"sticky-nav small-5\">
-        $sticky_nav_items
-    </nav>";
+	public static function render_sticky_nav( $class = 'sticky-nav' ) {
+		return str_replace(
+			[ 'a href', '<ul class="sub-menu"' ],
+			[
+				'a class="btn primary" href',
+				'<button class="btn primary submenu-toggler">' . SVG::get( 'down-arrow' ) . '</button><ul class="sub-menu"'
+			],
+			wp_nav_menu(
+				[
+					'menu' => 'Site Menu',
+					'container' => 'nav',
+					'echo' => false,
+					'menu_class' => "$class small-5",
+					'container_class' => "$class-container",
+					'depth' => 2
+				]
+			)
+		);
 	}
 
 	/**
@@ -473,4 +475,12 @@ class TwentyEighteen {
 		return wp_get_nav_menu_items( 'Site Menu' ) ?: [];
 	}
 
+	/**
+     * Adds content after the page header.
+     *
+     * @return void
+     */
+    public static function after_page_header() : void {
+        echo apply_filters( 'colbycomms_twentyeighteen__after_page_header', '' ); 
+    }
 }

@@ -14,6 +14,7 @@ setup_postdata( $post );
 get_header();
 
 echo T18::get_page_header(); ?>
+<?php T18::after_page_header(); ?>
 <div class="container-fluid">
 	<div class="container-lg">
 		<div class="row">

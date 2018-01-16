@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad03fff5b914bda987c0759525b2b591",
+    "content-hash": "321d7a5cd3a9522b32977fa2461c37d4",
     "packages": [
         {
             "name": "colbycomms/colby-svg",
@@ -49,16 +49,16 @@
         },
         {
             "name": "htmlburger/carbon-fields",
-            "version": "dev-master",
+            "version": "2.2.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "0737a5efcb1432c6eda4956949589be0906c8044"
+                "reference": "246380b030a57f06def937c50317cd9175d52495"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/0737a5efcb1432c6eda4956949589be0906c8044",
-                "reference": "0737a5efcb1432c6eda4956949589be0906c8044",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/246380b030a57f06def937c50317cd9175d52495",
+                "reference": "246380b030a57f06def937c50317cd9175d52495",
                 "shasum": ""
             },
             "require": {
@@ -168,7 +168,7 @@
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2018-01-04T13:25:13+00:00"
+            "time": "2018-01-04T13:26:54+00:00"
         }
     ],
     "packages-dev": [
