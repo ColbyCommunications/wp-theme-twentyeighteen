@@ -6,7 +6,7 @@
  */
 
 use ColbyComms\SVG\SVG;
-use function ColbyComms\TwentyEighteen\Functions\get_head_title;
+use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -15,9 +15,15 @@ use function ColbyComms\TwentyEighteen\Functions\get_head_title;
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=0" />
 <?php wp_head(); ?>
 <title>
-	<?php echo get_head_title(); ?>
+	<?php echo T18::get_head_title(); ?>
 </title>
-<header class="site-header pl-2 pr-2 pt-1 pb-1 container-fluid <?php echo has_post_thumbnail( $post ) ? 'dark-transparent' : 'primary'; ?>">
+<header class="site-header pl-2 pr-2 pt-1 pb-1 container-fluid 
+<?php
+echo has_post_thumbnail( $post )
+	? 'dark-transparent'
+	: 'primary';
+	?>
+	">
 	<div class="container">
 		<div class="row mx-0 align-items-center">
 			<div class="col-6 px-0 col-lg-3">

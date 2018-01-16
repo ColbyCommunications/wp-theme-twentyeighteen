@@ -6,28 +6,21 @@
  */
 
 use ColbyComms\SVG\SVG;
-use function ColbyComms\TwentyEighteen\Functions\get_global_menu;
-use function ColbyComms\TwentyEighteen\Functions\get_address_block;
-use function ColbyComms\TwentyEighteen\Functions\render_sticky_nav;
-use function ColbyComms\TwentyEighteen\Functions\get_nav_type;
-use function ColbyComms\TwentyEighteen\Functions\get_social_icons;
-use function ColbyComms\TwentyEighteen\Functions\sticky_nav;
-use function ColbyComms\TwentyEighteen\Functions\sub_footer;
-use function ColbyComms\TwentyEighteen\Functions\super_footer;
+
+use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
 ?>
-</main>
-<?php super_footer(); ?>
+<?php T18::super_footer(); ?>
 <footer class="site-footer dark pt-5 pb-6 container-fluid dark">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-4 small-4 mb-3">
-				<?php echo get_address_block(); ?>
-				<?php echo get_social_icons(); ?>
+				<?php echo T18::get_address_block(); ?>
+				<?php echo T18::get_social_icons(); ?>
 			</div>
 
 			<div class="col-12 col-md-8 mb-3 text-light">
-				<?php echo get_global_menu(); ?>
+				<?php echo T18::get_global_menu(); ?>
 			</div>
 			<div class="col-12 mb-2 text-center">
 				<a class="text-white" href=<?php echo network_home_url(); ?>>
@@ -40,7 +33,7 @@ use function ColbyComms\TwentyEighteen\Functions\super_footer;
 		</div>
 	</div>
 </footer>
-<?php sticky_nav(); ?>
+<?php T18::sticky_nav(); ?>
 <?php wp_footer(); ?>
 <?php
-sub_footer();
+T18::sub_footer();

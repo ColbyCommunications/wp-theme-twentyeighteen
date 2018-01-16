@@ -7,9 +7,7 @@
 
 namespace ColbyComms\TwentyEighteen;
 
-use Carbon_Fields\Container;
-use Carbon_Fields\Field;
-use Carbon_Fields\Carbon_Fields;
+use Carbon_Fields\{Container, Field};
 
 /**
  * Sets up an options page using Carbon Fields.

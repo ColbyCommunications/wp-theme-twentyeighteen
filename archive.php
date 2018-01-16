@@ -5,7 +5,7 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
-use function ColbyComms\TwentyEighteen\Functions\get_archive_header;
+use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
 if ( ! have_posts() ) {
 	include '404.php';
@@ -15,9 +15,9 @@ if ( ! have_posts() ) {
 get_header();
 
 ?>
-<main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main' ] ) ) ); ?>">
+<main class="<?php T18::main_class( 'main' ); ?>">
 <div class="row">
-	<?php echo get_archive_header(); ?>
+	<?php echo T18::get_archive_header(); ?>
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 		<?php get_template_part( 'parts/article', 'excerpt' ); ?>

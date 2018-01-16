@@ -5,8 +5,7 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
-use function ColbyComms\TwentyEighteen\Functions\get_page_header;
-use function ColbyComms\TwentyEighteen\Functions\main_class;
+use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
 global $post;
 
@@ -16,11 +15,11 @@ setup_postdata( $post );
 
 get_header();
 ?>
-<main <?php main_class( 'main' ); ?>>
-	<?php echo get_page_header(); ?>
+<main <?php T18::main_class( 'main' ); ?>>
+	<?php echo T18::get_page_header(); ?>
 	<div class="container-xl py-4">
 		<article class="pb-3">
-	<?php the_content(); ?>
+			<?php the_content(); ?>
 		</article>
 	</div>
 </main>

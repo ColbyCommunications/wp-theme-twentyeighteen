@@ -13,22 +13,10 @@
     "lint": "phpcs --extensions=php -s",
     "test": "composer lint"
   },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "/Users/jwatkins/colby-wp-schedule/"
-    },
-    {
-      "type": "path",
-      "url": "/Users/jwatkins/wp-collapsible/"
-    }
-  ],
   "minimum-stability": "dev",
   "require": {
-    "colbycomms/colby-wp-schedule": "dev-master",
     "colbycomms/colby-svg": "dev-master",
-    "htmlburger/carbon-fields": "*",
-    "colbycomms/wp-collapsible": "dev-master"
+    "htmlburger/carbon-fields": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",

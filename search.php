@@ -5,39 +5,41 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
-use function ColbyComms\TwentyEighteen\Functions\get_page_header;
-use function ColbyComms\TwentyEighteen\Functions\get_post_pagination;
+use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
 get_header();
 ?>
-<main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main' ] ) ) ); ?>">
+<main <?php T18::main_class(); ?>>
 <?php
-echo get_page_header(
+echo T18::get_page_header(
 	[
 		'do_background_image' => false,
 		'width' => 'md',
-		'header_content' => '<div class="page-header container-lg"><h1 class="text-white">Search results for <i>'
-		. get_search_query() . '</i></h1>' . get_search_form( false ) . '</div>',
+		'header_content' => '
+			<div class="page-header container-lg">
+				<h1 class="text-white">Search results for <i>' . get_search_query() . '</i></h1>'
+				. get_search_form( false ) .
+			'</div>',
 	]
 );
 ?>
-<div class="container-lg">
-	<div class="pt-4 row pb-4">
-	<?php if ( ! have_posts() ) : ?>
-		<div class="col-12">
-			No posts found.
-		</div>
-	<?php
-	endif;
+	<div class="container-lg">
+		<div class="pt-4 row pb-4">
+		<?php if ( ! have_posts() ) : ?>
+			<div class="col-12">
+				No posts found.
+			</div>
+			<?php
+			endif;
 while ( have_posts() ) :
 	the_post();
 	get_template_part( 'parts/article', 'excerpt' );
-		endwhile;
-		?>
+			endwhile;
+			?>
+		</div>
+		<?php echo T18::get_post_pagination(); ?>
 	</div>
-		<?php echo get_post_pagination(); ?>
-</div>
-	</main>
+</main>
 <?php
 
 get_footer();

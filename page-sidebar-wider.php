@@ -5,8 +5,7 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
-use function ColbyComms\TwentyEighteen\Functions\get_page_header;
-use function ColbyComms\TwentyEighteen\Functions\get_main_sidebar;
+use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
 global $post;
 
@@ -14,7 +13,7 @@ setup_postdata( $post );
 
 get_header();
 ?>
-<?php echo get_page_header(); ?>
+<?php echo T18::get_page_header(); ?>
 <div class="container-fluid">
 	<div class="container">
 		<div class="row">
@@ -26,7 +25,7 @@ get_header();
 				</div>
 			</main>
 			<aside class="col-12 col-lg-4 py-5">
-				<?php echo get_main_sidebar(); ?>
+				<?php echo T18::get_main_sidebar(); ?>
 			</aside>
 		</div>
 	</div>

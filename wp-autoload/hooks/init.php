@@ -7,7 +7,7 @@
 
 namespace ColbyComms\TwentyEighteen\Hooks;
 
-use function ColbyComms\TwentyEighteen\Functions\get_post_types;
+use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
 add_action( 'init', __NAMESPACE__ . '\_register_post_types' );
 add_action( 'init', __NAMESPACE__ . '\_set_whether_to_do_event_listings', 5 );
@@ -15,7 +15,7 @@ add_action( 'init', __NAMESPACE__ . '\_set_whether_to_do_event_listings', 5 );
 // phpcs:disable Squiz.Commenting.FunctionComment.Missing
 
 function _register_post_types() {
-	foreach ( get_post_types() as $post_type_name => $post_type_args ) {
+	foreach ( T18::get_post_types() as $post_type_name => $post_type_args ) {
 		register_post_type( $post_type_name, $post_type_args );
 	}
 }
