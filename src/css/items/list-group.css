@@ -34,11 +34,11 @@
 }
 
 .list-group > li:first-child {
-  padding-top: 0.875em;
+  padding-top: 1em;
 }
 
 .list-group > li:last-child {
-  padding-bottom: 0.875em;
+  padding-bottom: 1em;
 }
 
 .list-group > a:hover,

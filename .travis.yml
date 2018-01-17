@@ -8,6 +8,8 @@ install:
 php:
   - '7.1'
 before_script:
+  - yarn run lint
+  - yarn run stylelint
   - composer phpcbf
   - composer lint
 scripts:
