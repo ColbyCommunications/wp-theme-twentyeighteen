@@ -29,3 +29,7 @@
 @import "./blocks/section";
 @import "./blocks/site-header";
 @import "./features/directory";
+
+.container {
+  max-width: none !important;
+}

@@ -19,6 +19,7 @@ new ColbyComms\TwentyEighteen\Shortcodes\Catalog();
 new ColbyComms\TwentyEighteen\Shortcodes\Column();
 new ColbyComms\TwentyEighteen\Shortcodes\NoAutoP();
 new ColbyComms\TwentyEighteen\Shortcodes\ColbyDNLogos();
+new ColbyComms\TwentyEighteen\Shortcodes\SiteSearchForm();
 
 // Theme options page.
 new ColbyComms\TwentyEighteen\ThemeOptions();

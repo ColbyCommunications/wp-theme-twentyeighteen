@@ -5,7 +5,7 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
-use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
+use ColbyComms\TwentyEighteen\{PageHeader, TwentyEighteen as T18};
 
 global $post;
 
@@ -16,7 +16,7 @@ setup_postdata( $post );
 get_header();
 ?>
 <main <?php T18::main_class( 'main' ); ?>>
-	<?php echo T18::get_page_header(); ?>
+	<?php PageHeader::show(); ?>
 	<?php T18::after_page_header(); ?>
 	<div class="container-xl py-4">
 		<article class="pb-3">
