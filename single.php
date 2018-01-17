@@ -5,7 +5,7 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
-use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
+use ColbyComms\TwentyEighteen\{PageHeader, TwentyEighteen as T18};
 
 global $post;
 
@@ -15,7 +15,7 @@ get_header();
 ?>
 <main <?php T18::main_class( 'main' ); ?>>
 <?php
-echo T18::get_page_header(
+PageHeader::show(
 	[
 		'do_background_image' => false,
 		'title_size' => 'large-1',

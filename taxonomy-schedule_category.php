@@ -21,7 +21,7 @@ $queried_object = get_term_by( 'slug', get_query_var( 'schedule_category' ), 'sc
 ?>
 <main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main' ] ) ) ); ?>">
 	<?php T18::schedule_archive_header( $queried_object ); ?>
-	<?php T18::after_page_header(); ?>
+	<?php PageHeader::show(); ?>
 	<div class="container mx-auto mb-5">
 		<?php
 		echo ScheduleShortcode::render(

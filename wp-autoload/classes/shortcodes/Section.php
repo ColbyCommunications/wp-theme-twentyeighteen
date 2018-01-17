@@ -33,6 +33,7 @@ class Section {
 				'title' => '',
 				'class' => '',
 				'style' => '',
+				'width' => '',
 			],
 			$atts
 		);
@@ -46,6 +47,9 @@ class Section {
 	endif;
 	?>
 	>
+	<?php if ( $atts['width'] ) : ?>
+		<div class="<?php echo "container-{$atts['width']}"; ?>">
+	<?php endif; ?>
 	<?php if ( ! empty( $atts['title'] ) ) : ?>
 	<header>
 		<h1 class="section-title">
@@ -56,6 +60,9 @@ class Section {
 	<div class="row">
 		<?php echo apply_filters( 'the_content', $content ); ?>
 	</div>
+	<?php if ( $atts['width'] ) : ?>
+	</div>
+	<?php endif; ?>
 </section>
 		<?php
 

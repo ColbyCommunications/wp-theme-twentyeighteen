@@ -5,7 +5,7 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
-use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
+use ColbyComms\TwentyEighteen\{PageHeader, TwentyEighteen as T18};
 
 if ( ! have_posts() ) {
 	include '404.php';
@@ -17,7 +17,7 @@ get_header();
 ?>
 <main class="<?php T18::main_class( 'main' ); ?>">
 <div class="row">
-	<?php echo T18::get_archive_header(); ?>
+	<?php PageHeader::show( [ 'type' => 'archive' ] ); ?>
 	<?php T18::after_page_header(); ?>
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>

@@ -5,13 +5,13 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
-use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
+use ColbyComms\TwentyEighteen\{PageHeader, TwentyEighteen as T18};
 
 get_header();
 ?>
 <main <?php T18::main_class(); ?>>
 <?php
-echo T18::get_page_header(
+PageHeader::show(
 	[
 		'do_background_image' => false,
 		'width' => 'md',

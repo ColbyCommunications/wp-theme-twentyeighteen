@@ -14,7 +14,7 @@ setup_postdata( $post );
 get_header();
 ?>
 <main <?php T18::main_class(); ?>>
-	<?php echo T18::get_page_header(); ?>
+	<?php PageHeader::show(); ?>
 	<?php T18::after_page_header(); ?>
 	<div class="container-lg py-5">
 		<article class="pb-3">
