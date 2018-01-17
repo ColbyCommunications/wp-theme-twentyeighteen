@@ -344,13 +344,16 @@ class TwentyEighteen {
 	 * Renders a nav intended to stick to the bottom with CSS.
 	 *
 	 * @param string $class A CSS BEM namespace.
+	 * @param array  $args Arguments for this function and wp_nav_menu.
 	 * @return string Rendered HTML.
 	 */
 	public static function render_navbar( $class = 'shrinkable', $args = [] ) {
 		// No need for nav menu item ids.
-		add_filter( 'nav_menu_item_id', function() {
-			return '';
-		} );
+		add_filter(
+			'nav_menu_item_id', function() {
+				return '';
+			}
+		);
 
 		// Modify the CSS class for submenus.
 		add_filter(
