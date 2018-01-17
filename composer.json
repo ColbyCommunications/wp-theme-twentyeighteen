@@ -11,12 +11,13 @@
   "scripts": {
     "phpcbf": "phpcbf --extensions=php",
     "lint": "phpcs --extensions=php -s",
-    "test": "composer lint"
+    "test": "phpunit"
   },
   "minimum-stability": "dev",
   "require": {
     "colbycomms/colby-svg": "dev-master",
-    "htmlburger/carbon-fields": "^2.1"
+    "htmlburger/carbon-fields": "^2.1",
+    "phpunit/phpunit": "^7.0@dev"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
