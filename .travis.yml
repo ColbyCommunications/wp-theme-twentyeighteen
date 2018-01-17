@@ -14,5 +14,4 @@ before_script:
   - yarn run stylelint
   - composer phpcbf
   - composer lint
-scripts:
-  - composer test
+script: composer test
