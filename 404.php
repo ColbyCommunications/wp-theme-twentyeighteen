@@ -17,7 +17,7 @@ PageHeader::show(
 		'header_content' => '<div class="container text-center">
 				<h1>No post found.</h1>
 			</div>',
-	]	
+	]
 );
 ?>
 	<?php T18::after_page_header(); ?>

@@ -13,7 +13,7 @@ setup_postdata( $post );
 
 get_header();
 ?>
-<?php PageHeader::show() ?>
+<?php PageHeader::show(); ?>
 <?php T18::after_page_header(); ?>
 <div class="container-fluid">
 	<div class="container">
