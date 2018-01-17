@@ -11,9 +11,9 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 0.375em;
+  margin-bottom: 0.75em;
   font-family: var(--serif);
-  line-height: 1.3;
+  line-height: 1.333;
   color: var(--heading-color);
 }
 

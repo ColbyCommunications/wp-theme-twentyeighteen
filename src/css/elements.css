@@ -6,9 +6,10 @@ body {
   margin: 0;
   font-family: var(--sans);
   font-size: 119%;
-  line-height: 1.888;
+  line-height: 1.75;
   color: var(--black);
   background: var(--white);
+  text-rendering: optimizeLegibility;
 }
 
 *,
