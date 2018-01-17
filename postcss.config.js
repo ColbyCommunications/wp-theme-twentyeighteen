@@ -18,7 +18,7 @@ module.exports = {
       breakpoints: {
         sm: '576px',
         md: '768px',
-        lg: '992px',
+        lg: '932px',
       },
     }),
     containers,

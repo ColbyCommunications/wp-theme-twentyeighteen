@@ -21,5 +21,5 @@ function _maybe_do_site_menu() : string {
 		return '';
 	}
 
-	return T18::render_sticky_nav( 'subheader-nav' );
+	return T18::render_navbar( 'shrinkable' );
 }

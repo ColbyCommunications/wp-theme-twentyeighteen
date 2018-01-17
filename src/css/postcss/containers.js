@@ -5,7 +5,7 @@ const postcss = require('postcss');
  */
 module.exports = postcss.plugin('containers', () => root => {
   root.walkAtRules('containers', rule => {
-    const sizes = { sm: '568px', md: '768px', lg: '992px', xl: '1200px' };
+    const sizes = {sm: '568px', md: '768px', lg: '900px', xl: '1200px'};
     const baseDecls = `
   margin: 0 auto;
 	padding-left: .75rem;

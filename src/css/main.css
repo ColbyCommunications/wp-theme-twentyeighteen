@@ -24,7 +24,7 @@
 @import "./items/list-group";
 @import "./items/search-form";
 @import "./items/sticky-nav";
-@import "./items/subheader-nav";
+@import "shrinkable-menu/src/css/main.css";
 @import "./items/wp-gallery";
 @import "./blocks/section";
 @import "./blocks/site-header";

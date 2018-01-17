@@ -1,4 +1,4 @@
-.sticky-nav-container {
+.sticky-nav {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -7,13 +7,13 @@
   background: #214280;
 }
 
-.sticky-nav {
+.sticky-nav__menu {
   z-index: 1111;
   display: flex;
   flex-wrap: wrap;
 }
 
-.sticky-nav .menu-item {
+.sticky-nav__item {
   display: flex;
   flex: 1 1 150px;
   align-items: center;
@@ -22,15 +22,16 @@
   text-align: center;
 }
 
-.sticky-nav .menu-item a {
+.sticky-nav__btn {
   display: block;
   width: 100%;
   padding: 0.5rem;
+  color: white;
   text-transform: uppercase;
   border-radius: 0;
 }
 
-.sticky-nav .menu-item:not(:last-of-type) a {
+.sticky-nav__item:not(:last-of-type) .sticky-nav__btn {
   border-right-width: 0;
 }
 

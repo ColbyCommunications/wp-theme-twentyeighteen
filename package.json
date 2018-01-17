@@ -58,6 +58,7 @@
   },
   "dependencies": {
     "click-outside": "^2.0.2",
-    "colby-wp-collapsible": "^1.0.14"
+    "colby-wp-collapsible": "^1.0.14",
+    "shrinkable-menu": "^1.0.0"
   }
 }

@@ -17,6 +17,7 @@ use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 <title>
 	<?php echo T18::get_head_title(); ?>
 </title>
+<body <?php body_class(); ?>>
 <header class="site-header pl-2 pr-2 pt-1 pb-1 container-fluid 
 <?php
 echo has_post_thumbnail( $post )

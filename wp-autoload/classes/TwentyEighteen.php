@@ -26,7 +26,7 @@ class TwentyEighteen {
 
 		<header class="container-fluid largest primary pt-7 pb-2 mb-4">
 			<div class="container text-center">
-				<div class="large-1 large-md-6">
+				<div>
 					<?php if ( isset( $options['content'] ) ) : ?>
 						<?php echo $options['content']; ?>
 					<?php else : ?>
@@ -63,7 +63,7 @@ class TwentyEighteen {
 		return array_merge(
 			[
 				'do_background_image' => true,
-				'title_size' => 'large 1 large-md-6',
+				'title_size' => 'large-1 large-md-3',
 				'width' => '',
 				'header_content' => do_shortcode( get_post_meta( get_the_id(), 'header_content', true ) ),
 			],
@@ -96,7 +96,7 @@ class TwentyEighteen {
 	public static function extra_classes( $featured_image_exists ) {
 		$padding_classes = $featured_image_exists
 			? 'pb-8 pt-9'
-			: 'pb-3 pt-7';
+			: 'pb-3 pt-8';
 
 		echo $padding_classes;
 		echo $featured_image_exists
@@ -343,24 +343,97 @@ class TwentyEighteen {
 	/**
 	 * Renders a nav intended to stick to the bottom with CSS.
 	 *
+	 * @param string $class A CSS BEM namespace.
 	 * @return string Rendered HTML.
 	 */
-	public static function render_sticky_nav( $class = 'sticky-nav' ) {
-		return str_replace(
-			[ 'a href', '<ul class="sub-menu"' ],
-			[
-				'a class="btn primary" href',
-				'<button class="btn primary submenu-toggler">' . SVG::get( 'down-arrow' ) . '</button><ul class="sub-menu"',
-			],
-			wp_nav_menu(
+	public static function render_navbar( $class = 'shrinkable', $args = [] ) {
+		// No need for nav menu item ids.
+		add_filter( 'nav_menu_item_id', function() {
+			return '';
+		} );
+
+		// Modify the CSS class for submenus.
+		add_filter(
+			'nav_menu_submenu_css_class',
+			function( $classes, $args ) use ( $class ) {
+				return array_map(
+					function( $cl ) use ( $class ) {
+						return 'sub-menu' === $cl
+							? "{$class}__submenu"
+							: $cl;
+					},
+					$classes
+				);
+			},
+			10,
+			2
+		);
+
+		// Modify the ul's CSS class.
+		add_filter(
+			'nav_menu_css_class',
+			function( $classes ) use ( $class ) {
+				$classes = array_map(
+					function( $cl ) use ( $class ) {
+						if ( 'menu-item-has-children' === $cl ) {
+							return "{$class}__has-submenu";
+						}
+
+						if ( 'menu-item' === $cl ) {
+							return "{$class}__item";
+						}
+
+						return '';
+					},
+					$classes
+				);
+
+				return array_filter( $classes );
+			},
+			10,
+			2
+		);
+
+		// Add a css class to the nav menu link.
+		add_filter(
+			'nav_menu_link_attributes',
+			function( $attr ) use ( $class, $args ) {
+				$attr['class'] = "{$class}__btn"
+					. ( isset( $args['link-class'] ) ? " {$args['link-class']}" : '' );
+
+				return $attr;
+			}
+		);
+
+		// Add a submenu toggle button.
+		add_filter(
+			'walker_nav_menu_start_el',
+			function( $output, $item, $depth ) use ( $class ) {
+				if ( $depth > 0 || ! in_array( 'menu-item-has-children', $item->classes, true ) ) {
+					return $output;
+				}
+
+				$arrow = SVG::get( 'down-arrow' );
+
+				return "$output
+				<button class=\"{$class}__btn {$class}__submenu-toggler\">
+					$arrow
+				</button>";
+			},
+			10,
+			3
+		);
+
+		return wp_nav_menu(
+			array_merge(
 				[
 					'menu' => 'Site Menu',
 					'container' => 'nav',
 					'echo' => false,
-					'menu_class' => "$class small-5",
-					'container_class' => "$class-container",
-					'depth' => 2,
-				]
+					'menu_class' => "{$class}__menu",
+					'container_class' => "$class small-4",
+				],
+				$args
 			)
 		);
 	}
@@ -370,7 +443,7 @@ class TwentyEighteen {
 	 */
 	public static function sticky_nav() {
 		if ( 'fixed-bottom' === self::get_nav_type() ) {
-			echo self::render_sticky_nav();
+			echo self::render_navbar( 'sticky-nav', [ 'link-class' => 'primary btn' ] );
 		}
 	}
 
