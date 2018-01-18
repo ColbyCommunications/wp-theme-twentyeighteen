@@ -31,5 +31,5 @@
 @import "./features/directory";
 
 .container {
-  max-width: none !important;
+  max-width: 1140px !important;
 }
