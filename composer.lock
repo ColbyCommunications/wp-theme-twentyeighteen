@@ -380,19 +380,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "4bd3e3fbae45054ebbe8a2e1aba921aae477742c"
+                "reference": "b891ef3423a09f8da8d9f10903d976a6d8f20d57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/4bd3e3fbae45054ebbe8a2e1aba921aae477742c",
-                "reference": "4bd3e3fbae45054ebbe8a2e1aba921aae477742c",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/b891ef3423a09f8da8d9f10903d976a6d8f20d57",
+                "reference": "b891ef3423a09f8da8d9f10903d976a6d8f20d57",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.9.0",
                 "phpunit/phpunit": "^6.5"
             },
             "type": "library",
@@ -427,7 +426,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2018-01-12T10:28:45+00:00"
+            "time": "2018-01-17T21:31:52+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -1629,12 +1628,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "9f56110922e6c20c7021291cdf3bfcff5bd72d64"
+                "reference": "98f079cafc6c34172065d5d8751e543c993aadb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9f56110922e6c20c7021291cdf3bfcff5bd72d64",
-                "reference": "9f56110922e6c20c7021291cdf3bfcff5bd72d64",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/98f079cafc6c34172065d5d8751e543c993aadb2",
+                "reference": "98f079cafc6c34172065d5d8751e543c993aadb2",
                 "shasum": ""
             },
             "require": {
@@ -1672,7 +1671,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-01-15T03:22:29+00:00"
+            "time": "2018-01-17T03:54:48+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
