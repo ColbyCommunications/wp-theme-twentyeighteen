@@ -5,7 +5,7 @@
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
-use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
+use ColbyComms\TwentyEighteen\{PageHeader, TwentyEighteen as T18};
 
 global $post;
 
