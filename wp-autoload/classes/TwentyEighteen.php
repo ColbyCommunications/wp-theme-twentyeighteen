@@ -9,6 +9,7 @@ namespace ColbyComms\TwentyEighteen;
 
 use Carbon_Fields\Helper\Helper;
 use ColbyComms\SVG\SVG;
+use ColbyComms\TwentyEighteen\PageHeader;
 
 /**
  * Namespaced utility functions.
@@ -76,8 +77,9 @@ class TwentyEighteen {
 		echo $queried_object->name;
 		echo '</h1>';
 
-		echo get_archive_header(
+		PageHeader::show(
 			[
+				'type' => 'archive',
 				'content' => ob_get_clean(),
 			]
 		);

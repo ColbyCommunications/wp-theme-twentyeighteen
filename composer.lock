@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8684be6e4707482cdd7c7aa55c98e8c9",
+    "content-hash": "fc4ec34e37d23a3af5ce15aa20df9482",
     "packages": [
         {
             "name": "colbycomms/colby-svg",
@@ -46,6 +46,92 @@
             ],
             "description": "A library of SVGs used across projects, with a PHP class for loading and echoing them, plus a shortcode for use in WordPress.",
             "time": "2018-01-10T13:36:37+00:00"
+        },
+        {
+            "name": "colbycomms/colby-wp-schedule",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ColbyCommunications/wp-schedule.git",
+                "reference": "92a38a3cdd0fbefa09bafdbe08886e1f0ed42618"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/92a38a3cdd0fbefa09bafdbe08886e1f0ed42618",
+                "reference": "92a38a3cdd0fbefa09bafdbe08886e1f0ed42618",
+                "shasum": ""
+            },
+            "require": {
+                "colbycomms/wp-collapsible": "dev-master",
+                "htmlburger/carbon-fields": "^2.1",
+                "phpunit/phpunit": "*"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "*",
+                "wp-coding-standards/wpcs": "dev-master"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "ColbyComms\\Schedules\\": "wp-schedule/"
+                },
+                "files": [
+                    "wp-schedule/index.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Iavor Dekov",
+                    "email": "ivdekov@colby.edu"
+                }
+            ],
+            "description": "A WordPress plugin for creating table-based schedules.",
+            "time": "2018-01-16T01:23:16+00:00"
+        },
+        {
+            "name": "colbycomms/wp-collapsible",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ColbyCommunications/wp-collapsible.git",
+                "reference": "b3983000454cdd746913d12981eb074898f5ff06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ColbyCommunications/wp-collapsible/zipball/b3983000454cdd746913d12981eb074898f5ff06",
+                "reference": "b3983000454cdd746913d12981eb074898f5ff06",
+                "shasum": ""
+            },
+            "require": {
+                "colbycomms/colby-svg": "dev-master",
+                "htmlburger/carbon-fields": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "johnpbloch/wordpress-core": "dev-master",
+                "phpunit/phpunit": ">=5.0",
+                "squizlabs/php_codesniffer": "^3.0@dev",
+                "wp-coding-standards/wpcs": "dev-master"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "ColbyComms\\Collapsible\\": "wp/"
+                },
+                "files": [
+                    "wp/index.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "John Watkins",
+                    "email": "john.watkins@colby.edu"
+                }
+            ],
+            "description": "A WordPress shortcode for collapsible HTML drawers.",
+            "time": "2018-01-15T22:07:10+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -1719,6 +1805,7 @@
     "stability-flags": {
         "colbycomms/colby-svg": 20,
         "phpunit/phpunit": 20,
+        "colbycomms/colby-wp-schedule": 20,
         "wp-coding-standards/wpcs": 20
     },
     "prefer-stable": false,
