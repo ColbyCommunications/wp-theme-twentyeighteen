@@ -1,4 +1,6 @@
 language: php
+cache:
+  - yarn
 before_install:
   - nvm install node
 install:
@@ -12,5 +14,4 @@ before_script:
   - yarn run stylelint
   - composer phpcbf
   - composer lint
-scripts:
-  - composer test
+script: composer test
