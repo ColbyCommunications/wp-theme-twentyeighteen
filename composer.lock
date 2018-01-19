@@ -1791,12 +1791,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/visual-term-description-editor.git",
-                "reference": "534a017558cff1fc9350e3e9a16b68690f2ad7a7"
+                "reference": "5bab34b365690d4e416bcb96b0e1cc8eb7941593"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/visual-term-description-editor/zipball/534a017558cff1fc9350e3e9a16b68690f2ad7a7",
-                "reference": "534a017558cff1fc9350e3e9a16b68690f2ad7a7",
+                "url": "https://api.github.com/repos/ColbyCommunications/visual-term-description-editor/zipball/5bab34b365690d4e416bcb96b0e1cc8eb7941593",
+                "reference": "5bab34b365690d4e416bcb96b0e1cc8eb7941593",
                 "shasum": ""
             },
             "require": {
@@ -1825,7 +1825,7 @@
             "support": {
                 "source": "https://github.com/ColbyCommunications/visual-term-description-editor/tree/master"
             },
-            "time": "2018-01-19T18:13:56+00:00"
+            "time": "2018-01-19T18:18:36+00:00"
         },
         {
             "name": "theseer/tokenizer",
