@@ -14,6 +14,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_open_sans' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_styles' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_scripts' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_schedule_style' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_schedule_script' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_remove_unwanted_styles', 999 );
 
 // phpcs:disable Squiz.Commenting.FunctionComment.Missing
@@ -41,6 +42,15 @@ function _theme_scripts() {
 		[],
 		VERSION,
 		true
+	);
+}
+
+function _schedule_script() {
+	wp_enqueue_script(
+		'wp-schedule',
+		get_template_directory_uri() . '/vendor/colbycomms/colby-wp-schedule/dist/colby-wp-schedule.js',
+		[],
+		VERSION
 	);
 }
 

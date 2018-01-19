@@ -17,8 +17,9 @@
   "require": {
     "colbycomms/colby-svg": "dev-master",
     "htmlburger/carbon-fields": "^2.1",
-    "phpunit/phpunit": "^7.0@dev",
-    "colbycomms/colby-wp-schedule": "dev-master"
+    "phpunit/phpunit": "^6.5",
+    "colbycomms/colby-wp-schedule": "dev-master",
+    "colbycomms/whos-coming": "dev-master"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
