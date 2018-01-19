@@ -14,14 +14,22 @@
     "test": "phpunit"
   },
   "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":
+        "https://github.com/ColbyCommunications/visual-term-description-editor"
+    }
+  ],
   "require": {
     "colbycomms/colby-svg": "dev-master",
     "htmlburger/carbon-fields": "^2.1",
-    "phpunit/phpunit": "^6.5",
     "colbycomms/colby-wp-schedule": "dev-master",
-    "colbycomms/whos-coming": "dev-master"
+    "colbycomms/whos-coming": "dev-master",
+    "sheabunge/visual-term-description-editor": "*"
   },
   "require-dev": {
+    "phpunit/phpunit": "^6.5",
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "dev-master"
   },

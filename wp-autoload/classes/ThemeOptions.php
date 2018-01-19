@@ -45,14 +45,19 @@ class ThemeOptions {
 					)
 					->set_default_value( 'none' )
 					->set_help_text( 'Choose the type of navigation to display on this site for the main site menu ("Site Menu" under Appearance -> Menus).' ),
+
 				Field::make( 'textarea', 'super_footer_content', 'Content above the footer.' )
 					->set_help_text( 'Add content above the footer.' ),
+
 				Field::make( 'textarea', 'sub_footer_content', 'Content below the footer.' )
 					->set_help_text( 'Add content at the very bottom of the page. Useful for fixed items. Shortcodes are allowed.' ),
+
 				Field::make( 'separator', 'crb_style_options', 'Features' ),
+
 				Field::make( 'checkbox', 'do_event_listings', 'Event Listings' )
 					->set_default_value( false )
 					->set_help_text( 'Features enabling the creation of grouped schedules of events.' ),
+
 				Field::make( 'checkbox', 'do_service_catalog', 'Service Catalog' )
 					->set_default_value( false )
 					->set_help_text( 'Listings of services offered by a department.' ),
