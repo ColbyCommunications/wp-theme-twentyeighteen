@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c26c416a5d9b4512cafaeb0692fc8707",
+    "content-hash": "b85666f40f6bb49d1f003cedc441636a",
     "packages": [
         {
             "name": "colbycomms/colby-svg",
@@ -121,7 +121,17 @@
                     "whos-coming/index.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "fix": [
+                    "phpcbf --extensions=php"
+                ],
+                "lint": [
+                    "phpcs --extensions=php -s"
+                ],
+                "test": [
+                    "phpunit"
+                ]
+            },
             "authors": [
                 {
                     "name": "John Watkins",
@@ -129,6 +139,10 @@
                 }
             ],
             "description": "A listing of people who have R.S.V.P.'ed to an event, with the list entered in JSON or CSV format.",
+            "support": {
+                "source": "https://github.com/ColbyCommunications/whos-coming/tree/master",
+                "issues": "https://github.com/ColbyCommunications/whos-coming/issues"
+            },
             "time": "2018-01-19T15:50:07+00:00"
         },
         {

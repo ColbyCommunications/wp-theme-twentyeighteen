@@ -21,7 +21,10 @@ $queried_object = get_term_by( 'slug', get_query_var( 'schedule_category' ), 'sc
 ?>
 <main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main' ] ) ) ); ?>">
 	<?php T18::schedule_archive_header( $queried_object ); ?>
-	<div class="container mx-auto mb-5">
+	<div class="container-lg mx-auto mb-5">
+		<div class="mb-3">
+		<?php echo $queried_object->description; ?>
+		</div>
 		<?php
 		echo ScheduleShortcode::render(
 			new WpQuery( $wp_query ),
