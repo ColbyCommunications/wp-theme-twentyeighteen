@@ -1,8 +1,8 @@
 import Catalog from './Catalog';
 
 function runCatalog(container) {
-  const buttons = document.querySelectorAll('[data-catalog-content]');
-  const contentContainer = document.querySelector('[data-catalog-container]');
+  const buttons = container.querySelectorAll('[data-catalog-content]');
+  const contentContainer = container.querySelector('[data-catalog-container]');
 
   const catalog = new Catalog({
     buttons,

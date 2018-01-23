@@ -25,15 +25,25 @@ class Catalog {
 	 *
 	 * @return WP_Query
 	 */
-	private static function get_catalog_query() {
-		return new \WP_Query(
-			[
-				'post_type' => 'catalog-item',
-				'posts_per_page' => 99,
-				'orderby' => 'name',
-				'order' => 'ASC',
-			]
-		);
+	private static function get_catalog_query( $atts ) {
+		$args = [
+			'post_type' => 'catalog-item',
+			'posts_per_page' => 99,
+			'orderby' => 'name',
+			'order' => 'ASC',
+		];
+
+		if ( ! empty( $atts['categories'] ) ) {
+			$args['tax_query'] = [
+				[
+					'taxonomy' => 'service-category',
+					'field' => 'name',
+					'terms' => array_map( 'trim', explode( ',', $atts['categories'] ) ) 
+				]
+			];
+		}
+
+		return new \WP_Query( $args );
 	}
 
 	/**
@@ -75,7 +85,14 @@ class Catalog {
 	 * @return string The shortcode output.
 	 */
 	public static function render_catalog( $atts = [], $content = '' ) {
-		$catalogs_query = self::get_catalog_query();
+		$atts = shortcode_atts(
+			[
+				'categories' => false,
+			],
+			$atts
+		);
+
+		$catalogs_query = self::get_catalog_query( $atts );
 
 		if ( ! $catalogs_query->have_posts() ) {
 			return '';

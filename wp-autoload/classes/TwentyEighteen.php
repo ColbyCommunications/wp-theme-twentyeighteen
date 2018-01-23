@@ -385,10 +385,33 @@ class TwentyEighteen {
 					'custom-fields',
 				],
 				'show_in_rest' => true,
+				'taxonomies' => [ 'service-category' ],
 			];
 		}
 
 		return $post_types;
+	}
+
+	/**
+	 * Provides settings for taxonomies created by this theme.
+	 * 
+	 * @return array A list of taxonomies and their settings.
+	 */
+	public static function get_taxonomies() : array {
+		return [
+			'service-category' => [
+				'post_type' => 'catalog-item',
+				'args' => [
+					'label' => 'Service Categories',
+					'labels' => [
+						'name' => 'Service Category',
+						'singular_name' => 'Service Category',
+					],
+					'hierarchical' => true,
+					'show_admin_column' => true,
+				],
+			],
+		];
 	}
 
 	/**
