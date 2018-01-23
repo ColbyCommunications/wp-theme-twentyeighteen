@@ -98,6 +98,8 @@ class Catalog {
 			return '';
 		}
 
+		$content = $content ?: '<h3>' . $catalogs_query->posts[0]->post_title . '</h3>'
+			. $catalogs_query->posts[0]->post_content;
 		$items = self::get_items_html( $catalogs_query );
 
 		ob_start();
