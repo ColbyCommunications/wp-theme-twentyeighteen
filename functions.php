@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }
 
-define( 'VERSION', '1.0.2' );
+define( 'VERSION', '1.0.3' );
 define( 'TEXT_DOMAIN', 'colbycomms/wp-theme-twentyeighteen' );
 
 // Fix path to carbon fields assets URL failing to resolve.

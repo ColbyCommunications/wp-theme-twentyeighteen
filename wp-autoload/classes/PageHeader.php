@@ -126,7 +126,7 @@ class PageHeader {
 		$featured_image_style = '';
 
 		if ( $options['do_background_image'] && has_post_thumbnail() ) {
-			$url = get_the_post_thumbnail_url( get_the_id(), 'large' );
+			$url = get_the_post_thumbnail_url( get_the_id(), 'hero' );
 			$featured_image_style = " style=\"background-image: url($url)\"";
 		}
 

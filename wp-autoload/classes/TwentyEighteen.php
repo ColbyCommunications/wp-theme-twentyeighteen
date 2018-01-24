@@ -358,6 +358,12 @@ class TwentyEighteen {
 				400,
 				true,
 			],
+			'Hero' => [
+				'hero',
+				1600,
+				500,
+				true,
+			],
 		];
 	}
 
