@@ -29,6 +29,9 @@
       "url": "/Users/jwatkins/reunion/wp-content/plugins/colby-wp-schedule"
     }
   ],
+  "config": {
+    "github-protocols": ["https"]
+  },
   "require": {
     "colbycomms/colby-svg": "dev-master",
     "htmlburger/carbon-fields": "^2.1",

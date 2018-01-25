@@ -1,4 +1,5 @@
 vendor
+wp-content
 node_modules
 format.html
 .cache
