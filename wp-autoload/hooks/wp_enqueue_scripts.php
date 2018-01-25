@@ -15,6 +15,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_styles' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_scripts' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_schedule_style' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_schedule_script' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_print_styles' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_remove_unwanted_styles', 999 );
 
 // phpcs:disable Squiz.Commenting.FunctionComment.Missing
@@ -68,4 +69,14 @@ function _remove_unwanted_styles() {
 	wp_dequeue_style( 'wooslider-flexslider' );
 	wp_dequeue_style( 'wooslider-common' );
 	wp_dequeue_style( 'duplicate-post' );
+}
+
+function _print_styles() {
+	wp_enqueue_style(
+		'twentyeighteen-print',
+		get_template_directory_uri() . '/assets/print.css',
+		[],
+		VERSION,
+		isset( $_GET['print'] ) ? 'all' : 'print'
+	);
 }

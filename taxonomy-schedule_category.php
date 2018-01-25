@@ -6,7 +6,7 @@
  */
 
 use ColbyComms\Schedules\Shortcodes\ScheduleShortcode;
-use ColbyComms\Schedules\WpQuery;
+use ColbyComms\Schedules\Utils\WpQuery;
 use ColbyComms\TwentyEighteen\{PageHeader, TwentyEighteen as T18};
 
 if ( ! have_posts() ) {
@@ -28,7 +28,7 @@ $queried_object = get_term_by( 'slug', get_query_var( 'schedule_category' ), 'sc
 		<?php
 		echo ScheduleShortcode::render(
 			new WpQuery( $wp_query ),
-			$queried_object->parent ? [ 'active' => 'Signature Events' ] : [],
+			$queried_object->parent ? ['active' => 'Signature Events' ] : [],
 			$queried_object->parent ? $queried_object : null
 		);
 		?>

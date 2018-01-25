@@ -12,6 +12,7 @@
 @import "./utils/has-featured-image";
 @import "./utils/lists";
 @import "./utils/position";
+@import "./utils/print";
 @import "./utils/sizing";
 @import "./utils/spacing";
 @import "./utils/text";

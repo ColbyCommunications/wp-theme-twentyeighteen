@@ -22,16 +22,19 @@
     },
     {
       "type": "vcs",
-      "url":
-        "https://github.com/ColbyCommunications/whos-coming"
+      "url": "https://github.com/ColbyCommunications/whos-coming"
+    },
+    {
+      "type": "path",
+      "url": "/Users/jwatkins/reunion/wp-content/plugins/colby-wp-schedule"
     }
   ],
   "require": {
     "colbycomms/colby-svg": "dev-master",
     "htmlburger/carbon-fields": "^2.1",
-    "colbycomms/colby-wp-schedule": "dev-master",
     "colbycomms/whos-coming": "dev-master",
-    "sheabunge/visual-term-description-editor": "*"
+    "sheabunge/visual-term-description-editor": "*",
+    "colbycomms/colby-wp-schedule": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.5",

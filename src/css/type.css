@@ -13,6 +13,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 0.75em;
   font-family: var(--serif);
+  font-weight: 400;
   line-height: 1.1;
   color: var(--heading-color);
 }
@@ -20,11 +21,13 @@ h6 {
 .h1,
 h1 {
   font-size: 200%;
+  font-weight: 600;
 }
 
 .h2,
 h2 {
   font-size: 172%;
+  font-weight: 600;
 }
 
 .h3,

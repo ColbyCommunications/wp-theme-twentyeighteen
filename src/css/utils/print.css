@@ -1,0 +1,10 @@
+@media print {
+  .print-none {
+    display: none;
+  }
+
+  * {
+    color: black !important;
+    background-color: white !important;
+  }
+}

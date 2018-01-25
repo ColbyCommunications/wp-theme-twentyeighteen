@@ -36,9 +36,3 @@
 .sticky-nav__item:not(:last-of-type) .sticky-nav__btn {
   border-right-width: 0;
 }
-
-@media print {
-  .sticky-nav {
-    display: none;
-  }
-}

@@ -1,0 +1,20 @@
+.site-header {
+  display: none;
+}
+
+.print-none {
+  display: none;
+}
+
+* {
+  color: black !important;
+  background-color: white !important;
+}
+
+#wpadminbar {
+  display: none;
+}
+
+.sticky-nav {
+  display: none !important;
+}
