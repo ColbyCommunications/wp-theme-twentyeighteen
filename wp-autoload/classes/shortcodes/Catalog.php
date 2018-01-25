@@ -88,6 +88,7 @@ class Catalog {
 		$atts = shortcode_atts(
 			[
 				'categories' => false,
+				'menu-class' => 'gray',
 			],
 			$atts
 		);
@@ -108,7 +109,7 @@ class Catalog {
 <section class="section">
 	<div data-catalog class="row">
 		<div class="col-12 col-md-4">
-			<div class="list-group gray">
+			<div class="list-group <?php echo esc_attr( $atts['menu-class'] ); ?>">
 				<?php echo $items; ?>
 			</div>
 		</div>
