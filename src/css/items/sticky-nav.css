@@ -11,6 +11,8 @@
   z-index: 1111;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
 .sticky-nav__item {
