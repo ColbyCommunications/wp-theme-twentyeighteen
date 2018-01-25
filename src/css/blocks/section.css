@@ -2,8 +2,8 @@
 
 .section {
   position: relative;
-  padding-top: 2.625rem;
-  padding-bottom: 2.25rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   color: var(--color);
   background-color: var(--background);
 }
