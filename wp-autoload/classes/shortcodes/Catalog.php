@@ -105,7 +105,7 @@ class Catalog {
 		ob_start();
 
 		?>
-<section class="section container">
+<section class="section">
 	<div data-catalog class="row">
 		<div class="col-12 col-md-4">
 			<div class="list-group gray">

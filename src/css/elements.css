@@ -71,13 +71,13 @@ hr {
   margin: 1.5rem 0;
 }
 
-article ul {
+ul {
   margin-bottom: 0.75rem;
   margin-left: 2.5rem;
   list-style-type: disc;
 }
 
-article ol {
+ol {
   margin-bottom: 0.75rem;
   margin-left: 2.5rem;
   list-style-type: decimal;

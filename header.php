@@ -30,7 +30,7 @@ echo has_post_thumbnail( $post )
 			<div class="col-6 px-0 col-lg-3">
 				<?php echo do_shortcode( '[colby-dn-logos]' ); ?>
 			</div>
-			<a style="line-height: 1.5;" class="home-link px-0 col-6 col-lg-9 justify-flex-end d-flex text-right"
+			<a class="home-link small-2 large-md-1 px-0 col-6 col-lg-9 justify-flex-end d-flex text-right"
 				href="<?php bloginfo( 'url' ); ?>">
 				<?php bloginfo(); ?>
 			</a>
