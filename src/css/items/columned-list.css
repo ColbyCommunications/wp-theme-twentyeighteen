@@ -1,5 +1,7 @@
 .columned-list {
   margin-top: 0;
+  margin-left: 0;
+  list-style: none;
   column-count: 2;
 }
 
