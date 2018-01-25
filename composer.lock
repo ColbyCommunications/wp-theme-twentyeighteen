@@ -49,11 +49,11 @@
         },
         {
             "name": "colbycomms/colby-wp-schedule",
-            "version": "dev-linting",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "/Users/jwatkins/reunion/wp-content/plugins/colby-wp-schedule",
-                "reference": "9044825a1905dea8eeb2db5725ea7f61ac1ab6c3",
+                "reference": "fb019e67d7dd8b184ae43bb4ee36c7faf6f3e1c0",
                 "shasum": null
             },
             "require": {
