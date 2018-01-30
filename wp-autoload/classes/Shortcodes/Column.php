@@ -12,11 +12,18 @@ namespace ColbyComms\TwentyEighteen\Shortcodes;
  */
 class Column {
 	/**
+	 * This shortcode's tag.
+	 * 
+	 * @var string
+	 */
+	const SHORTCODE_TAG = 'column';
+
+	/**
 	 * Registers the shortcode callback.
 	 */
 	public function __construct() {
-		if ( ! shortcode_exists( 'column' ) ) {
-			add_shortcode( 'column', [ __CLASS__, 'render_column' ] );
+		if ( ! shortcode_exists( self::SHORTCODE_TAG ) ) {
+			add_shortcode( self::SHORTCODE_TAG, [ __CLASS__, 'render_column' ] );
 		}
 	}
 

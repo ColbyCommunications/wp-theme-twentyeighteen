@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c4b530d4b1c6f9fd9319d2b1f0e1367",
+    "content-hash": "b0f59198ea99aa40e179f2c850f359f2",
     "packages": [
         {
             "name": "colbycomms/colby-svg",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-svg.git",
-                "reference": "c6979d5cf1a010a3ecacd065407efdbd9079485b"
+                "reference": "e48459793888a5296de2e8c169a15d64c525bf68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/colby-svg/zipball/c6979d5cf1a010a3ecacd065407efdbd9079485b",
-                "reference": "c6979d5cf1a010a3ecacd065407efdbd9079485b",
+                "url": "https://api.github.com/repos/ColbyCommunications/colby-svg/zipball/e48459793888a5296de2e8c169a15d64c525bf68",
+                "reference": "e48459793888a5296de2e8c169a15d64c525bf68",
                 "shasum": ""
             },
             "require-dev": {
@@ -45,67 +45,16 @@
                 }
             ],
             "description": "A library of SVGs used across projects, with a PHP class for loading and echoing them, plus a shortcode for use in WordPress.",
-            "time": "2018-01-25T16:08:19+00:00"
-        },
-        {
-            "name": "colbycomms/colby-wp-schedule",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "/Users/jwatkins/reunion/wp-content/plugins/colby-wp-schedule",
-                "reference": "fb019e67d7dd8b184ae43bb4ee36c7faf6f3e1c0",
-                "shasum": null
-            },
-            "require": {
-                "colbycomms/wp-collapsible": "dev-master",
-                "htmlburger/carbon-fields": "^2.1",
-                "phpunit/phpunit": "*"
-            },
-            "require-dev": {
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ColbyComms\\Schedules\\": "wp-schedule/"
-                },
-                "files": [
-                    "wp-schedule/index.php"
-                ]
-            },
-            "scripts": {
-                "phpcbf": [
-                    "phpcbf --extensions=php"
-                ],
-                "lint": [
-                    "phpcs --extensions=php -s"
-                ],
-                "test": [
-                    "phpunit"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Iavor Dekov",
-                    "email": "ivdekov@colby.edu"
-                }
-            ],
-            "description": "A WordPress plugin for creating table-based schedules."
+            "time": "2018-01-29T12:42:49+00:00"
         },
         {
             "name": "colbycomms/whos-coming",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ColbyCommunications/whos-coming.git",
-                "reference": "f68b02bbbbbec47f81a259ed6d285860ce2e2287"
-            },
+            "version": "dev-search-input-x-button",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/whos-coming/zipball/f68b02bbbbbec47f81a259ed6d285860ce2e2287",
-                "reference": "f68b02bbbbbec47f81a259ed6d285860ce2e2287",
-                "shasum": ""
+                "type": "path",
+                "url": "/Users/jwatkins/reunion/wp-content/plugins/whos-coming",
+                "reference": "22f104a7f747179bdac2043b209915e3c9f96bb3",
+                "shasum": null
             },
             "require": {
                 "htmlburger/carbon-fields": "^2.1",
@@ -142,12 +91,7 @@
                     "email": "john.watkins@colby.edu"
                 }
             ],
-            "description": "A listing of people who have R.S.V.P.'ed to an event, with the list entered in JSON or CSV format.",
-            "support": {
-                "source": "https://github.com/ColbyCommunications/whos-coming/tree/master",
-                "issues": "https://github.com/ColbyCommunications/whos-coming/issues"
-            },
-            "time": "2018-01-19T20:14:29+00:00"
+            "description": "A listing of people who have R.S.V.P.'ed to an event, with the list entered in JSON or CSV format."
         },
         {
             "name": "colbycomms/wp-collapsible",
@@ -192,6 +136,53 @@
             ],
             "description": "A WordPress shortcode for collapsible HTML drawers.",
             "time": "2018-01-19T12:43:28+00:00"
+        },
+        {
+            "name": "colbycomms/wp-schedule",
+            "version": "dev-add-archive-template",
+            "dist": {
+                "type": "path",
+                "url": "/Users/jwatkins/reunion/wp-content/plugins/colby-wp-schedule",
+                "reference": "927573079e443d65d907ce5a7c221275d950330d",
+                "shasum": null
+            },
+            "require": {
+                "colbycomms/colby-svg": "dev-master",
+                "colbycomms/wp-collapsible": "dev-master",
+                "htmlburger/carbon-fields": "^2.1",
+                "phpunit/phpunit": "*"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "*",
+                "wp-coding-standards/wpcs": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ColbyComms\\Schedules\\": "wp-schedule/"
+                },
+                "files": [
+                    "wp-schedule/index.php"
+                ]
+            },
+            "scripts": {
+                "phpcbf": [
+                    "phpcbf --extensions=php"
+                ],
+                "lint": [
+                    "phpcs --extensions=php -s"
+                ],
+                "test": [
+                    "phpunit"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Iavor Dekov",
+                    "email": "ivdekov@colby.edu"
+                }
+            ],
+            "description": "A WordPress plugin for creating table-based schedules."
         },
         {
             "name": "composer/installers",
@@ -319,21 +310,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "8520afa0d55f9b3aba1070a9bf65d4b0d9fb7727"
+                "reference": "dcbbb92ee8534a4244559f3b0e5702dd30b43f47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8520afa0d55f9b3aba1070a9bf65d4b0d9fb7727",
-                "reference": "8520afa0d55f9b3aba1070a9bf65d4b0d9fb7727",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/dcbbb92ee8534a4244559f3b0e5702dd30b43f47",
+                "reference": "dcbbb92ee8534a4244559f3b0e5702dd30b43f47",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1"
             },
             "require-dev": {
+                "doctrine/coding-standard": "~2.1.0",
                 "ext-pdo": "*",
                 "ext-phar": "*",
-                "phpunit/phpunit": "^6.2.3"
+                "phpunit/phpunit": "^6.5.5"
             },
             "type": "library",
             "extra": {
@@ -363,20 +355,20 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2017-12-22T05:44:00+00:00"
+            "time": "2018-01-29T06:31:30+00:00"
         },
         {
             "name": "htmlburger/carbon-fields",
-            "version": "2.2.0-beta.4",
+            "version": "2.2.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "246380b030a57f06def937c50317cd9175d52495"
+                "reference": "04fddaf6d621d149d40a04d5503a0f372c566cf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/246380b030a57f06def937c50317cd9175d52495",
-                "reference": "246380b030a57f06def937c50317cd9175d52495",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/04fddaf6d621d149d40a04d5503a0f372c566cf6",
+                "reference": "04fddaf6d621d149d40a04d5503a0f372c566cf6",
                 "shasum": ""
             },
             "require": {
@@ -486,7 +478,7 @@
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2018-01-04T13:26:54+00:00"
+            "time": "2018-01-29T13:03:39+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -746,16 +738,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "7159da1ff4ab5de0c033bab91c9d3f52dd9a7a02"
+                "reference": "cf842904952e64e703800d094cdf34e715a8a3ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/7159da1ff4ab5de0c033bab91c9d3f52dd9a7a02",
-                "reference": "7159da1ff4ab5de0c033bab91c9d3f52dd9a7a02",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/cf842904952e64e703800d094cdf34e715a8a3ae",
+                "reference": "cf842904952e64e703800d094cdf34e715a8a3ae",
                 "shasum": ""
             },
             "require": {
@@ -787,7 +779,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2017-11-15T21:30:06+00:00"
+            "time": "2017-12-30T13:23:38+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -1107,12 +1099,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "efbb48526fd0739823f5cbee4f9fdfd25053dbeb"
+                "reference": "c4cdf0e12b3a5de0ee433338c95f6ec40a28bdfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/efbb48526fd0739823f5cbee4f9fdfd25053dbeb",
-                "reference": "efbb48526fd0739823f5cbee4f9fdfd25053dbeb",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c4cdf0e12b3a5de0ee433338c95f6ec40a28bdfd",
+                "reference": "c4cdf0e12b3a5de0ee433338c95f6ec40a28bdfd",
                 "shasum": ""
             },
             "require": {
@@ -1183,7 +1175,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-01-24T13:39:40+00:00"
+            "time": "2018-01-26T16:48:21+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1295,17 +1287,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "c2019a4d1d15b86fc3da1139c99f6ed16a1fe517"
+                "reference": "35df5e7539f65399b38ff3fcd323d53e08d8dfcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/c2019a4d1d15b86fc3da1139c99f6ed16a1fe517",
-                "reference": "c2019a4d1d15b86fc3da1139c99f6ed16a1fe517",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/35df5e7539f65399b38ff3fcd323d53e08d8dfcd",
+                "reference": "35df5e7539f65399b38ff3fcd323d53e08d8dfcd",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.0",
-                "sebastian/diff": "^2.0",
+                "sebastian/diff": "^2.0 || ^3.0",
                 "sebastian/exporter": "^3.1"
             },
             "require-dev": {
@@ -1351,20 +1343,20 @@
                 "compare",
                 "equality"
             ],
-            "time": "2018-01-12T08:56:06+00:00"
+            "time": "2018-01-29T13:45:34+00:00"
         },
         {
             "name": "sebastian/diff",
-            "version": "dev-master",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "0fd4d14dd707808a95ca67ada62c15f9a9186b15"
+                "reference": "abcc70409ddfb310a8cb41ef0c2e857425438cf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/0fd4d14dd707808a95ca67ada62c15f9a9186b15",
-                "reference": "0fd4d14dd707808a95ca67ada62c15f9a9186b15",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/abcc70409ddfb310a8cb41ef0c2e857425438cf4",
+                "reference": "abcc70409ddfb310a8cb41ef0c2e857425438cf4",
                 "shasum": ""
             },
             "require": {
@@ -1376,7 +1368,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -1403,7 +1395,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-12-14T13:13:00+00:00"
+            "time": "2017-12-14T11:32:19+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -1891,12 +1883,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "4a8bf11547e139e77b651365113fc12850c43d9a"
+                "reference": "87f8f5fd77fbd9ef83e8c21dc5ec002203ba83d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/4a8bf11547e139e77b651365113fc12850c43d9a",
-                "reference": "4a8bf11547e139e77b651365113fc12850c43d9a",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/87f8f5fd77fbd9ef83e8c21dc5ec002203ba83d3",
+                "reference": "87f8f5fd77fbd9ef83e8c21dc5ec002203ba83d3",
                 "shasum": ""
             },
             "require": {
@@ -1933,7 +1925,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-11-23T20:04:41+00:00"
+            "time": "2018-01-29T08:33:01+00:00"
         }
     ],
     "packages-dev": [
@@ -2033,7 +2025,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "colbycomms/colby-svg": 20,
-        "colbycomms/whos-coming": 20,
         "wp-coding-standards/wpcs": 20
     },
     "prefer-stable": false,

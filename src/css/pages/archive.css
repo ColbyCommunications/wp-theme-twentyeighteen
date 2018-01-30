@@ -1,0 +1,35 @@
+.post-archive {
+  display: grid;
+  width: 100%;
+  max-width: 992px;
+  padding: 0.75rem;
+  margin: 0 auto;
+  grid-gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .post-archive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.archive-excerpt__header {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.archive-excerpt__title {
+  margin-bottom: 0;
+  font-size: 133%;
+}
+
+.archive-excerpt__body {
+  font-size: 94.4%;
+}
+
+.archive-excerpt__date {
+  margin-bottom: 1rem;
+  font-size: 84.1%;
+  text-align: right;
+  text-transform: uppercase;
+}

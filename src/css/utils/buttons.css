@@ -1,8 +1,28 @@
 .btn {
   padding: 0.5em 1em;
+  text-align: center;
+  text-transform: uppercase;
   border: 1px solid var(--border-color);
   border-radius: 0.125em;
   transition: background-color 0.2s;
+}
+
+.btn-lg {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.btn__first-line,
+.btn__last-line {
+  display: block;
+}
+
+.btn__first-line {
+  font-size: 126%;
+}
+
+.btn__last-line {
+  text-transform: none;
 }
 
 .btn:hover {

@@ -6,22 +6,20 @@
  */
 
 ?>
-<article <?php post_class( 'col-12 col-md-6 px-2 light archive-excerpt' ); ?>>
-	<div class="container-md pb-3 mb-3 article-inner">
-		<header class="primary pl-2 pt-2 pr-2 pb-1 mb-2 container-fluid">
-			<div class="container">
-				<h1 class="large-2">
-					<a href="<?php the_permalink(); ?>">
-						<?php the_title(); ?>
-					</a>
-				</h1>
-			</div>
-		</header>
-		<div class="container-fluid px-0">
-			<div class="container small-2">
-				<?php the_excerpt(); ?>
-			</div>
-		</div>
-		<?php get_template_part( 'parts/post-footer' ); ?>
+<article <?php post_class( 'light archive-excerpt' ); ?>>
+	<header class="primary archive-excerpt__header">
+		<h1 class="archive-excerpt__title">
+			<a href="<?php the_permalink(); ?>">
+				<?php the_title(); ?>
+			</a>
+		</h1>
+	</header>
+	<div class="archive-excerpt__body">
+		<?php the_excerpt(); ?>
 	</div>
+	<footer class="archive-excerpt__footer">
+		<div class="archive-excerpt__date">
+			<?php the_time( get_option( 'date_format' ) ); ?>
+		</div>
+	</footer>
 </article>

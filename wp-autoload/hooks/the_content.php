@@ -19,6 +19,10 @@ add_filter( 'the_content', __NAMESPACE__ . '\_remove_empty_paragraph_tags' );
 function _modify_directory_shortcode_html( $content ) {
 	global $post;
 
+	if ( empty( $post ) ) {
+		return $content;
+	}
+
 	if ( 'Staff' !== $post->post_title ) {
 		return $content;
 	}

@@ -15,16 +15,16 @@ if ( ! have_posts() ) {
 get_header();
 
 ?>
-<main class="<?php T18::main_class( 'main' ); ?>">
-<div class="row">
+<main <?php T18::main_class( 'main' ); ?>>
 	<?php PageHeader::show( [ 'type' => 'archive' ] ); ?>
 	<?php T18::after_page_header(); ?>
-	<?php while ( have_posts() ) : ?>
-		<?php the_post(); ?>
-		<?php get_template_part( 'parts/article', 'excerpt' ); ?>
-	<?php endwhile; ?>
-</div>
-<?php echo get_post_pagination(); ?>
+	<div class="post-archive">
+		<?php while ( have_posts() ) : ?>
+			<?php the_post(); ?>
+			<?php get_template_part( 'parts/article', 'excerpt' ); ?>
+		<?php endwhile; ?>
+	</div>
+<?php echo T18::get_post_pagination(); ?>
 </main>
 <?php
 

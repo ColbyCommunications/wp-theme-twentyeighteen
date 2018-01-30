@@ -28,6 +28,12 @@ class NoAutoP {
 	 * @return string The modified shortcode content.
 	 */
 	public function shortcode_callback( $_, $content ) {
-		return str_replace( [ "\n", "\r" ], '', $content );
+		return trim(
+			str_replace(
+				[ "\n", "\r", '<br>', '<br />' ],
+				'',
+				do_shortcode( $content )
+			)
+		);
 	}
 }

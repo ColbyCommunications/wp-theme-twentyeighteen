@@ -27,6 +27,7 @@
 @import "./items/sticky-nav";
 @import "shrinkable-menu/src/css/main.css";
 @import "./items/wp-gallery";
+@import "pages/archive.css";
 @import "./blocks/section";
 @import "./blocks/site-header";
 @import "./features/directory";
@@ -35,6 +36,6 @@
   max-width: 1140px !important;
 }
 
-.shrinkable__menu {
-  margin-left: 0;
+.shrinkable__btn {
+  background-color: var(--background-color, #214280);
 }

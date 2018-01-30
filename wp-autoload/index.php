@@ -14,12 +14,14 @@ foreach ( glob( __DIR__ . '/hooks/*.php', GLOB_NOSORT ) as $file ) {
 }
 
 // Shortcodes.
+new ColbyComms\TwentyEighteen\Shortcodes\Button();
 new ColbyComms\TwentyEighteen\Shortcodes\Section();
 new ColbyComms\TwentyEighteen\Shortcodes\Catalog();
 new ColbyComms\TwentyEighteen\Shortcodes\Column();
 new ColbyComms\TwentyEighteen\Shortcodes\NoAutoP();
 new ColbyComms\TwentyEighteen\Shortcodes\ColbyDNLogos();
 new ColbyComms\TwentyEighteen\Shortcodes\SiteSearchForm();
+new ColbyComms\TwentyEighteen\Shortcodes\Theme;
 
 // Theme options page.
 new ColbyComms\TwentyEighteen\ThemeOptions();

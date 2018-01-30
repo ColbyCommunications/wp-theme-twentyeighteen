@@ -12,6 +12,13 @@ namespace ColbyComms\TwentyEighteen\Shortcodes;
  */
 class SiteSearchForm {
 	/**
+	 * The shortcode tag.
+	 * 
+	 * @var string
+	 */
+	const SHORTCODE_TAG = 'site-search-form';
+
+	/**
 	 * Hooks the shortcode creator function.
 	 */
 	public function __construct() {
@@ -24,8 +31,8 @@ class SiteSearchForm {
 	 * @return void
 	 */
 	public static function add_shortcode() {
-		if ( ! shortcode_exists( 'site-search-form' ) ) {
-			add_shortcode( 'site-search-form', [ __CLASS__, 'site_search_form' ] );
+		if ( ! shortcode_exists( self::SHORTCODE_TAG ) ) {
+			add_shortcode( self::SHORTCODE_TAG, [ __CLASS__, 'render_shortcode' ] );
 		}
 	}
 
@@ -34,7 +41,7 @@ class SiteSearchForm {
 	 *
 	 * @return string HTML.
 	 */
-	public static function site_search_form() : string {
+	public static function render_shortcode() : string {
 		$echo = false;
 		return get_search_form( $echo );
 	}

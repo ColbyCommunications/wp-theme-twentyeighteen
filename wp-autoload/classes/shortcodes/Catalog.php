@@ -11,12 +11,14 @@ namespace ColbyComms\TwentyEighteen\Shortcodes;
  * Shortcode [catalog].
  */
 class Catalog {
+	const SHORTCODE_TAG = 'catalog';
+
 	/**
 	 * Registers the shortcode callback.
 	 */
 	public function __construct() {
-		if ( ! shortcode_exists( 'catalog' ) ) {
-			add_shortcode( 'catalog', [ __CLASS__, 'render_catalog' ] );
+		if ( ! shortcode_exists( self::SHORTCODE_TAG ) ) {
+			add_shortcode( self::SHORTCODE_TAG, [ __CLASS__, 'render_catalog' ] );
 		}
 	}
 

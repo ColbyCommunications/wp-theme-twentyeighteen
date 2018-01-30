@@ -251,6 +251,7 @@ class TwentyEighteen {
 			function( $classes ) use ( $class ) {
 				$classes = array_map(
 					function( $cl ) use ( $class ) {
+
 						if ( 'menu-item-has-children' === $cl ) {
 							return "{$class}__has-submenu";
 						}
@@ -273,12 +274,19 @@ class TwentyEighteen {
 		// Add a css class to the nav menu link.
 		add_filter(
 			'nav_menu_link_attributes',
-			function( $attr ) use ( $class, $args ) {
+			function( $attr, $item ) use ( $class, $args ) {
+				
 				$attr['class'] = "{$class}__btn"
 					. ( isset( $args['link-class'] ) ? " {$args['link-class']}" : '' );
 
+				if ( $item->classes[0] ) {
+					$attr['class'] .= ' ' . $item->classes[0];
+				}
+
 				return $attr;
-			}
+			},
+			10,
+			2
 		);
 
 		// Add a submenu toggle button.

@@ -21,8 +21,8 @@
         "https://github.com/ColbyCommunications/visual-term-description-editor"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/ColbyCommunications/whos-coming"
+      "type": "path",
+      "url": "/Users/jwatkins/reunion/wp-content/plugins/whos-coming"
     },
     {
       "type": "path",
@@ -35,9 +35,9 @@
   "require": {
     "colbycomms/colby-svg": "dev-master",
     "htmlburger/carbon-fields": "^2.1",
-    "colbycomms/whos-coming": "dev-master",
+    "colbycomms/whos-coming": "*",
     "sheabunge/visual-term-description-editor": "*",
-    "colbycomms/colby-wp-schedule": "*"
+    "colbycomms/wp-schedule": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.5",
