@@ -13,6 +13,7 @@ use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=0" />
+<link rel=icon href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type=image/x-icon>
 <?php wp_head(); ?>
 <title>
 	<?php echo T18::get_head_title(); ?>
