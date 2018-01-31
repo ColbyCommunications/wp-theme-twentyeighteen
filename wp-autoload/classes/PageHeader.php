@@ -55,7 +55,7 @@ class PageHeader {
 		ob_start();
 		?>
 
-		<header class="page-header container-fluid largest primary pt-7 pb-2 mb-4">
+		<header class="page-header container-fluid largest primary mb-4">
 			<div class="container text-center">
 				<div>
 					<?php if ( isset( $options['content'] ) ) : ?>
@@ -139,11 +139,6 @@ class PageHeader {
 	 * @param bool $featured_image_exists Whether there's a featured image.
 	 */
 	public static function extra_classes( $featured_image_exists ) {
-		$padding_classes = $featured_image_exists
-			? 'pb-8 pt-9'
-			: 'pb-3 pt-8';
-
-		echo $padding_classes;
 		echo $featured_image_exists
 			? ' has-featured-image'
 			: '';
@@ -170,7 +165,7 @@ class PageHeader {
 
 		$header_classes = self::get_header_classes();
 		?>
-		<div class="<?php echo $header_classes ? "$header_classes " : ''; ?>page-header container<?php echo empty( $options['width'] ) ? '' : "-{$options['width']}"; ?>">
+		<div class="<?php echo $header_classes ? "$header_classes " : ''; ?> container<?php echo empty( $options['width'] ) ? '' : "-{$options['width']}"; ?>">
 			<?php echo self::get_parent_page_link(); ?>
 			<div class="<?php echo esc_attr( $options['title_size'] ); ?>">
 				<h1 class="text-uppercase"><?php the_title(); ?></h1>
