@@ -55,7 +55,7 @@ class PageHeader {
 		ob_start();
 		?>
 
-		<header class="container-fluid largest primary pt-7 pb-2 mb-4">
+		<header class="page-header container-fluid largest primary pt-7 pb-2 mb-4">
 			<div class="container text-center">
 				<div>
 					<?php if ( isset( $options['content'] ) ) : ?>
@@ -103,7 +103,7 @@ class PageHeader {
 
 		?>
 		<header
-			class="container-fluid largest primary <?php self::extra_classes( ! ! $featured_image_style ); ?>"
+			class="page-header container-fluid largest primary <?php self::extra_classes( ! ! $featured_image_style ); ?>"
 			<?php echo $featured_image_style; ?>>
 			<?php if ( empty( $options['header_content'] ) ) : ?>
 				<?php self::default_page_header_content( $options ); ?>
@@ -126,7 +126,7 @@ class PageHeader {
 		$featured_image_style = '';
 
 		if ( $options['do_background_image'] && has_post_thumbnail() ) {
-			$url = get_the_post_thumbnail_url( get_the_id(), 'hero' );
+			$url = get_the_post_thumbnail_url( get_the_id(), has_image_size( 'hero' ) ? 'hero' : 'large' );
 			$featured_image_style = " style=\"background-image: url($url)\"";
 		}
 
@@ -150,6 +150,15 @@ class PageHeader {
 	}
 
 	/**
+	 * Get classes set in the post meta.
+	 *
+	 * @return string|null The classes or nothing.
+	 */
+	public static function get_header_classes() {
+		return get_post_meta( get_the_id(), 'header_class', true );
+	}
+
+	/**
 	 * Provides fallback content for a header where nothing is provided.
 	 *
 	 * @param array $options Options passed in to the page header function.
@@ -159,14 +168,15 @@ class PageHeader {
 			? get_post_meta( get_the_id(), 'subtitle', true )
 			: '';
 
+		$header_classes = self::get_header_classes();
 		?>
-		<div class="container<?php echo empty( $options['width'] ) ? '' : "-{$options['width']}"; ?> text-center">
+		<div class="<?php echo $header_classes ? "$header_classes " : ''; ?>page-header container<?php echo empty( $options['width'] ) ? '' : "-{$options['width']}"; ?>">
 			<?php echo self::get_parent_page_link(); ?>
 			<div class="<?php echo esc_attr( $options['title_size'] ); ?>">
-				<h1><?php the_title(); ?></h1>
+				<h1 class="text-uppercase"><?php the_title(); ?></h1>
 			</div>
 			<?php if ( $subtitle ) : ?>
-			<div class="large-2 text-uppercase">
+			<div class="large-2">
 				<h2><?php echo $subtitle; ?></h2>
 			</div>
 			<?php endif; ?>

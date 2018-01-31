@@ -7,12 +7,15 @@
 
 namespace ColbyComms\TwentyEighteen;
 
+use Carbon_Fields\Helper\Helper;
 use Carbon_Fields\{Container, Field};
 
 /**
  * Sets up an options page using Carbon Fields.
  */
 class ThemeOptions {
+	const ANALYTICS_KEY = 'analytics_code';
+
 	/**
 	 * Adds hooks.
 	 */
@@ -61,7 +64,14 @@ class ThemeOptions {
 				Field::make( 'checkbox', 'do_service_catalog', 'Service Catalog' )
 					->set_default_value( false )
 					->set_help_text( 'Listings of services offered by a department.' ),
+
+				Field::make( 'textarea', self::ANALYTICS_KEY, 'Google Analytics code' )
+					->set_help_text( 'Place this site\'s Analytics embed code in this box.' ),
 			]
 		);
 	}
+
+	public static function get( string $key ) {
+		return Helper::get_theme_option( $key );
+	} 
 }

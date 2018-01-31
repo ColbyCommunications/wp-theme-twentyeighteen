@@ -1,5 +1,18 @@
+@keyframes float-in-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 4.5rem, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .has-featured-image {
   position: relative;
+  text-align: right;
   background-position: center;
   background-size: cover;
 }
@@ -21,4 +34,23 @@
 .has-featured-image > * {
   position: relative;
   z-index: 1;
+}
+
+@supports (animation-fill-mode: both) {
+  .has-featured-image .parent-page-link,
+  .has-featured-image h1,
+  .has-featured-image h2 {
+    animation-name: float-in-up;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+
+  .has-featured-image .parent-page-link {
+    animation-duration: 1s;
+  }
+
+  .has-featured-image h2 {
+    animation-delay: 0.5s;
+  }
 }

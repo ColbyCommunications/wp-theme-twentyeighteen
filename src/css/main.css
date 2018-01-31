@@ -29,6 +29,7 @@
 @import "./items/wp-gallery";
 @import "pages/archive.css";
 @import "./blocks/section";
+@import "./blocks/page-header";
 @import "./blocks/site-header";
 @import "./features/directory";
 
