@@ -10,7 +10,7 @@ namespace ColbyComms\TwentyEighteen\Hooks;
 use ColbyComms\TwentyEighteen\ThemeOptions;
 
 add_action( 'wp_head', __NAMESPACE__ . '\_typekit' );
-add_action( 'wp_head', __NAMESPACE__ . '\_analytics' );
+add_action( 'wp_head', __NAMESPACE__ . '\_analytics', 999 );
 
 // phpcs:disable Squiz.Commenting.FunctionComment.Missing
 
