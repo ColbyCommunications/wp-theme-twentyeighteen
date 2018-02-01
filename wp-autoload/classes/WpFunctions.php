@@ -30,7 +30,7 @@ class WpFunctions {
 	 * @param string $content A string to escape.
 	 * @return string The escaped string.
 	 */
-	public static function esc_attr( string $content = '' ) : string {
+	public static function esc_attr( string $content ) : string {
 		return function_exists( 'esc_attr' ) ? esc_attr( $content ) : $content;
 	}
 

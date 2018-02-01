@@ -7,6 +7,12 @@
 
 namespace ColbyComms\TwentyEighteen;
 
+if ( isset( $_GET['debug'] ) ) {
+	register_shutdown_function( function() {
+		print_r( error_get_last() );
+	} );
+}
+
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }

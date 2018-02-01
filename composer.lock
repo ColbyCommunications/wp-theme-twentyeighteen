@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-svg.git",
-                "reference": "e48459793888a5296de2e8c169a15d64c525bf68"
+                "reference": "dde64ff7d7237f959a8271b64435b0de8d2d6fde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/colby-svg/zipball/e48459793888a5296de2e8c169a15d64c525bf68",
-                "reference": "e48459793888a5296de2e8c169a15d64c525bf68",
+                "url": "https://api.github.com/repos/ColbyCommunications/colby-svg/zipball/dde64ff7d7237f959a8271b64435b0de8d2d6fde",
+                "reference": "dde64ff7d7237f959a8271b64435b0de8d2d6fde",
                 "shasum": ""
             },
             "require-dev": {
@@ -45,7 +45,7 @@
                 }
             ],
             "description": "A library of SVGs used across projects, with a PHP class for loading and echoing them, plus a shortcode for use in WordPress.",
-            "time": "2018-01-29T12:42:49+00:00"
+            "time": "2018-01-31T18:17:26+00:00"
         },
         {
             "name": "colbycomms/whos-coming",
@@ -139,11 +139,11 @@
         },
         {
             "name": "colbycomms/wp-schedule",
-            "version": "dev-add-archive-template",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "/Users/jwatkins/reunion/wp-content/plugins/colby-wp-schedule",
-                "reference": "927573079e443d65d907ce5a7c221275d950330d",
+                "reference": "fc5d437fb66c0162b7f2bd92c874891623c93cc3",
                 "shasum": null
             },
             "require": {
@@ -638,24 +638,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "e8e68dc40f300e50f5a3b254bd7b41eecdc4ddca"
+                "reference": "7f47b363d3f2d6e8f1d8c4159ad8c42deb1fcb87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/e8e68dc40f300e50f5a3b254bd7b41eecdc4ddca",
-                "reference": "e8e68dc40f300e50f5a3b254bd7b41eecdc4ddca",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/7f47b363d3f2d6e8f1d8c4159ad8c42deb1fcb87",
+                "reference": "7f47b363d3f2d6e8f1d8c4159ad8c42deb1fcb87",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5"
+                "phpunit/phpunit": "^6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -684,7 +684,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2018-01-18T22:08:35+00:00"
+            "time": "2018-01-30T14:27:07+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -692,25 +692,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "86868b92020037a58b124ebb428d3ac1e064e503"
+                "reference": "6946f85e19ea3342353e22b83b4e2e59414c1a2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/86868b92020037a58b124ebb428d3ac1e064e503",
-                "reference": "86868b92020037a58b124ebb428d3ac1e064e503",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/6946f85e19ea3342353e22b83b4e2e59414c1a2f",
+                "reference": "6946f85e19ea3342353e22b83b4e2e59414c1a2f",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1",
-                "phpdocumentor/reflection-common": "^1.0",
-                "phpdocumentor/type-resolver": "^0.5",
-                "webmozart/assert": "^1.0"
+                "php": ">=7.1",
+                "phpdocumentor/type-resolver": "^0",
+                "webmozart/assert": "^1"
             },
             "require-dev": {
-                "doctrine/instantiator": "^1.0",
-                "mockery/mockery": "^1.0",
-                "phpstan/phpstan": "^0.9.0",
-                "phpunit/phpunit": "^6.4"
+                "doctrine/instantiator": "^1",
+                "mockery/mockery": "^1"
             },
             "type": "library",
             "extra": {
@@ -734,34 +731,34 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2018-01-12T19:30:38+00:00"
+            "time": "2018-01-31T20:23:19+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "0.5.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "cf842904952e64e703800d094cdf34e715a8a3ae"
+                "reference": "ad39fb2becfa9ddc4b23b5e85c88123462d86ef2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/cf842904952e64e703800d094cdf34e715a8a3ae",
-                "reference": "cf842904952e64e703800d094cdf34e715a8a3ae",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/ad39fb2becfa9ddc4b23b5e85c88123462d86ef2",
+                "reference": "ad39fb2becfa9ddc4b23b5e85c88123462d86ef2",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
-                "phpdocumentor/reflection-common": "^1.0"
+                "php": ">=7.1",
+                "phpdocumentor/reflection-common": "^2.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^6.4"
+                "phpunit/phpunit": "^6.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "0.x-dev"
                 }
             },
             "autoload": {
@@ -779,7 +776,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2017-12-30T13:23:38+00:00"
+            "time": "2018-01-31T13:23:25+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -1099,12 +1096,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c4cdf0e12b3a5de0ee433338c95f6ec40a28bdfd"
+                "reference": "c05279e235bcc1ad10f5a4c0d24cbc4fbdd71235"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c4cdf0e12b3a5de0ee433338c95f6ec40a28bdfd",
-                "reference": "c4cdf0e12b3a5de0ee433338c95f6ec40a28bdfd",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c05279e235bcc1ad10f5a4c0d24cbc4fbdd71235",
+                "reference": "c05279e235bcc1ad10f5a4c0d24cbc4fbdd71235",
                 "shasum": ""
             },
             "require": {
@@ -1175,7 +1172,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-01-26T16:48:21+00:00"
+            "time": "2018-01-29T15:29:51+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1883,12 +1880,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "87f8f5fd77fbd9ef83e8c21dc5ec002203ba83d3"
+                "reference": "0df1908962e7a3071564e857d86874dad1ef204a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/87f8f5fd77fbd9ef83e8c21dc5ec002203ba83d3",
-                "reference": "87f8f5fd77fbd9ef83e8c21dc5ec002203ba83d3",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/0df1908962e7a3071564e857d86874dad1ef204a",
+                "reference": "0df1908962e7a3071564e857d86874dad1ef204a",
                 "shasum": ""
             },
             "require": {
@@ -1925,7 +1922,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-01-29T08:33:01+00:00"
+            "time": "2018-01-29T19:49:41+00:00"
         }
     ],
     "packages-dev": [
@@ -1935,12 +1932,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "977feae69ad0323d2aed9407c665a552aea28632"
+                "reference": "09dcef65965712877bba624ee0f28194c36f21f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/977feae69ad0323d2aed9407c665a552aea28632",
-                "reference": "977feae69ad0323d2aed9407c665a552aea28632",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/09dcef65965712877bba624ee0f28194c36f21f6",
+                "reference": "09dcef65965712877bba624ee0f28194c36f21f6",
                 "shasum": ""
             },
             "require": {
@@ -1978,7 +1975,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-01-18T00:31:32+00:00"
+            "time": "2018-01-31T22:57:59+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
