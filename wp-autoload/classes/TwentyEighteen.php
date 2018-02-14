@@ -2,7 +2,7 @@
 /**
  * ThemeEighteen.php
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen;
@@ -15,6 +15,46 @@ use ColbyComms\TwentyEighteen\PageHeader;
  * Namespaced utility functions.
  */
 class TwentyEighteen {
+	/**
+	 * Whether to load production assets.
+	 *
+	 * @var bool
+	 */
+	const PROD = true ;
+	/**
+	 * Plugin text domain.
+	 *
+	 * @var string
+	 */
+	const TEXT_DOMAIN = 'colby-wp-theme-twentyeighteen';
+	/**
+	 * Vendor name.
+	 *
+	 * @var string
+	 */
+	const VENDOR = 'colbycomms';
+
+	/**
+	 * Version.
+	 *
+	 * @var string
+	 */
+	const VERSION = '1.0.0';
+
+	/**
+	 * String preceding this plugin's filter.
+	 *
+	 * @var string
+	 */
+	const FILTER_NAMESPACE = 'colbycomms__twentyeighteen__';
+
+	/**
+	 * Filter for whether the header should have a transparent background.
+	 * 
+	 * @var bool
+	 */
+	const TRANSPARENT_HEADER_FILTER = self::FILTER_NAMESPACE  . 'header_is_transparent';
+
 	/**
 	 * Outputs the main class handler.
 	 *

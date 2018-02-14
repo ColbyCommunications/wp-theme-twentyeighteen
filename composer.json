@@ -11,7 +11,7 @@
   "scripts": {
     "phpcbf": "phpcbf --extensions=php",
     "lint": "phpcs --extensions=php -s",
-    "test": "phpunit"
+    "test": "composer lint"
   },
   "minimum-stability": "dev",
   "repositories": [
@@ -19,6 +19,11 @@
       "type": "vcs",
       "url":
         "https://github.com/ColbyCommunications/visual-term-description-editor"
+    },
+    {
+      "type": "vcs",
+      "url":
+        "https://github.com/ColbyCommunications/wp-collapsible"
     },
     {
       "type": "path",
@@ -37,7 +42,8 @@
     "htmlburger/carbon-fields": "^2.1",
     "colbycomms/whos-coming": "*",
     "sheabunge/visual-term-description-editor": "*",
-    "colbycomms/wp-schedule": "*"
+    "colbycomms/wp-schedule": "*",
+    "colbycomms/wp-collapsible": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.5",

@@ -12,7 +12,7 @@ const cssnano = require('cssnano');
 module.exports = {
   plugins: [
     postcssImport,
-    grid,
+    grid({ gridGutterWidth: '3rem' }),
     colorFunction,
     sizing({
       breakpoints: {

@@ -2,7 +2,7 @@
 /**
  * Performs theme initialization.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen;
@@ -17,8 +17,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }
 
-define( 'VERSION', '1.0.6' );
-define( 'TEXT_DOMAIN', 'colbycomms/wp-theme-twentyeighteen' );
+if ( ! defined( 'PROD' ) ) {
+	define( 'PROD', false );
+}
+define( 'VERSION', '1.0.7' );
+define( 'TEXT_DOMAIN', 'colby-wp-theme-twentyeighteen' );
 
 // Fix path to carbon fields assets URL failing to resolve.
 // TO-DO: See config.php and core/Carbon_Fields.php in that library for debugging.

@@ -28,18 +28,22 @@ function _open_sans() {
 }
 
 function _theme_styles() {
+	$min = defined( 'PROD' ) && PROD ? '.min' : '';
+
 	wp_enqueue_style(
 		TEXT_DOMAIN,
-		get_template_directory_uri() . '/dist/wp-theme-twentyeighteen.css',
+		get_template_directory_uri() . "/dist/wp-theme-twentyeighteen$min.css",
 		[],
 		VERSION
 	);
 }
 
 function _theme_scripts() {
+	$min = defined( 'PROD' ) && PROD ? '.min' : '';
+
 	wp_enqueue_script(
 		TEXT_DOMAIN,
-		get_template_directory_uri() . '/dist/wp-theme-twentyeighteen.js',
+		get_template_directory_uri() . "/dist/wp-theme-twentyeighteen$min.js",
 		[],
 		VERSION,
 		true

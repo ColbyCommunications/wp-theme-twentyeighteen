@@ -15,3 +15,7 @@ before_script:
   - composer phpcbf
   - composer lint
 script: composer test
+notifications:
+    slack: colbycommunications:7VDpGw5uHu7tZ7aHDO2puCfG
+    on_success: change
+    on_failure: change

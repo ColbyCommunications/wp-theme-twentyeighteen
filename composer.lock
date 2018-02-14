@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0f59198ea99aa40e179f2c850f359f2",
+    "content-hash": "5899945a5ac7bff1c3a6858801f56547",
     "packages": [
         {
             "name": "colbycomms/colby-svg",
@@ -49,11 +49,11 @@
         },
         {
             "name": "colbycomms/whos-coming",
-            "version": "dev-search-input-x-button",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "/Users/jwatkins/reunion/wp-content/plugins/whos-coming",
-                "reference": "22f104a7f747179bdac2043b209915e3c9f96bb3",
+                "reference": "5ec62cc0826477cb41058a186554829216d165ce",
                 "shasum": null
             },
             "require": {
@@ -127,7 +127,17 @@
                     "wp/index.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "lint": [
+                    "./vendor/bin/phpcs --extensions=php -s"
+                ],
+                "fix": [
+                    "./vendor/bin/phpcbf --extensions=php -s"
+                ],
+                "test": [
+                    "composer lint && vendor/bin/phpunit"
+                ]
+            },
             "authors": [
                 {
                     "name": "John Watkins",
@@ -135,6 +145,10 @@
                 }
             ],
             "description": "A WordPress shortcode for collapsible HTML drawers.",
+            "support": {
+                "source": "https://github.com/ColbyCommunications/wp-collapsible/tree/master",
+                "issues": "https://github.com/ColbyCommunications/wp-collapsible/issues"
+            },
             "time": "2018-01-19T12:43:28+00:00"
         },
         {
@@ -1096,12 +1110,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c05279e235bcc1ad10f5a4c0d24cbc4fbdd71235"
+                "reference": "3330ef26ade05359d006041316ed0fa9e8e3cefe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c05279e235bcc1ad10f5a4c0d24cbc4fbdd71235",
-                "reference": "c05279e235bcc1ad10f5a4c0d24cbc4fbdd71235",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3330ef26ade05359d006041316ed0fa9e8e3cefe",
+                "reference": "3330ef26ade05359d006041316ed0fa9e8e3cefe",
                 "shasum": ""
             },
             "require": {
@@ -1172,7 +1186,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-01-29T15:29:51+00:00"
+            "time": "2018-02-01T05:57:37+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1284,12 +1298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "35df5e7539f65399b38ff3fcd323d53e08d8dfcd"
+                "reference": "34369daee48eafb2651bea869b4b15d75ccc35f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/35df5e7539f65399b38ff3fcd323d53e08d8dfcd",
-                "reference": "35df5e7539f65399b38ff3fcd323d53e08d8dfcd",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/34369daee48eafb2651bea869b4b15d75ccc35f9",
+                "reference": "34369daee48eafb2651bea869b4b15d75ccc35f9",
                 "shasum": ""
             },
             "require": {
@@ -1340,7 +1354,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2018-01-29T13:45:34+00:00"
+            "time": "2018-02-01T13:46:46+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -1751,7 +1765,7 @@
         },
         {
             "name": "sebastian/version",
-            "version": "dev-master",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/version.git",
@@ -1932,12 +1946,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "09dcef65965712877bba624ee0f28194c36f21f6"
+                "reference": "2503b5aca573b6d4b9c4f92ab639183a663ff7c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/09dcef65965712877bba624ee0f28194c36f21f6",
-                "reference": "09dcef65965712877bba624ee0f28194c36f21f6",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/2503b5aca573b6d4b9c4f92ab639183a663ff7c7",
+                "reference": "2503b5aca573b6d4b9c4f92ab639183a663ff7c7",
                 "shasum": ""
             },
             "require": {
@@ -1975,7 +1989,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-01-31T22:57:59+00:00"
+            "time": "2018-02-04T22:33:35+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
@@ -2022,6 +2036,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "colbycomms/colby-svg": 20,
+        "colbycomms/wp-collapsible": 20,
         "wp-coding-standards/wpcs": 20
     },
     "prefer-stable": false,
