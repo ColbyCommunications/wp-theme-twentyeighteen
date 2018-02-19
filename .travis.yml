@@ -4,9 +4,9 @@ cache:
 before_install:
   - nvm install node
 install:
-  - yarn install
   - rm -rf composer.lock
   - composer install
+  - yarn install
 php:
   - '7.1'
 before_script:
