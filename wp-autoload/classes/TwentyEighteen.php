@@ -20,7 +20,7 @@ class TwentyEighteen {
 	 *
 	 * @var bool
 	 */
-	const PROD = true ;
+	const PROD = true;
 	/**
 	 * Plugin text domain.
 	 *
@@ -50,10 +50,10 @@ class TwentyEighteen {
 
 	/**
 	 * Filter for whether the header should have a transparent background.
-	 * 
+	 *
 	 * @var bool
 	 */
-	const TRANSPARENT_HEADER_FILTER = self::FILTER_NAMESPACE  . 'header_is_transparent';
+	const TRANSPARENT_HEADER_FILTER = self::FILTER_NAMESPACE . 'header_is_transparent';
 
 	/**
 	 * Outputs the main class handler.
@@ -315,7 +315,7 @@ class TwentyEighteen {
 		add_filter(
 			'nav_menu_link_attributes',
 			function( $attr, $item ) use ( $class, $args ) {
-				
+
 				$attr['class'] = "{$class}__btn"
 					. ( isset( $args['link-class'] ) ? " {$args['link-class']}" : '' );
 
@@ -448,7 +448,7 @@ class TwentyEighteen {
 
 	/**
 	 * Provides settings for taxonomies created by this theme.
-	 * 
+	 *
 	 * @return array A list of taxonomies and their settings.
 	 */
 	public static function get_taxonomies() : array {

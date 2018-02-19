@@ -13,35 +13,13 @@
     "lint": "phpcs --extensions=php -s",
     "test": "composer lint"
   },
-  "minimum-stability": "dev",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url":
-        "https://github.com/ColbyCommunications/visual-term-description-editor"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/ColbyCommunications/wp-collapsible"
-    },
-    {
-      "type": "path",
-      "url": "/Users/jwatkins/reunion/wp-content/plugins/whos-coming"
-    },
-    {
-      "type": "path",
-      "url": "/Users/jwatkins/colby-wp-schedule"
-    }
-  ],
-  "config": {
-    "github-protocols": ["https"]
-  },
+  "minimum-stability": "stable",
   "require": {
     "colbycomms/colby-svg": "dev-master",
     "htmlburger/carbon-fields": "^2.1",
-    "colbycomms/whos-coming": "*",
+    "colbycomms/whos-coming": "dev-master",
     "sheabunge/visual-term-description-editor": "*",
-    "colbycomms/wp-schedule": "*",
+    "colbycomms/wp-schedule": "dev-master",
     "colbycomms/wp-collapsible": "dev-master",
     "colbycomms/heroic-panel": "dev-master"
   },

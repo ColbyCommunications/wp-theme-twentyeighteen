@@ -13,7 +13,7 @@ namespace ColbyComms\TwentyEighteen\Shortcodes;
 class SiteSearchForm {
 	/**
 	 * The shortcode tag.
-	 * 
+	 *
 	 * @var string
 	 */
 	const SHORTCODE_TAG = 'site-search-form';

@@ -10,9 +10,11 @@ use ColbyComms\TwentyEighteen\{PageHeader, TwentyEighteen as T18};
 global $post;
 
 
-add_filter( T18::TRANSPARENT_HEADER_FILTER, function() {
-	return true;
-} );
+add_filter(
+	T18::TRANSPARENT_HEADER_FILTER, function() {
+		return true;
+	}
+);
 
 remove_filter( 'the_content', 'wpautop' );
 

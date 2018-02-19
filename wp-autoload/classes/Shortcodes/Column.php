@@ -13,7 +13,7 @@ namespace ColbyComms\TwentyEighteen\Shortcodes;
 class Column {
 	/**
 	 * This shortcode's tag.
-	 * 
+	 *
 	 * @var string
 	 */
 	const SHORTCODE_TAG = 'column';

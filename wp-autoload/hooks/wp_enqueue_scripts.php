@@ -61,6 +61,6 @@ function _print_styles() {
 		get_template_directory_uri() . '/assets/print.css',
 		[],
 		VERSION,
-		isset( $_GET['print'] ) ? 'all' : 'print'
+		get_query_var( 'print' ) ? 'all' : 'print'
 	);
 }

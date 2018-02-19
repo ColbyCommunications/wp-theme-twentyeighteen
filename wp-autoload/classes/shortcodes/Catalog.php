@@ -25,6 +25,7 @@ class Catalog {
 	/**
 	 * Gets a query for posts with the catalog-item post_type.
 	 *
+	 * @param array $atts Options.
 	 * @return WP_Query
 	 */
 	private static function get_catalog_query( $atts ) {
@@ -40,8 +41,8 @@ class Catalog {
 				[
 					'taxonomy' => 'service-category',
 					'field' => 'name',
-					'terms' => array_map( 'trim', explode( ',', $atts['categories'] ) ) 
-				]
+					'terms' => array_map( 'trim', explode( ',', $atts['categories'] ) ),
+				],
 			];
 		}
 

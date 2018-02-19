@@ -13,7 +13,7 @@ namespace ColbyComms\TwentyEighteen\Shortcodes;
 class Button {
 	/**
 	 * This shortcode's tag.
-	 * 
+	 *
 	 * @var string
 	 */
 	const SHORTCODE_TAG = 'button';
@@ -36,7 +36,7 @@ class Button {
 	 */
 	public static function render_shortcode( $atts = [], $content = '' ) {
 		$content = $atts['text'] ?? $content;
-		
+
 		if ( isset( $atts['extra_text'] ) ) {
 			$content = "<span class=\"btn__first-line\">
 				$content

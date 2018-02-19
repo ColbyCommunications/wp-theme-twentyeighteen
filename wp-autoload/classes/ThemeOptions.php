@@ -71,7 +71,13 @@ class ThemeOptions {
 		);
 	}
 
+	/**
+	 * Get theme option.
+	 *
+	 * @param string $key The option key.
+	 * @return mixed The value.
+	 */
 	public static function get( string $key ) {
 		return Helper::get_theme_option( $key );
-	} 
+	}
 }

@@ -13,7 +13,7 @@ namespace ColbyComms\TwentyEighteen\Shortcodes;
 class Theme {
 	/**
 	 * This shortcode's tag.
-	 * 
+	 *
 	 * @var string
 	 */
 	const SHORTCODE_TAG = 'theme';
