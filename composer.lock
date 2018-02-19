@@ -179,12 +179,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/wp-schedule.git",
-                "reference": "53a31e50083f2fc00f9e8f2f7ebd0f67a52953ca"
+                "reference": "c9f8cbfd149b9dd525954094c5e14ac2601a6051"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/53a31e50083f2fc00f9e8f2f7ebd0f67a52953ca",
-                "reference": "53a31e50083f2fc00f9e8f2f7ebd0f67a52953ca",
+                "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/c9f8cbfd149b9dd525954094c5e14ac2601a6051",
+                "reference": "c9f8cbfd149b9dd525954094c5e14ac2601a6051",
                 "shasum": ""
             },
             "require": {
@@ -209,12 +209,12 @@
             "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
-                    "name": "Iavor Dekov",
-                    "email": "ivdekov@colby.edu"
+                    "name": "John Watkins",
+                    "email": "john.watkins@colby.edu"
                 }
             ],
             "description": "A WordPress plugin for creating table-based schedules.",
-            "time": "2018-02-19T17:59:14+00:00"
+            "time": "2018-02-19T18:31:34+00:00"
         },
         {
             "name": "composer/installers",
