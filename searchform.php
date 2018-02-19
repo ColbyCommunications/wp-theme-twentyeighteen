@@ -2,7 +2,7 @@
 /**
  * Search form template.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 use ColbyComms\SVG\SVG;

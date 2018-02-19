@@ -2,7 +2,7 @@
 /**
  * ThemeOptions.php
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen;

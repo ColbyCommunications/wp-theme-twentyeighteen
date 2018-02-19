@@ -2,7 +2,7 @@
 /**
  * Hooks functions to the user_can_richedit filter.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen\Hooks;

@@ -2,7 +2,7 @@
 /**
  * Creates a shortcode for a catalog-like listing of items with descriptions.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen\Shortcodes;

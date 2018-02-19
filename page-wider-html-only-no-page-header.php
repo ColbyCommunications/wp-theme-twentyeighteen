@@ -9,6 +9,7 @@ use ColbyComms\TwentyEighteen\{PageHeader, TwentyEighteen as T18};
 
 global $post;
 
+
 add_filter( T18::TRANSPARENT_HEADER_FILTER, function() {
 	return true;
 } );

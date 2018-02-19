@@ -2,7 +2,7 @@
 /**
  * Hooks functions to the colbycomms_twentyeighteen__after_page_header action.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen\Hooks;

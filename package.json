@@ -1,5 +1,5 @@
 {
-  "name": "wp-theme-twentyeighteen",
+  "name": "colby-wp-theme-twentyeighteen",
   "version": "0.1.0",
   "description": "A WordPress theme created for new WP sites.",
   "main": "src/js",
@@ -57,6 +57,7 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
     "click-outside": "^2.0.2",
     "colby-wp-collapsible": "^1.0.14",
     "shrinkable-menu": "^1.0.0"

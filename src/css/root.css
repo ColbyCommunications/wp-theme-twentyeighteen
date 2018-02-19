@@ -1,6 +1,7 @@
 :root {
   --sans: "Open Sans", sans-serif;
   --serif: "franklin-gothic-urw", sans-serif;
+  --primary: #214280;
 }
 
 @custom-props-themes;

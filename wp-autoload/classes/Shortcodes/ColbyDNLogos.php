@@ -2,7 +2,7 @@
 /**
  * Creates a shortcode for a block showing the Colby logo and the DareNorthward logo.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen\Shortcodes;

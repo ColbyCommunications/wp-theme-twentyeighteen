@@ -2,7 +2,7 @@
 /**
  * Template for an article excerpt.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 ?>

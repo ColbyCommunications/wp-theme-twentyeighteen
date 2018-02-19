@@ -2,7 +2,7 @@
 /**
  * Templage for a post footer.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 ?>

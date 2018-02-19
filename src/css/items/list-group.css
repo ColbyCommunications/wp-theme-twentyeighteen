@@ -12,6 +12,7 @@
 
 .list-group > li,
 .list-group > a,
+.list-group > div > a,
 .list-group > button {
   position: relative;
   z-index: 4;
@@ -23,6 +24,7 @@
 }
 
 .list-group > a,
+.list-group > div,
 .list-group > button {
   padding: 0.75rem 1rem;
   background-color: var(--background);
@@ -34,12 +36,30 @@
   padding: 0.5rem 1rem;
 }
 
+.list-group > li > ul,
+.list-group > div > ul {
+  padding-top: 0.5rem;
+}
+
 .list-group > li:first-child {
   padding-top: 1em;
 }
 
 .list-group > li:last-child {
   padding-bottom: 1.25em;
+}
+
+.list-group--condensed > li {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.list-group--condensed > li:first-child {
+  padding-top: 0.5rem;
+}
+
+.list-group--condensed > li:last-child {
+  padding-bottom: 0.5rem;
 }
 
 .list-group > a:hover,

@@ -2,7 +2,7 @@
 /**
  * Autoload hook files and load classes.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -25,3 +25,5 @@ new ColbyComms\TwentyEighteen\Shortcodes\Theme;
 
 // Theme options page.
 new ColbyComms\TwentyEighteen\ThemeOptions();
+
+add_filter( ColbyComms\Schedules\Schedules::ENQUEUE_SCRIPT_FILTER, '__return_false' );

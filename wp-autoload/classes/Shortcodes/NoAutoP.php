@@ -2,7 +2,7 @@
 /**
  * Creates a shortcode for a section without autoparagraphs.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen\Shortcodes;

@@ -2,7 +2,7 @@
 /**
  * Template Name: Page (wider, HTML only)
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 use ColbyComms\TwentyEighteen\{PageHeader, TwentyEighteen as T18};

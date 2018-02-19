@@ -2,7 +2,7 @@
 /**
  * Template for single pages
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 // Fallback until a more specific template is needed.

@@ -2,7 +2,7 @@
 /**
  * Fallback template
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 // Time to make a new template.

@@ -1,0 +1,134 @@
+/* Schedule styles originally created for Commencement 2017 */
+
+.section--schedule h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.section--schedule h5 {
+  color: black;
+  color: var(--primary, black);
+}
+
+.section--schedule .day {
+  width: 100%;
+  margin-bottom: 2.25rem;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.section--schedule .day h4 {
+  padding: 0.375rem 1.5rem;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  background: var(--primary);
+}
+
+.section--schedule .event {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.section--schedule .event:nth-of-type(odd) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.section--schedule .event {
+  font-weight: 600;
+}
+
+.section--schedule .event .event__svg {
+  position: relative;
+  top: 1px;
+  left: 5px;
+  font-size: 1rem;
+}
+
+.section--schedule .event .event__svg svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--primary);
+  transition: transform 0.1s;
+  transform: scale(0.9);
+}
+
+.section--schedule .event a.event__svg:hover svg {
+  color: var(--highlight);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section--schedule .event .event__links {
+  margin-top: 0.75rem;
+}
+
+.section--schedule .section--schedule__inner {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0 auto;
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+}
+
+.section--schedule .section--schedule__inner > div:first-of-type {
+  flex: 0 0 66.666%;
+  max-width: 66.666%;
+}
+
+@media screen and (min-width: 768px) {
+  .section--schedule .section--schedule__inner > div:first-of-type {
+    padding-right: 3rem;
+  }
+}
+
+body:not(.wp-is-mobile) .section--schedule .section--schedule__inner > div:last-of-type {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding-right: 0;
+  padding-left: 3rem;
+}
+
+.section--schedule .section--schedule__inner .schedule-gallery {
+  padding-top: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section--schedule .section--schedule__inner .gallery-item {
+  margin-top: 0;
+  margin-bottom: 0.375rem;
+  border: 0;
+}
+
+.section--schedule .section--schedule__inner br {
+  display: none;
+}
+
+.section--schedule .schedule__key {
+  text-align: right;
+}
+
+.section--schedule .schedule__key span {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 2.25rem;
+  font-size: 0.841rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.section--schedule .schedule__key svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+  color: var(--primary);
+}
+
+.section--schedule .schedule__key--bottom {
+  margin-top: -3rem;
+}
+
+.section--schedule .schedule__key--top {
+  margin-bottom: 0.125rem;
+}

@@ -2,7 +2,7 @@
 /**
  * Creates a shortcode for a themed area.
  *
- * @package colbycomms/wp-theme-twentyeighteen
+ * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen\Shortcodes;
