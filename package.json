@@ -15,7 +15,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && composer phpcbf && composer lint",
+      "pre-commit": "npm run lint && npm run stylelint && composer phpcbf && composer lint",
       "pre-push": "npm run prepare && composer lint"
     }
   },
@@ -63,6 +63,7 @@
     "react": "^16.2.0",
     "react-add-to-calendar": "^0.1.5",
     "react-dom": "^16.2.0",
-    "shrinkable-menu": "^1.0.0"
+    "shrinkable-menu": "^1.0.0",
+    "styled-components": "^3.1.6"
   }
 }

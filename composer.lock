@@ -53,12 +53,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/heroic-panel.git",
-                "reference": "f59a83d7b44540a56ab321e1ae6d5b975db0c88e"
+                "reference": "e1c16a90d70cefd106765ec208c578274c5a273f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/heroic-panel/zipball/f59a83d7b44540a56ab321e1ae6d5b975db0c88e",
-                "reference": "f59a83d7b44540a56ab321e1ae6d5b975db0c88e",
+                "url": "https://api.github.com/repos/ColbyCommunications/heroic-panel/zipball/e1c16a90d70cefd106765ec208c578274c5a273f",
+                "reference": "e1c16a90d70cefd106765ec208c578274c5a273f",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 }
             ],
             "description": "A shortcode for a panel with a background image and a superimposed content block.",
-            "time": "2018-02-14T14:51:54+00:00"
+            "time": "2018-02-22T15:33:15+00:00"
         },
         {
             "name": "colbycomms/whos-coming",
@@ -1957,16 +1957,16 @@
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.2.2",
+            "version": "3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "d7c00c3000ac0ce79c96fcbfef86b49a71158cd1"
+                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d7c00c3000ac0ce79c96fcbfef86b49a71158cd1",
-                "reference": "d7c00c3000ac0ce79c96fcbfef86b49a71158cd1",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4842476c434e375f9d3182ff7b89059583aa8b27",
+                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27",
                 "shasum": ""
             },
             "require": {
@@ -1976,7 +1976,7 @@
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0"
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
             },
             "bin": [
                 "bin/phpcs",
@@ -2004,7 +2004,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-12-19T21:44:46+00:00"
+            "time": "2018-02-20T21:35:23+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",

@@ -7,9 +7,9 @@
 
 namespace ColbyComms\TwentyEighteen\Hooks;
 
-use ColbyComms\TwentyEighteen\TEXT_DOMAIN;
-use ColbyComms\TwentyEighteen\VERSION;
+use ColbyComms\TwentyEighteen\TwentyEighteen;
 
+add_action( 'init', __NAMESPACE__ . '\_register_assets' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_open_sans' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_styles' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_theme_scripts' );
@@ -17,6 +17,31 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_print_styles' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_remove_unwanted_styles', 999 );
 
 // phpcs:disable Squiz.Commenting.FunctionComment.Missing
+
+function _register_assets() {
+	$min = defined( 'PROD' ) && PROD ? '.min' : '';
+	wp_register_style(
+		TwentyEighteen::TEXT_DOMAIN,
+		get_template_directory_uri() . '/dist/' . TwentyEighteen::TEXT_DOMAIN . "$min.css",
+		[],
+		TwentyEighteen::VERSION
+	);
+
+	wp_register_style(
+		TwentyEighteen::TEXT_DOMAIN . '-blocks',
+		get_template_directory_uri() . '/dist/' . TwentyEighteen::TEXT_DOMAIN . "-blocks$min.css",
+		[],
+		TwentyEighteen::VERSION
+	);
+
+	wp_register_script(
+		TwentyEighteen::TEXT_DOMAIN,
+		get_template_directory_uri() . '/dist/' . TwentyEighteen::TEXT_DOMAIN . "$min.js",
+		[],
+		TwentyEighteen::VERSION,
+		true
+	);
+}
 
 function _open_sans() {
 	wp_enqueue_style(
@@ -26,26 +51,12 @@ function _open_sans() {
 }
 
 function _theme_styles() {
-	$min = defined( 'PROD' ) && PROD ? '.min' : '';
-
-	wp_enqueue_style(
-		TEXT_DOMAIN,
-		get_template_directory_uri() . '/dist/' . TEXT_DOMAIN . "$min.css",
-		[],
-		VERSION
-	);
+	wp_enqueue_style( TwentyEighteen::TEXT_DOMAIN );
+	wp_enqueue_style( TwentyEighteen::TEXT_DOMAIN . '-blocks' );
 }
 
 function _theme_scripts() {
-	$min = defined( 'PROD' ) && PROD ? '.min' : '';
-
-	wp_enqueue_script(
-		TEXT_DOMAIN,
-		get_template_directory_uri() . '/dist/' . TEXT_DOMAIN . "$min.js",
-		[],
-		VERSION,
-		true
-	);
+	wp_enqueue_script( TwentyEighteen::TEXT_DOMAIN );
 }
 
 function _remove_unwanted_styles() {
@@ -60,7 +71,7 @@ function _print_styles() {
 		'twentyeighteen-print',
 		get_template_directory_uri() . '/assets/print.css',
 		[],
-		VERSION,
+		TwentyEighteen::VERSION,
 		get_query_var( 'print' ) ? 'all' : 'print'
 	);
 }

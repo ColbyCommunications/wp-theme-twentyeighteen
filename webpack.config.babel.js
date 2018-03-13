@@ -9,6 +9,14 @@ const main = () => {
   const min = PROD ? '.min' : '';
   const entry = {
     [packageJson.name]: ['./src/js/index.js', './src/css/main.css'],
+    [`${packageJson.name}-editor`]: [
+      './src/js/editor/index.js',
+      './src/css/editor/editor.css',
+    ],
+    [`${packageJson.name}-blocks`]: [
+      './src/js/editor/index.js',
+      './src/css/blocks/index.css',
+    ],
   };
   const filename = `[name]${min}.js`;
   const plugins = [new ExtractTextPlugin(`[name]${min}.css`)];
@@ -33,9 +41,17 @@ const main = () => {
         },
         {
           test: /\.css$/,
+          exclude: [/editor.css$/],
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: ['css-loader', 'postcss-loader'],
+          }),
+        },
+        {
+          test: [/editor.css$/],
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: ['css-loader'],
           }),
         },
       ],

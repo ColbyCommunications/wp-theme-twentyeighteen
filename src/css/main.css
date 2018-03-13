@@ -1,8 +1,6 @@
 @import "suitcss-base"; /* Normalize with extra. */
 @import "./root";
 @import "./elements";
-@import "./grid";
-@import "./type";
 @import "./aria";
 @import "./utils/backgrounds";
 @import "./utils/borders";
@@ -14,7 +12,6 @@
 @import "./utils/position";
 @import "./utils/print";
 @import "./utils/sizing";
-@import "./utils/spacing";
 @import "./utils/text";
 @import "./utils/wordpress";
 @import "./items/badge";

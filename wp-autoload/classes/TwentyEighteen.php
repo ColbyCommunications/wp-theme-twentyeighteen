@@ -7,7 +7,6 @@
 
 namespace ColbyComms\TwentyEighteen;
 
-use Carbon_Fields\Helper\Helper;
 use ColbyComms\SVG\SVG;
 use ColbyComms\TwentyEighteen\PageHeader;
 
@@ -20,7 +19,7 @@ class TwentyEighteen {
 	 *
 	 * @var bool
 	 */
-	const PROD = true;
+	const PROD = false;
 	/**
 	 * Plugin text domain.
 	 *
@@ -129,7 +128,7 @@ class TwentyEighteen {
 	 * Prints the sub footer if it is set via theme options.
 	 */
 	public static function super_footer() {
-		$super_footer = apply_filters( 'super_footer_content', Helper::get_theme_option( 'super_footer_content' ) );
+		$super_footer = apply_filters( 'super_footer_content', ThemeOptions::get( 'super_footer_content' ) );
 		if ( ! empty( $super_footer ) ) {
 			echo do_shortcode( $super_footer );
 		}
@@ -247,7 +246,7 @@ class TwentyEighteen {
 		static $nav_type;
 
 		if ( empty( $nav_type ) ) {
-			$nav_type = Helper::get_theme_option( 'menu_type' );
+			$nav_type = ThemeOptions::get( 'menu_type' );
 		}
 
 		return $nav_type;
@@ -367,7 +366,13 @@ class TwentyEighteen {
 	 */
 	public static function sticky_nav() {
 		if ( 'fixed-bottom' === self::get_nav_type() ) {
-			echo self::render_navbar( 'sticky-nav', [ 'link-class' => 'primary btn' ] );
+			echo self::render_navbar(
+				'sticky-nav',
+				[
+					'link-class' => 'primary btn',
+					'depth' => 1
+				]
+			);
 		}
 	}
 
@@ -375,7 +380,7 @@ class TwentyEighteen {
 	 * Prints the sub footer if it is set via theme options.
 	 */
 	public static function sub_footer() {
-		$sub_footer = apply_filters( 'sub_footer_content', Helper::get_theme_option( 'sub_footer_content' ) );
+		$sub_footer = apply_filters( 'sub_footer_content', ThemeOptions::get( 'sub_footer_content' ) );
 		if ( ! empty( $sub_footer ) ) {
 			echo do_shortcode( $sub_footer );
 		}
@@ -423,7 +428,7 @@ class TwentyEighteen {
 	public static function get_post_types() {
 		$post_types = [];
 
-		if ( Helper::get_theme_option( 'do_service_catalog' ) === true ) {
+		if ( ThemeOptions::get( 'do_service_catalog' ) === true ) {
 			$post_types['catalog-item'] = [
 				'label' => 'Catalog',
 				'labels' => [

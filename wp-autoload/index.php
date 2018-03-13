@@ -26,4 +26,9 @@ new ColbyComms\TwentyEighteen\Shortcodes\Theme();
 // Theme options page.
 new ColbyComms\TwentyEighteen\ThemeOptions();
 
+// Editor.
+new ColbyComms\TwentyEighteen\Editor();
+
+
+return;
 add_filter( ColbyComms\Schedules\Schedules::ENQUEUE_SCRIPT_FILTER, '__return_false' );
