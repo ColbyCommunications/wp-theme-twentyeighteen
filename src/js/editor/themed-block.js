@@ -33,7 +33,6 @@ registerBlockType('colbycomms/themed-block', {
   },
 
   edit({ attributes, setAttributes, isSelected }) {
-    console.log(attributes);
     let { themeName, width } = attributes;
     themeName = themeName || THEMES[cssThemes.defaultTheme].name;
     width = width || '';

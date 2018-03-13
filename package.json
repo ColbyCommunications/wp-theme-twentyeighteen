@@ -15,8 +15,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run stylelint && composer phpcbf && composer lint",
-      "pre-push": "npm run prepare && composer lint"
+      "pre-commit":
+        "npm run lint && npm run stylelint && composer phpcbf && composer lint"
     }
   },
   "devDependencies": {

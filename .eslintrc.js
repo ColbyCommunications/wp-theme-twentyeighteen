@@ -4,5 +4,8 @@ module.exports = {
   extends: ["fbjs"],
   rules: {
     "import/prefer-default-export": 0
+  },
+  globals:{
+    wp: true
   }
 }

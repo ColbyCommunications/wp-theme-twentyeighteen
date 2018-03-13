@@ -370,7 +370,7 @@ class TwentyEighteen {
 				'sticky-nav',
 				[
 					'link-class' => 'primary btn',
-					'depth' => 1
+					'depth' => 1,
 				]
 			);
 		}

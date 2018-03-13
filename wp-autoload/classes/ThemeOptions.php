@@ -28,7 +28,7 @@ class ThemeOptions {
 	 * Creates the options page.
 	 */
 	public function create_container() {
-		$this->container = Container::make(  '__theme_options', TwentyEighteen::TEXT_DOMAIN . '__options', 'Theme Options' );
+		$this->container = Container::make( '__theme_options', TwentyEighteen::TEXT_DOMAIN . '__options', 'Theme Options' );
 	}
 
 	/**

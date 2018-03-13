@@ -1,21 +1,24 @@
 <?php
 /**
  * Editor.php
- * 
+ *
  * @package colbycomms/wp-theme-twentyeighteen
  */
 
 namespace ColbyComms\TwentyEighteen;
 
+/**
+ * Registers hooks for editor blocks.
+ */
 class Editor {
 	/**
 	 * Names of blocks to register.
-	 * 
+	 *
 	 * @var array
 	 */
 	const BLOCKS = [
 		'divider',
-		'themed-block'
+		'themed-block',
 	];
 
 	/**
@@ -38,7 +41,7 @@ class Editor {
 		wp_register_style(
 			TwentyEighteen::TEXT_DOMAIN . '-editor',
 			"$dist/" . TwentyEighteen::TEXT_DOMAIN . "-editor$min.css",
-			['wp-edit-blocks']
+			[ 'wp-edit-blocks' ]
 		);
 
 		wp_register_script(
