@@ -30,6 +30,7 @@
 @import "./blocks/site-header";
 @import "./features/directory";
 @import "./features/schedule";
+@import "./calendar";
 
 .container {
   max-width: 1140px !important;

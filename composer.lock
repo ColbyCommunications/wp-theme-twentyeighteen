@@ -93,12 +93,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/whos-coming.git",
-                "reference": "5ec62cc0826477cb41058a186554829216d165ce"
+                "reference": "32d9193dd613a0190f8479604878a643e7bb6caa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/whos-coming/zipball/5ec62cc0826477cb41058a186554829216d165ce",
-                "reference": "5ec62cc0826477cb41058a186554829216d165ce",
+                "url": "https://api.github.com/repos/ColbyCommunications/whos-coming/zipball/32d9193dd613a0190f8479604878a643e7bb6caa",
+                "reference": "32d9193dd613a0190f8479604878a643e7bb6caa",
                 "shasum": ""
             },
             "require": {
@@ -127,7 +127,7 @@
                 }
             ],
             "description": "A listing of people who have R.S.V.P.'ed to an event, with the list entered in JSON or CSV format.",
-            "time": "2018-02-03T13:03:32+00:00"
+            "time": "2018-03-15T13:35:27+00:00"
         },
         {
             "name": "colbycomms/wp-collapsible",
