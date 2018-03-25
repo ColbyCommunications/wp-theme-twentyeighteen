@@ -74,8 +74,14 @@ class TwentyEighteen {
 	 * @var string
 	 */
 	const TRANSPARENT_HEADER_CLASS_FILTER = self::FILTER_NAMESPACE . 'transparent_header_class';
-	
 
+	/**
+	 * Name of the head title filter.
+	 * 
+	 * @var string
+	 */
+	const HEAD_TITLE_FILTER = self::FILTER_NAMESPACE . 'head_title';
+	
 	/**
 	 * Outputs the main class handler.
 	 *
@@ -422,7 +428,13 @@ class TwentyEighteen {
 	public static function get_head_title() {
 		$wp_title = wp_title( '', false );
 		$wp_title = $wp_title ? "$wp_title - " : '';
-		return $wp_title . get_bloginfo() . ' - Colby College';
+
+		/**
+		 * Filters the title in the document head.
+		 * 
+		 * @param string
+		 */
+		return apply_filters( self::HEAD_TITLE_FILTER, $wp_title . get_bloginfo() . ' - Colby College' );
 	}
 
 	/**
