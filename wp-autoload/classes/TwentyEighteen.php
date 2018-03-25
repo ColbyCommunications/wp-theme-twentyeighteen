@@ -45,14 +45,29 @@ class TwentyEighteen {
 	 *
 	 * @var string
 	 */
-	const FILTER_NAMESPACE = 'colbycomms__twentyeighteen__';
+	const FILTER_NAMESPACE = self::vendor . '__twentyeighteen__';
 
 	/**
 	 * Filter for whether the header should have a transparent background.
 	 *
-	 * @var bool
+	 * @var string
 	 */
 	const TRANSPARENT_HEADER_FILTER = self::FILTER_NAMESPACE . 'header_is_transparent';
+
+	/**
+	 * Name of the main class filter.
+	 * 
+	 * @var string
+	 */
+	const MAIN_CLASS_FILTER = self::FILTER_NAMESPACE . 'main_class';
+
+	/**
+	 * Name of the after page header filter.
+	 * 
+	 * @var sting
+	 */
+
+	 const AFTER_PAGE_HEADER_FILTER = self::FILTER_NAMESPACE . 'after_page_header';
 
 	/**
 	 * Outputs the main class handler.
@@ -68,7 +83,7 @@ class TwentyEighteen {
 		 * 
 		 * @param array $classes
 		 */
-		$classes = apply_filters( 'main_class', $classes );
+		$classes = apply_filters( self::MAIN_CLASS_FILTER, $classes );
 
 		echo 'class="' . esc_attr( implode( ' ', $classes ) ) . '"';
 	}
@@ -494,6 +509,6 @@ class TwentyEighteen {
 	 * @return void
 	 */
 	public static function after_page_header() : void {
-		echo apply_filters( 'colbycomms_twentyeighteen__after_page_header', '' );
+		echo apply_filters( self::AFTER_PAGE_HEADER_FILTER, '' );
 	}
 }

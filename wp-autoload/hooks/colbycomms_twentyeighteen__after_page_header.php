@@ -10,7 +10,7 @@ namespace ColbyComms\TwentyEighteen\Hooks;
 use Carbon_Fields\Helper\Helper;
 use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
-add_action( 'colbycomms_twentyeighteen__after_page_header', __NAMESPACE__ . '\_maybe_do_site_menu' );
+add_action( self::AFTER_PAGE_HEADER_FILTER, __NAMESPACE__ . '\_maybe_do_site_menu' );
 
 // phpcs:disable Squiz.Commenting.FunctionComment.Missing
 

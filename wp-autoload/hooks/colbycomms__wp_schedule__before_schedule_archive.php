@@ -6,7 +6,7 @@ add_filter(
 	'colbycomms__wp_schedule__before_schedule_archive', function( $string, $queried_object ) {
 		ob_start();
 	?>
-<main class="<?php echo esc_attr( implode( ' ', apply_filters( 'main_class', [ 'main' ] ) ) ); ?>">
+<main class="<?php echo esc_attr( implode( ' ', apply_filters( T18::MAIN_CLASS_FILTER, [ 'main' ] ) ) ); ?>">
 	<?php T18::schedule_archive_header( $queried_object ); ?>
 	<div class="container-lg mx-auto mb-5">
 	<?php
