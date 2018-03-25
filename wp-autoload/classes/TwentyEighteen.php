@@ -45,43 +45,14 @@ class TwentyEighteen {
 	 *
 	 * @var string
 	 */
-	const FILTER_NAMESPACE = self::vendor . '__twentyeighteen__';
+	const FILTER_NAMESPACE = self::VENDOR . '__twentyeighteen__';
 
-	/**
-	 * Filter for whether the header should have a transparent background.
-	 *
-	 * @var string
-	 */
 	const IS_HEADER_TRANSPARENT_FILTER = self::FILTER_NAMESPACE . 'is_header_transperent';
-
-	/**
-	 * Name of the main class filter.
-	 * 
-	 * @var string
-	 */
 	const MAIN_CLASS_FILTER = self::FILTER_NAMESPACE . 'main_class';
-
-	/**
-	 * Name of the after page header filter.
-	 * 
-	 * @var string
-	 */
-	 const AFTER_PAGE_HEADER_FILTER = self::FILTER_NAMESPACE . 'after_page_header';
-
-	/**
-	 * Name of the transparent header filter.
-	 *
-	 * @var string
-	 */
+	const AFTER_PAGE_HEADER_FILTER = self::FILTER_NAMESPACE . 'after_page_header';
 	const TRANSPARENT_HEADER_CLASS_FILTER = self::FILTER_NAMESPACE . 'transparent_header_class';
-
-	/**
-	 * Name of the head title filter.
-	 * 
-	 * @var string
-	 */
 	const HEAD_TITLE_FILTER = self::FILTER_NAMESPACE . 'head_title';
-	
+
 	/**
 	 * Outputs the main class handler.
 	 *
@@ -93,7 +64,7 @@ class TwentyEighteen {
 
 		/**
 		 * Filters the classes applied to the <main> element.
-		 * 
+		 *
 		 * @param array $classes
 		 */
 		$classes = apply_filters( self::MAIN_CLASS_FILTER, $classes );
@@ -176,23 +147,11 @@ class TwentyEighteen {
 	 * @return string The rendered HTML.
 	 */
 	public static function get_address_block() {
-		return '
-    <address>
-        <div class="mb-1">
-            <span class="h3 strong text-sans">
-                <a href="//colby.edu">Colby College</a>
-            </span>
-        </div>
-        <div>
-            4000 Mayflower Hill Drive <br>Waterville, Maine 04901
-        </div>
-        <div>
-            207-859-4000
-        </div>
-        <div>
-            <a href="//colby.edu/contact">Contact Us</a>
-        </div>
-    </address>';
+		ob_start();
+
+		get_template_part( 'parts/address' );
+
+		return ob_get_clean();
 	}
 
 	/**
@@ -431,7 +390,7 @@ class TwentyEighteen {
 
 		/**
 		 * Filters the title in the document head.
-		 * 
+		 *
 		 * @param string
 		 */
 		return apply_filters( self::HEAD_TITLE_FILTER, $wp_title . get_bloginfo() . ' - Colby College' );
@@ -533,13 +492,13 @@ class TwentyEighteen {
 
 	/**
 	 * Returns whether the header bar is transparent.
-	 * 
+	 *
 	 * @return bool Yes or no.
 	 */
 	public static function is_header_transparent() : bool {
 		/**
 		 * Filters whether the header bar is transparent.
-		 * 
+		 *
 		 * @return bool
 		 */
 		return apply_filters( self::IS_HEADER_TRANSPARENT_FILTER, false ) === true;
@@ -547,13 +506,13 @@ class TwentyEighteen {
 
 	/**
 	 * Returns the CSS class to apply to a transparent header bar.
-	 * 
+	 *
 	 * @return string
 	 */
 	public static function get_transparent_header_class() : string {
 		/**
 		 * Filters the CSS class applied to make the header bar transparent.
-		 * 
+		 *
 		 * @var string The CSS class.
 		 */
 		return apply_filters( self::TRANSPARENT_HEADER_CLASS_FILTER, 'dark-transparent' );

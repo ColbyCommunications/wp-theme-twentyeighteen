@@ -13,8 +13,8 @@ const cssThemes = require('./css-themes');
 module.exports = {
   plugins: [
     postcssImport,
-    grid({ gridGutterWidth: '3rem' }),
     colorFunction,
+    grid({ gridGutterWidth: '3rem' }),
     sizing({
       breakpoints: {
         sm: '576px',
