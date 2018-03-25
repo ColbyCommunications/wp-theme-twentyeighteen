@@ -21,13 +21,25 @@ class Navbar {
 	 */
 	public function __construct( $class = '', $args = [] ) {
 		$this->class = $class;
-		$this->args = $args;
+        $this->args = $args;
+
 
 		add_filter( 'nav_menu_item_id', [ __CLASS__, 'remove_menu_item_id' ] );
 		add_filter( 'nav_menu_submenu_css_class', [ $this, 'modify_submenu_classes' ] );
 		add_filter( 'nav_menu_css_class', [ $this, 'modify_menu_classes' ] );
 		add_filter( 'nav_menu_link_attributes', [ $this, 'modify_link_attributes' ], 10, 2 );
 		add_filter( 'walker_nav_menu_start_el', [ $this, 'modify_start_el' ], 10, 3 );
+	}
+
+	/**
+	 * Removes filters added in constructor.
+	 */
+	public function shut_down() {
+		remove_filter( 'nav_menu_item_id', [ __CLASS__, 'remove_menu_item_id' ] );
+		remove_filter( 'nav_menu_submenu_css_class', [ $this, 'modify_submenu_classes' ] );
+		remove_filter( 'nav_menu_css_class', [ $this, 'modify_menu_classes' ] );
+		remove_filter( 'nav_menu_link_attributes', [ $this, 'modify_link_attributes' ] );
+		remove_filter( 'walker_nav_menu_start_el', [ $this, 'modify_start_el' ] );
 	}
 
 	/**

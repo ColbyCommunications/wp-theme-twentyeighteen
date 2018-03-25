@@ -273,7 +273,11 @@ class TwentyEighteen {
 	public static function render_navbar( $class = 'shrinkable', $args = [] ) {
 		$navbar = new Navbar( $class, $args );
 
-		return $navbar->render();
+		$output = $navbar->render();
+
+		$navbar->shut_down();
+
+		return $output;
 	}
 
 	/**
