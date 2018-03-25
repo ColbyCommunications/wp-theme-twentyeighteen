@@ -62,6 +62,12 @@ class TwentyEighteen {
 	 */
 	public static function main_class( $classes = '' ) : void {
 		$classes = is_array( $classes ) ? $classes : explode( ' ', $classes );
+
+		/**
+		 * Filters the classes applied to the <main> element.
+		 * 
+		 * @param array $classes
+		 */
 		$classes = apply_filters( 'main_class', $classes );
 
 		echo 'class="' . esc_attr( implode( ' ', $classes ) ) . '"';
