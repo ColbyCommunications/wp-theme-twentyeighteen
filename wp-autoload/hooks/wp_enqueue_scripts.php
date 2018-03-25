@@ -19,7 +19,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\_remove_unwanted_styles', 99
 // phpcs:disable Squiz.Commenting.FunctionComment.Missing
 
 function _register_assets() {
-	$min = defined( 'PROD' ) && PROD ? '.min' : '';
+	$min = TwentyEighteen::PROD ? '.min' : '';
 	wp_register_style(
 		TwentyEighteen::TEXT_DOMAIN,
 		get_template_directory_uri() . '/dist/' . TwentyEighteen::TEXT_DOMAIN . "$min.css",

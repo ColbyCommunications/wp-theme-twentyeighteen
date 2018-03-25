@@ -11,9 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }
 
-if ( ! defined( 'PROD' ) ) {
-	define( 'PROD', false );
-}
 define( 'VERSION', '1.0.7' );
 define( 'TEXT_DOMAIN', 'colby-wp-theme-twentyeighteen' );
 
