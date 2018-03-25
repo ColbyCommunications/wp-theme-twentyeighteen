@@ -8,6 +8,7 @@
 use ColbyComms\SVG\SVG;
 use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
+
 ?><!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
@@ -21,8 +22,8 @@ use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 <body <?php body_class(); ?>>
 <header class="site-header py-1 px-2 container-fluid 
 <?php
-echo has_post_thumbnail( $post ) || apply_filters( T18::TRANSPARENT_HEADER_FILTER, false ) === true
-	? 'dark-transparent'
+echo has_post_thumbnail( $post ) || T18::is_header_transparent()
+	? T18::get_transparent_header_class()
 	: 'primary';
 	?>
 	">

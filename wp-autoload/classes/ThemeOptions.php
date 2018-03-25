@@ -15,6 +15,7 @@ use Carbon_Fields\{Container, Field};
  */
 class ThemeOptions {
 	const ANALYTICS_KEY = 'analytics_code';
+	const MENU_TYPE_KEY = 'menu_type';
 
 	/**
 	 * Adds hooks.
@@ -37,7 +38,7 @@ class ThemeOptions {
 	public function add_plugin_options() {
 		$this->container->add_fields(
 			[
-				Field::make( 'radio', 'menu_type', 'Navigation Display' )
+				Field::make( 'radio', self::MENU_TYPE_KEY, 'Navigation Display' )
 					->add_options(
 						[
 							'none' => 'No site navigation.',

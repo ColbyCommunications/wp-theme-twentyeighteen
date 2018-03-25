@@ -52,7 +52,7 @@ class TwentyEighteen {
 	 *
 	 * @var string
 	 */
-	const TRANSPARENT_HEADER_FILTER = self::FILTER_NAMESPACE . 'header_is_transparent';
+	const IS_HEADER_TRANSPARENT_FILTER = self::FILTER_NAMESPACE . 'is_header_transperent';
 
 	/**
 	 * Name of the main class filter.
@@ -64,10 +64,17 @@ class TwentyEighteen {
 	/**
 	 * Name of the after page header filter.
 	 * 
-	 * @var sting
+	 * @var string
 	 */
-
 	 const AFTER_PAGE_HEADER_FILTER = self::FILTER_NAMESPACE . 'after_page_header';
+
+	/**
+	 * Name of the transparent header filter.
+	 *
+	 * @var string
+	 */
+	const TRANSPARENT_HEADER_CLASS_FILTER = self::FILTER_NAMESPACE . 'transparent_header_class';
+	
 
 	/**
 	 * Outputs the main class handler.
@@ -510,5 +517,33 @@ class TwentyEighteen {
 	 */
 	public static function after_page_header() : void {
 		echo apply_filters( self::AFTER_PAGE_HEADER_FILTER, '' );
+	}
+
+	/**
+	 * Returns whether the header bar is transparent.
+	 * 
+	 * @return bool Yes or no.
+	 */
+	public static function is_header_transparent() : bool {
+		/**
+		 * Filters whether the header bar is transparent.
+		 * 
+		 * @return bool
+		 */
+		return apply_filters( self::IS_HEADER_TRANSPARENT_FILTER, false ) === true;
+	}
+
+	/**
+	 * Returns the CSS class to apply to a transparent header bar.
+	 * 
+	 * @return string
+	 */
+	public static function get_transparent_header_class() : string {
+		/**
+		 * Filters the CSS class applied to make the header bar transparent.
+		 * 
+		 * @var string The CSS class.
+		 */
+		return apply_filters( self::TRANSPARENT_HEADER_CLASS_FILTER, 'dark-transparent' );
 	}
 }

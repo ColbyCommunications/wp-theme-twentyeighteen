@@ -2,8 +2,7 @@
 // @codingStandardsIgnoreFile
 use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
-add_filter(
-	'colbycomms__twentyeighteen__header_is_transparent', function( $bool ) {
+add_filter( T18::IS_HEADER_TRANSPARENT, function( $bool ) {
 		global $post;
 
 		if ( ! is_page() ) {
