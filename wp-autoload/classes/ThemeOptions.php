@@ -16,6 +16,7 @@ use Carbon_Fields\{Container, Field};
 class ThemeOptions {
 	const ANALYTICS_KEY = 'analytics_code';
 	const MENU_TYPE_KEY = 'menu_type';
+	const SUPER_FOOTER_CONTENT_KEY = 'super_footer_content';
 
 	/**
 	 * Adds hooks.
@@ -50,7 +51,7 @@ class ThemeOptions {
 					->set_default_value( 'none' )
 					->set_help_text( 'Choose the type of navigation to display on this site for the main site menu ("Site Menu" under Appearance -> Menus).' ),
 
-				Field::make( 'textarea', 'super_footer_content', 'Content above the footer.' )
+				Field::make( 'textarea', self::SUPER_FOOTER_CONTENT_KEY, 'Content above the footer.' )
 					->set_help_text( 'Add content above the footer.' ),
 
 				Field::make( 'textarea', 'sub_footer_content', 'Content below the footer.' )

@@ -5,6 +5,7 @@
  * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
+// TO-DO: Supply filters and theme options.
 ?>
 <address>
 	<div class="mb-1">

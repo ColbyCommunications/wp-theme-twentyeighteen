@@ -5,8 +5,6 @@
  * @package colbycomms/colby-wp-theme-twentyeighteen
  */
 
-namespace ColbyComms\TwentyEighteen;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }
