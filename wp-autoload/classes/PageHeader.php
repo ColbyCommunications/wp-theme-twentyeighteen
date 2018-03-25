@@ -55,7 +55,7 @@ class PageHeader {
 		ob_start();
 		?>
 
-		<header class="page-header container-fluid largest primary mb-4">
+		<header class="page-header container-fluid largest primary">
 			<div class="container text-center">
 				<div>
 					<?php if ( isset( $options['content'] ) ) : ?>

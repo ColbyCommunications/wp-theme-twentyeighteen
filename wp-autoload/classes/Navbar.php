@@ -21,8 +21,7 @@ class Navbar {
 	 */
 	public function __construct( $class = '', $args = [] ) {
 		$this->class = $class;
-        $this->args = $args;
-
+		$this->args = $args;
 
 		add_filter( 'nav_menu_item_id', [ __CLASS__, 'remove_menu_item_id' ] );
 		add_filter( 'nav_menu_submenu_css_class', [ $this, 'modify_submenu_classes' ] );
