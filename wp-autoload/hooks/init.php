@@ -7,7 +7,7 @@
 
 namespace ColbyComms\TwentyEighteen\Hooks;
 
-use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
+use ColbyComms\TwentyEighteen\{ThemeOptions, TwentyEighteen as T18};
 
 add_action( 'init', __NAMESPACE__ . '\_register_post_types' );
 add_action( 'init', __NAMESPACE__ . '\_set_whether_to_do_event_listings', 5 );
@@ -33,7 +33,7 @@ function _register_post_types() {
 function _set_whether_to_do_event_listings() {
 	add_filter(
 		'colby_wp_schedule_run', function() {
-			return carbon_get_theme_option( 'do_event_listings' );
+			return ThemeOptions::get( ThemeOptions::DO_EVENT_LISTINGS_KEY );
 		}
 	);
 }

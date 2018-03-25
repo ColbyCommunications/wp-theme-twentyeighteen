@@ -53,6 +53,7 @@ class TwentyEighteen {
 	const TRANSPARENT_HEADER_CLASS_FILTER = self::FILTER_NAMESPACE . 'transparent_header_class';
 	const HEAD_TITLE_FILTER = self::FILTER_NAMESPACE . 'head_title';
 	const SUPER_FOOTER_CONTENT_FILTER = self::FILTER_NAMESPACE . 'super_footer_content';
+	const SUB_FOOTER_CONTENT_FILTER = self::FILTER_NAMESPACE . 'sub_footer_content';
 	const SOCIAL_ICON_SETTINGS_FILTER = self::FILTER_NAMESPACE . 'social_icon_settings';
 
 	/**
@@ -299,7 +300,16 @@ class TwentyEighteen {
 	 * Prints the sub footer if it is set via theme options.
 	 */
 	public static function sub_footer() {
-		$sub_footer = apply_filters( 'sub_footer_content', ThemeOptions::get( 'sub_footer_content' ) );
+		/**
+		 * Filters the subfooter content.
+		 * 
+		 * @param string HTML output.
+		 */
+		$sub_footer = apply_filters(
+			self::SUB_FOOTER_CONTENT_FILTER,
+			ThemeOptions::get( ThemeOptions::SUB_FOOTER_CONTENT_KEY ) ?: ''
+		);
+
 		if ( ! empty( $sub_footer ) ) {
 			echo do_shortcode( $sub_footer );
 		}
@@ -353,7 +363,7 @@ class TwentyEighteen {
 	public static function get_post_types() {
 		$post_types = [];
 
-		if ( ThemeOptions::get( 'do_service_catalog' ) === true ) {
+		if ( ThemeOptions::get( ThemeOptions::DO_SERVICE_CATALOG_KEY ) === true ) {
 			$post_types['catalog-item'] = [
 				'label' => 'Catalog',
 				'labels' => [
