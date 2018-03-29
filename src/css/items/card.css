@@ -1,8 +1,10 @@
 .card {
   height: 100%;
   font-size: 94.4%;
+  border-radius: 2px;
 }
 
-.card-body {
+.card-body,
+.card-header {
   padding: 1.5rem;
 }

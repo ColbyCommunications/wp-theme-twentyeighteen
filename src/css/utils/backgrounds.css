@@ -10,6 +10,7 @@
     right: -1000%;
     bottom: 0;
     left: -1000%;
+    z-index: -1;
     pointer-events: none;
     content: "";
     background-color: var(--background-color);
