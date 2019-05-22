@@ -13,11 +13,6 @@
     "stylelint": "stylelint src/css/*.css --fix",
     "prepare": "npm run build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run stylelint && composer phpcbf && composer lint"
-    }
-  },
   "devDependencies": {
     "autoprefixer": "^7.2.4",
     "babel-core": "^6.26.0",

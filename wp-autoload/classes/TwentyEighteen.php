@@ -302,7 +302,7 @@ class TwentyEighteen {
 	public static function sub_footer() {
 		/**
 		 * Filters the subfooter content.
-		 * 
+		 *
 		 * @param string HTML output.
 		 */
 		$sub_footer = apply_filters(
