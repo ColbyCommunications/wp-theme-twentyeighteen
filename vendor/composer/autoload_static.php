@@ -4,14 +4,14 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitdbb9a2965681784d6c307ba2950c096c
+class ComposerStaticInit4f5cc9d0b92ba1b7c9fd9a18772cf34b
 {
     public static $files = array (
         '242e3a0f363e5698681bbb20327c9441' => __DIR__ . '/..' . '/colbycomms/colby-svg/wp/index.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        'd295ace785b0728c48ea4a22e2194784' => __DIR__ . '/../..' . '/wp-content/plugins/wp-collapsible/wp/index.php',
+        'd295ace785b0728c48ea4a22e2194784' => __DIR__ . '/..' . '/colbycomms/wp-collapsible/wp/index.php',
         'a61bd579f03f8e0773256ddbc044d4b3' => __DIR__ . '/..' . '/colbycomms/heroic-panel/heroic-panel/index.php',
-        '6db8f39525cd1d59e44f42c765ba4b49' => __DIR__ . '/../..' . '/wp-content/plugins/whos-coming/whos-coming/index.php',
+        '6db8f39525cd1d59e44f42c765ba4b49' => __DIR__ . '/..' . '/colbycomms/whos-coming/whos-coming/index.php',
         '85b4c5f2f9e7b594fdf26b3748b01ba9' => __DIR__ . '/..' . '/colbycomms/wp-schedule/wp-schedule/index.php',
         'c593e89827171e1f7b0b844f4f0139b4' => __DIR__ . '/../..' . '/wp-autoload/index.php',
     );
@@ -68,7 +68,7 @@ class ComposerStaticInitdbb9a2965681784d6c307ba2950c096c
         ),
         'ColbyComms\\WhosComing\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/wp-content/plugins/whos-coming/whos-coming',
+            0 => __DIR__ . '/..' . '/colbycomms/whos-coming/whos-coming',
         ),
         'ColbyComms\\TwentyEighteen\\' => 
         array (
@@ -88,7 +88,7 @@ class ComposerStaticInitdbb9a2965681784d6c307ba2950c096c
         ),
         'ColbyComms\\Collapsible\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/wp-content/plugins/wp-collapsible/wp',
+            0 => __DIR__ . '/..' . '/colbycomms/wp-collapsible/wp',
         ),
         'Carbon_Fields\\' => 
         array (
@@ -649,17 +649,17 @@ class ComposerStaticInitdbb9a2965681784d6c307ba2950c096c
         'TheSeer\\Tokenizer\\TokenCollectionException' => __DIR__ . '/..' . '/theseer/tokenizer/src/TokenCollectionException.php',
         'TheSeer\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/theseer/tokenizer/src/Tokenizer.php',
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
-        'VTDE\\Editor' => __DIR__ . '/../..' . '/wp-content/plugins/visual-term-description-editor/php/class-editor.php',
-        'VTDE\\Plugin' => __DIR__ . '/../..' . '/wp-content/plugins/visual-term-description-editor/php/class-plugin.php',
+        'VTDE\\Editor' => __DIR__ . '/..' . '/sheabunge/visual-term-description-editor/php/class-editor.php',
+        'VTDE\\Plugin' => __DIR__ . '/..' . '/sheabunge/visual-term-description-editor/php/class-plugin.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitdbb9a2965681784d6c307ba2950c096c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitdbb9a2965681784d6c307ba2950c096c::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitdbb9a2965681784d6c307ba2950c096c::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitdbb9a2965681784d6c307ba2950c096c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4f5cc9d0b92ba1b7c9fd9a18772cf34b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4f5cc9d0b92ba1b7c9fd9a18772cf34b::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit4f5cc9d0b92ba1b7c9fd9a18772cf34b::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit4f5cc9d0b92ba1b7c9fd9a18772cf34b::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -11,11 +11,11 @@ return array(
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
-    'ColbyComms\\WhosComing\\' => array($baseDir . '/wp-content/plugins/whos-coming/whos-coming'),
+    'ColbyComms\\WhosComing\\' => array($vendorDir . '/colbycomms/whos-coming/whos-coming'),
     'ColbyComms\\TwentyEighteen\\' => array($baseDir . '/wp-autoload/classes'),
     'ColbyComms\\Schedules\\' => array($vendorDir . '/colbycomms/wp-schedule/wp-schedule'),
     'ColbyComms\\SVG\\' => array($vendorDir . '/colbycomms/colby-svg/wp/classes'),
     'ColbyComms\\HeroicPanel\\' => array($vendorDir . '/colbycomms/heroic-panel/heroic-panel'),
-    'ColbyComms\\Collapsible\\' => array($baseDir . '/wp-content/plugins/wp-collapsible/wp'),
+    'ColbyComms\\Collapsible\\' => array($vendorDir . '/colbycomms/wp-collapsible/wp'),
     'Carbon_Fields\\' => array($vendorDir . '/htmlburger/carbon-fields/core'),
 );
