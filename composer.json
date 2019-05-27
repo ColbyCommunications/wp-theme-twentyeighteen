@@ -12,7 +12,7 @@
     "phpcbf": "phpcbf --extensions=php",
     "lint": "phpcs --extensions=php -s",
     "test": "composer lint",
-    "release": "rm -rf vendor; composer install --no-dev"
+    "release": "rm -rf vendor; composer install --no-dev -o"
   },
   "minimum-stability": "stable",
   "require": {
