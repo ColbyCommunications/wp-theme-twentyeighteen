@@ -11,7 +11,8 @@
   "scripts": {
     "phpcbf": "phpcbf --extensions=php",
     "lint": "phpcs --extensions=php -s",
-    "test": "composer lint"
+    "test": "composer lint",
+    "release": "rm -rf vendor; composer install --no-dev"
   },
   "minimum-stability": "stable",
   "require": {
@@ -32,6 +33,8 @@
     "psr-4": {
       "ColbyComms\\TwentyEighteen\\": "wp-autoload/classes"
     },
-    "files": ["wp-autoload/index.php"]
+    "files": [
+      "wp-autoload/index.php"
+    ]
   }
 }
