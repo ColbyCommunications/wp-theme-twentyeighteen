@@ -1,10 +1,9 @@
-vendor
 wp-content
 node_modules
 format.html
 .cache
-dist
 fonts
 .deploy-servers.js
 *.log
 .vscode
+ /vendor/**/.git
