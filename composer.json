@@ -11,27 +11,30 @@
   "scripts": {
     "phpcbf": "phpcbf --extensions=php",
     "lint": "phpcs --extensions=php -s",
-    "test": "composer lint"
+    "test": "composer lint",
+    "release": "rm -rf vendor; composer install --no-dev -o"
   },
   "minimum-stability": "stable",
   "require": {
-    "colbycomms/colby-svg": "dev-master",
+    "colbycomms/colby-svg": "^1.0",
     "htmlburger/carbon-fields": "^2.1",
     "colbycomms/whos-coming": "dev-master",
     "sheabunge/visual-term-description-editor": "*",
-    "colbycomms/wp-schedule": "dev-master",
+    "colbycomms/wp-schedule": "^1.0",
     "colbycomms/wp-collapsible": "dev-master",
     "colbycomms/heroic-panel": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.5",
     "squizlabs/php_codesniffer": "*",
-    "wp-coding-standards/wpcs": "dev-master"
+    "wp-coding-standards/wpcs": "^2.1"
   },
   "autoload": {
     "psr-4": {
       "ColbyComms\\TwentyEighteen\\": "wp-autoload/classes"
     },
-    "files": ["wp-autoload/index.php"]
+    "files": [
+      "wp-autoload/index.php"
+    ]
   }
 }

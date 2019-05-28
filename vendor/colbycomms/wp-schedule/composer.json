@@ -1,0 +1,32 @@
+{
+  "name": "colbycomms/colby-wp-schedule",
+  "description": "A WordPress plugin for creating table-based schedules.",
+  "type": "library",
+  "scripts": {
+    "phpcbf": "phpcbf --extensions=php",
+    "lint": "phpcs --extensions=php -s",
+    "test": "phpunit"
+  },
+  "authors": [
+    {
+      "name": "Iavor Dekov",
+      "email": "ivdekov@colby.edu"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "htmlburger/carbon-fields": "^2.1",
+    "phpunit/phpunit": "*",
+    "colbycomms/wp-collapsible": "dev-master"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "ColbyComms\\Schedules\\": "wp-schedule/"
+    },
+    "files": ["wp-schedule/index.php"]
+  }
+}
