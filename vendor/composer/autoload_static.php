@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite4bf1495e28a969bde9be17284ccdb4d
+class ComposerStaticInit2c75c7e3a19354e3ae145f484a5643a3
 {
     public static $files = array (
         '242e3a0f363e5698681bbb20327c9441' => __DIR__ . '/..' . '/colbycomms/colby-svg/wp/index.php',
@@ -323,9 +323,9 @@ class ComposerStaticInite4bf1495e28a969bde9be17284ccdb4d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite4bf1495e28a969bde9be17284ccdb4d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite4bf1495e28a969bde9be17284ccdb4d::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInite4bf1495e28a969bde9be17284ccdb4d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2c75c7e3a19354e3ae145f484a5643a3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2c75c7e3a19354e3ae145f484a5643a3::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit2c75c7e3a19354e3ae145f484a5643a3::$classMap;
 
         }, null, ClassLoader::class);
     }

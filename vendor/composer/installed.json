@@ -176,17 +176,17 @@
     },
     {
         "name": "colbycomms/wp-schedule",
-        "version": "v1.0.3",
-        "version_normalized": "1.0.3.0",
+        "version": "v1.0.4",
+        "version_normalized": "1.0.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ColbyCommunications/wp-schedule.git",
-            "reference": "f0022350c18760eb4f7206d37a419a302a202b19"
+            "reference": "70c11c0b3948e6f2efaa97c4fb5c6509617bd216"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/f0022350c18760eb4f7206d37a419a302a202b19",
-            "reference": "f0022350c18760eb4f7206d37a419a302a202b19",
+            "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/70c11c0b3948e6f2efaa97c4fb5c6509617bd216",
+            "reference": "70c11c0b3948e6f2efaa97c4fb5c6509617bd216",
             "shasum": ""
         },
         "require": {
@@ -198,7 +198,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "^2.1"
         },
-        "time": "2019-05-28T02:30:46+00:00",
+        "time": "2019-05-28T02:43:32+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

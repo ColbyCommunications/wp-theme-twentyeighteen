@@ -7,11 +7,9 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack -w",
-    "build": "webpack -p",
-    "deploy": "node node_modules/node-autodeploy-wp",
+    "build": "webpack && webpack -p",
     "lint": "eslint src/js",
-    "stylelint": "stylelint src/css/*.css --fix",
-    "prepare": "npm run build"
+    "stylelint": "stylelint src/css/*.css --fix"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.4",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af5a28d468892dfe66f604ad0af3fc1f",
+    "content-hash": "2ef8b3f358cda471ab150435b2811181",
     "packages": [
         {
             "name": "colbycomms/colby-svg",
@@ -175,16 +175,16 @@
         },
         {
             "name": "colbycomms/wp-schedule",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/wp-schedule.git",
-                "reference": "f0022350c18760eb4f7206d37a419a302a202b19"
+                "reference": "70c11c0b3948e6f2efaa97c4fb5c6509617bd216"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/f0022350c18760eb4f7206d37a419a302a202b19",
-                "reference": "f0022350c18760eb4f7206d37a419a302a202b19",
+                "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/70c11c0b3948e6f2efaa97c4fb5c6509617bd216",
+                "reference": "70c11c0b3948e6f2efaa97c4fb5c6509617bd216",
                 "shasum": ""
             },
             "require": {
@@ -213,7 +213,7 @@
                 }
             ],
             "description": "A WordPress plugin for creating table-based schedules.",
-            "time": "2019-05-28T02:30:46+00:00"
+            "time": "2019-05-28T02:43:32+00:00"
         },
         {
             "name": "composer/installers",
