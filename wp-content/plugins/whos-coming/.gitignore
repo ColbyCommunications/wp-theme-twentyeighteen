@@ -1,0 +1,8 @@
+vendor
+node_modules
+format.html
+.cache
+fonts
+.deploy-servers.js
+*.log
+.vscode

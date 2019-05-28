@@ -1,0 +1,517 @@
+[
+    {
+        "name": "colbycomms/colby-svg",
+        "version": "v1.0.11",
+        "version_normalized": "1.0.11.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/colby-svg.git",
+            "reference": "dde64ff7d7237f959a8271b64435b0de8d2d6fde"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ColbyCommunications/colby-svg/zipball/dde64ff7d7237f959a8271b64435b0de8d2d6fde",
+            "reference": "dde64ff7d7237f959a8271b64435b0de8d2d6fde",
+            "shasum": ""
+        },
+        "require-dev": {
+            "phpunit/phpunit": "5.6.*",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "dev-master"
+        },
+        "time": "2018-01-31T18:17:26+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ColbyComms\\SVG\\": "wp/classes/"
+            },
+            "files": [
+                "wp/index.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "John Watkins",
+                "email": "jwatkins@colby.edu"
+            }
+        ],
+        "description": "A library of SVGs used across projects, with a PHP class for loading and echoing them, plus a shortcode for use in WordPress."
+    },
+    {
+        "name": "colbycomms/heroic-panel",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/heroic-panel.git",
+            "reference": "e1c16a90d70cefd106765ec208c578274c5a273f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ColbyCommunications/heroic-panel/zipball/e1c16a90d70cefd106765ec208c578274c5a273f",
+            "reference": "e1c16a90d70cefd106765ec208c578274c5a273f",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1"
+        },
+        "require-dev": {
+            "squizlabs/php_codesniffer": "^3.2",
+            "wp-coding-standards/wpcs": "^0.14.0"
+        },
+        "time": "2018-02-22T15:33:15+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ColbyComms\\HeroicPanel\\": "heroic-panel/"
+            },
+            "files": [
+                "heroic-panel/index.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "John Watkins",
+                "email": "john.watkins@colby.edu"
+            }
+        ],
+        "description": "A shortcode for a panel with a background image and a superimposed content block."
+    },
+    {
+        "name": "colbycomms/whos-coming",
+        "version": "v1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/whos-coming.git",
+            "reference": "f558846d2bc5299af48c428e100fa9937c1ce88d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ColbyCommunications/whos-coming/zipball/f558846d2bc5299af48c428e100fa9937c1ce88d",
+            "reference": "f558846d2bc5299af48c428e100fa9937c1ce88d",
+            "shasum": ""
+        },
+        "require": {
+            "htmlburger/carbon-fields": "^3.1",
+            "php": "^7.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^6.5",
+            "squizlabs/php_codesniffer": "^3.2",
+            "wp-coding-standards/wpcs": "^0.14.0"
+        },
+        "time": "2019-05-28T02:22:39+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ColbyComms\\WhosComing\\": "whos-coming/"
+            },
+            "files": [
+                "whos-coming/index.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "John Watkins",
+                "email": "john.watkins@colby.edu"
+            }
+        ],
+        "description": "A listing of people who have R.S.V.P.'ed to an event, with the list entered in JSON or CSV format."
+    },
+    {
+        "name": "colbycomms/wp-collapsible",
+        "version": "v1.0.6",
+        "version_normalized": "1.0.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/wp-collapsible.git",
+            "reference": "318cd504433521545b2d6d8a1b82797d4816557a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ColbyCommunications/wp-collapsible/zipball/318cd504433521545b2d6d8a1b82797d4816557a",
+            "reference": "318cd504433521545b2d6d8a1b82797d4816557a",
+            "shasum": ""
+        },
+        "require": {
+            "colbycomms/colby-svg": "^1.0",
+            "htmlburger/carbon-fields": "*",
+            "php": "^7.1"
+        },
+        "require-dev": {
+            "johnpbloch/wordpress-core": "dev-master",
+            "phpunit/phpunit": ">=5.0",
+            "squizlabs/php_codesniffer": "^3.0@dev",
+            "wp-coding-standards/wpcs": "dev-master"
+        },
+        "time": "2019-05-28T01:49:55+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ColbyComms\\Collapsible\\": "wp/"
+            },
+            "files": [
+                "wp/index.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "John Watkins",
+                "email": "john.watkins@colby.edu"
+            }
+        ],
+        "description": "A WordPress shortcode for collapsible HTML drawers."
+    },
+    {
+        "name": "colbycomms/wp-schedule",
+        "version": "v1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/wp-schedule.git",
+            "reference": "f0022350c18760eb4f7206d37a419a302a202b19"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/f0022350c18760eb4f7206d37a419a302a202b19",
+            "reference": "f0022350c18760eb4f7206d37a419a302a202b19",
+            "shasum": ""
+        },
+        "require": {
+            "colbycomms/colby-svg": "^1.0",
+            "htmlburger/carbon-fields": "^3.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "*",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "^2.1"
+        },
+        "time": "2019-05-28T02:30:46+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ColbyComms\\Schedules\\": "wp-schedule/"
+            },
+            "files": [
+                "wp-schedule/index.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "John Watkins",
+                "email": "john.watkins@colby.edu"
+            }
+        ],
+        "description": "A WordPress plugin for creating table-based schedules."
+    },
+    {
+        "name": "composer/installers",
+        "version": "v1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/composer/installers.git",
+            "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/composer/installers/zipball/cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+            "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0"
+        },
+        "replace": {
+            "roundcube/plugin-installer": "*",
+            "shama/baton": "*"
+        },
+        "require-dev": {
+            "composer/composer": "1.0.*@dev",
+            "phpunit/phpunit": "^4.8.36"
+        },
+        "time": "2018-08-27T06:10:37+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "Composer\\Installers\\Plugin",
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Composer\\Installers\\": "src/Composer/Installers"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kyle Robinson Young",
+                "email": "kyle@dontkry.com",
+                "homepage": "https://github.com/shama"
+            }
+        ],
+        "description": "A multi-framework Composer library installer",
+        "homepage": "https://composer.github.io/installers/",
+        "keywords": [
+            "Craft",
+            "Dolibarr",
+            "Eliasis",
+            "Hurad",
+            "ImageCMS",
+            "Kanboard",
+            "Lan Management System",
+            "MODX Evo",
+            "Mautic",
+            "Maya",
+            "OXID",
+            "Plentymarkets",
+            "Porto",
+            "RadPHP",
+            "SMF",
+            "Thelia",
+            "WolfCMS",
+            "agl",
+            "aimeos",
+            "annotatecms",
+            "attogram",
+            "bitrix",
+            "cakephp",
+            "chef",
+            "cockpit",
+            "codeigniter",
+            "concrete5",
+            "croogo",
+            "dokuwiki",
+            "drupal",
+            "eZ Platform",
+            "elgg",
+            "expressionengine",
+            "fuelphp",
+            "grav",
+            "installer",
+            "itop",
+            "joomla",
+            "kohana",
+            "laravel",
+            "lavalite",
+            "lithium",
+            "magento",
+            "majima",
+            "mako",
+            "mediawiki",
+            "modulework",
+            "modx",
+            "moodle",
+            "osclass",
+            "phpbb",
+            "piwik",
+            "ppi",
+            "puppet",
+            "pxcms",
+            "reindex",
+            "roundcube",
+            "shopware",
+            "silverstripe",
+            "sydes",
+            "symfony",
+            "typo3",
+            "wordpress",
+            "yawik",
+            "zend",
+            "zikula"
+        ]
+    },
+    {
+        "name": "htmlburger/carbon-fields",
+        "version": "v3.1.1",
+        "version_normalized": "3.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/htmlburger/carbon-fields.git",
+            "reference": "65bd40b6e70ccbaeb9d0989c5589299f0983de04"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/65bd40b6e70ccbaeb9d0989c5589299f0983de04",
+            "reference": "65bd40b6e70ccbaeb9d0989c5589299f0983de04",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "mockery/mockery": "^0.9.7",
+            "phpunit/phpunit": "~4.8"
+        },
+        "time": "2019-04-11T09:46:37+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Carbon_Fields\\": "core/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-only"
+        ],
+        "authors": [
+            {
+                "name": "htmlBurger",
+                "email": "wordpress@htmlburger.com",
+                "homepage": "https://htmlburger.com/",
+                "role": "Developer"
+            },
+            {
+                "name": "Marin Atanasov",
+                "email": "contact@marinatanasov.com",
+                "homepage": "http://marinatanasov.com/",
+                "role": "Developer"
+            },
+            {
+                "name": "Siyan Panayotov",
+                "homepage": "http://siyanpanayotov.com/",
+                "role": "Developer"
+            },
+            {
+                "name": "Georgi Stoyanov",
+                "email": "stoyanov.gs@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Stanimir Panchev",
+                "email": "Stan4omir@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Peter Petrov",
+                "email": "peter.petrov89@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Plamen Kostadinov",
+                "email": "pkostadinov.2create@gmail.com",
+                "homepage": "http://plasmen.info/",
+                "role": "Developer"
+            },
+            {
+                "name": "Stanimir Stoyanov",
+                "email": "stanimir.k.stoyanov@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Georgi Popov",
+                "homepage": "http://magadanski.com/",
+                "role": "Developer"
+            },
+            {
+                "name": "German Velchev",
+                "email": "germozy@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Rashko Petrov",
+                "email": "brutalenemy666@gmail.com",
+                "homepage": "http://errorfactory.com/",
+                "role": "Developer"
+            },
+            {
+                "name": "Miroslav Mitev",
+                "email": "mmitev.2create@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Kaloyan Ivanov",
+                "email": "kaloyanxivanov@gmail.com",
+                "homepage": "http://vilepixels.com/",
+                "role": "Developer"
+            },
+            {
+                "name": "Atanas Angelov",
+                "email": "atanas.angelov.dev@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Alexander Panayotov",
+                "email": "alexander.panayotov@gmail.com",
+                "homepage": "http://alexanderpanayotov.com/",
+                "role": "Developer"
+            },
+            {
+                "name": "Viktor Vasilev",
+                "email": "liberalcho@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Georgi Georgiev",
+                "email": "george.georgiev96@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Atanas Vasilev",
+                "email": "atanasvasilev91@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
+        "homepage": "http://carbonfields.net/"
+    },
+    {
+        "name": "sheabunge/visual-term-description-editor",
+        "version": "v1.7.0",
+        "version_normalized": "1.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/visual-term-description-editor.git",
+            "reference": "df077cc67ec46139d3528044db31a7cbbcb90ea7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ColbyCommunications/visual-term-description-editor/zipball/df077cc67ec46139d3528044db31a7cbbcb90ea7",
+            "reference": "df077cc67ec46139d3528044db31a7cbbcb90ea7",
+            "shasum": ""
+        },
+        "require": {
+            "composer/installers": "^1.0",
+            "php": ">=5.4"
+        },
+        "time": "2017-02-16T13:07:21+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "php/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Shea Bunge",
+                "email": "info@bungeshea.com"
+            }
+        ],
+        "description": "Replaces the plain-text editor for WordPress taxonomies with a visual WYSIWYG editor"
+    }
+]

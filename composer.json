@@ -12,21 +12,19 @@
     "phpcbf": "phpcbf --extensions=php",
     "lint": "phpcs --extensions=php -s",
     "test": "composer lint",
-    "release": "rm -rf vendor; composer install --no-dev -o"
+    "release": "rm -rf vendor wp-content; composer install --no-dev -o"
   },
-  "minimum-stability": "stable",
   "require": {
+    "colbycomms/heroic-panel": "^1.0",
     "colbycomms/colby-svg": "^1.0",
-    "htmlburger/carbon-fields": "^2.1",
-    "colbycomms/whos-coming": "dev-master",
-    "sheabunge/visual-term-description-editor": "*",
+    "htmlburger/carbon-fields": "^3.1",
+    "colbycomms/whos-coming": "^1.0",
+    "sheabunge/visual-term-description-editor": "^1.7",
     "colbycomms/wp-schedule": "^1.0",
-    "colbycomms/wp-collapsible": "dev-master",
-    "colbycomms/heroic-panel": "dev-master"
+    "colbycomms/wp-collapsible": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.5",
-    "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "^2.1"
   },
   "autoload": {

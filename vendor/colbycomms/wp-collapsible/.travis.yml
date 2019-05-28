@@ -1,0 +1,8 @@
+language: php
+install:
+  - rm -rf composer.lock
+  - composer install
+php:
+  - '7.1'
+scripts:
+  - composer test
