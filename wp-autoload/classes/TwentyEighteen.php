@@ -45,14 +45,16 @@ class TwentyEighteen {
 	 *
 	 * @var string
 	 */
-	const FILTER_NAMESPACE = 'colbycomms__twentyeighteen__';
+	const FILTER_NAMESPACE = self::VENDOR . '__twentyeighteen__';
 
-	/**
-	 * Filter for whether the header should have a transparent background.
-	 *
-	 * @var bool
-	 */
-	const TRANSPARENT_HEADER_FILTER = self::FILTER_NAMESPACE . 'header_is_transparent';
+	const IS_HEADER_TRANSPARENT_FILTER = self::FILTER_NAMESPACE . 'is_header_transperent';
+	const MAIN_CLASS_FILTER = self::FILTER_NAMESPACE . 'main_class';
+	const AFTER_PAGE_HEADER_FILTER = self::FILTER_NAMESPACE . 'after_page_header';
+	const TRANSPARENT_HEADER_CLASS_FILTER = self::FILTER_NAMESPACE . 'transparent_header_class';
+	const HEAD_TITLE_FILTER = self::FILTER_NAMESPACE . 'head_title';
+	const SUPER_FOOTER_CONTENT_FILTER = self::FILTER_NAMESPACE . 'super_footer_content';
+	const SUB_FOOTER_CONTENT_FILTER = self::FILTER_NAMESPACE . 'sub_footer_content';
+	const SOCIAL_ICON_SETTINGS_FILTER = self::FILTER_NAMESPACE . 'social_icon_settings';
 
 	/**
 	 * Outputs the main class handler.
@@ -62,7 +64,13 @@ class TwentyEighteen {
 	 */
 	public static function main_class( $classes = '' ) : void {
 		$classes = is_array( $classes ) ? $classes : explode( ' ', $classes );
-		$classes = apply_filters( 'main_class', $classes );
+
+		/**
+		 * Filters the classes applied to the <main> element.
+		 *
+		 * @param array $classes
+		 */
+		$classes = apply_filters( self::MAIN_CLASS_FILTER, $classes );
 
 		echo 'class="' . esc_attr( implode( ' ', $classes ) ) . '"';
 	}
@@ -128,7 +136,16 @@ class TwentyEighteen {
 	 * Prints the sub footer if it is set via theme options.
 	 */
 	public static function super_footer() {
-		$super_footer = apply_filters( 'super_footer_content', ThemeOptions::get( 'super_footer_content' ) );
+		/**
+		 * Filters the HTML content displayed above the main site footer.
+		 *
+		 * @param string
+		 */
+		$super_footer = apply_filters(
+			self::SUPER_FOOTER_CONTENT_FILTER,
+			ThemeOptions::get( ThemeOptions::SUPER_FOOTER_CONTENT_KEY )
+		);
+
 		if ( ! empty( $super_footer ) ) {
 			echo do_shortcode( $super_footer );
 		}
@@ -142,23 +159,11 @@ class TwentyEighteen {
 	 * @return string The rendered HTML.
 	 */
 	public static function get_address_block() {
-		return '
-    <address>
-        <div class="mb-1">
-            <span class="h3 strong text-sans">
-                <a href="//colby.edu">Colby College</a>
-            </span>
-        </div>
-        <div>
-            4000 Mayflower Hill Drive <br>Waterville, Maine 04901
-        </div>
-        <div>
-            207-859-4000
-        </div>
-        <div>
-            <a href="//colby.edu/contact">Contact Us</a>
-        </div>
-    </address>';
+		ob_start();
+
+		get_template_part( 'parts/address' );
+
+		return ob_get_clean();
 	}
 
 	/**
@@ -168,7 +173,7 @@ class TwentyEighteen {
 	 * @return array The settings.
 	 */
 	public static function get_social_icon_settings() {
-		return [
+		$settings = [
 			[
 				'name' => 'Facebook',
 				'url' => apply_filters( 'facebook_url', 'https://www.facebook.com/colbycollege/' ),
@@ -190,6 +195,13 @@ class TwentyEighteen {
 				'icon' => SVG::get( 'vimeo' ),
 			],
 		];
+
+		/**
+		 * Filters the social icon settings.
+		 *
+		 * @param array
+		 */
+		return apply_filters( self::SOCIAL_ICON_SETTINGS_FILTER, $settings );
 	}
 
 	/**
@@ -260,105 +272,13 @@ class TwentyEighteen {
 	 * @return string Rendered HTML.
 	 */
 	public static function render_navbar( $class = 'shrinkable', $args = [] ) {
-		// No need for nav menu item ids.
-		add_filter(
-			'nav_menu_item_id', function() {
-				return '';
-			}
-		);
+		$navbar = new Navbar( $class, $args );
 
-		// Modify the CSS class for submenus.
-		add_filter(
-			'nav_menu_submenu_css_class',
-			function( $classes, $args ) use ( $class ) {
-				return array_map(
-					function( $cl ) use ( $class ) {
-						return 'sub-menu' === $cl
-							? "{$class}__submenu"
-							: $cl;
-					},
-					$classes
-				);
-			},
-			10,
-			2
-		);
+		$output = $navbar->render();
 
-		// Modify the ul's CSS class.
-		add_filter(
-			'nav_menu_css_class',
-			function( $classes ) use ( $class ) {
-				$classes = array_map(
-					function( $cl ) use ( $class ) {
+		$navbar->shut_down();
 
-						if ( 'menu-item-has-children' === $cl ) {
-							return "{$class}__has-submenu";
-						}
-
-						if ( 'menu-item' === $cl ) {
-							return "{$class}__item";
-						}
-
-						return '';
-					},
-					$classes
-				);
-
-				return array_filter( $classes );
-			},
-			10,
-			2
-		);
-
-		// Add a css class to the nav menu link.
-		add_filter(
-			'nav_menu_link_attributes',
-			function( $attr, $item ) use ( $class, $args ) {
-
-				$attr['class'] = "{$class}__btn"
-					. ( isset( $args['link-class'] ) ? " {$args['link-class']}" : '' );
-
-				if ( $item->classes[0] ) {
-					$attr['class'] .= ' ' . $item->classes[0];
-				}
-
-				return $attr;
-			},
-			10,
-			2
-		);
-
-		// Add a submenu toggle button.
-		add_filter(
-			'walker_nav_menu_start_el',
-			function( $output, $item, $depth ) use ( $class ) {
-				if ( $depth > 0 || ! in_array( 'menu-item-has-children', $item->classes, true ) ) {
-					return $output;
-				}
-
-				$arrow = SVG::get( 'down-arrow' );
-
-				return "$output
-				<button class=\"{$class}__btn {$class}__submenu-toggler\">
-					$arrow
-				</button>";
-			},
-			10,
-			3
-		);
-
-		return wp_nav_menu(
-			array_merge(
-				[
-					'menu' => 'Site Menu',
-					'container' => 'nav',
-					'echo' => false,
-					'menu_class' => "{$class}__menu",
-					'container_class' => "$class small-4",
-				],
-				$args
-			)
-		);
+		return $output;
 	}
 
 	/**
@@ -380,7 +300,16 @@ class TwentyEighteen {
 	 * Prints the sub footer if it is set via theme options.
 	 */
 	public static function sub_footer() {
-		$sub_footer = apply_filters( 'sub_footer_content', ThemeOptions::get( 'sub_footer_content' ) );
+		/**
+		 * Filters the subfooter content.
+		 * 
+		 * @param string HTML output.
+		 */
+		$sub_footer = apply_filters(
+			self::SUB_FOOTER_CONTENT_FILTER,
+			ThemeOptions::get( ThemeOptions::SUB_FOOTER_CONTENT_KEY ) ?: ''
+		);
+
 		if ( ! empty( $sub_footer ) ) {
 			echo do_shortcode( $sub_footer );
 		}
@@ -394,7 +323,13 @@ class TwentyEighteen {
 	public static function get_head_title() {
 		$wp_title = wp_title( '', false );
 		$wp_title = $wp_title ? "$wp_title - " : '';
-		return $wp_title . get_bloginfo() . ' - Colby College';
+
+		/**
+		 * Filters the title in the document head.
+		 *
+		 * @param string
+		 */
+		return apply_filters( self::HEAD_TITLE_FILTER, $wp_title . get_bloginfo() . ' - Colby College' );
 	}
 
 	/**
@@ -428,7 +363,7 @@ class TwentyEighteen {
 	public static function get_post_types() {
 		$post_types = [];
 
-		if ( ThemeOptions::get( 'do_service_catalog' ) === true ) {
+		if ( ThemeOptions::get( ThemeOptions::DO_SERVICE_CATALOG_KEY ) === true ) {
 			$post_types['catalog-item'] = [
 				'label' => 'Catalog',
 				'labels' => [
@@ -488,6 +423,34 @@ class TwentyEighteen {
 	 * @return void
 	 */
 	public static function after_page_header() : void {
-		echo apply_filters( 'colbycomms_twentyeighteen__after_page_header', '' );
+		echo apply_filters( self::AFTER_PAGE_HEADER_FILTER, '' );
+	}
+
+	/**
+	 * Returns whether the header bar is transparent.
+	 *
+	 * @return bool Yes or no.
+	 */
+	public static function is_header_transparent() : bool {
+		/**
+		 * Filters whether the header bar is transparent.
+		 *
+		 * @return bool
+		 */
+		return apply_filters( self::IS_HEADER_TRANSPARENT_FILTER, false ) === true;
+	}
+
+	/**
+	 * Returns the CSS class to apply to a transparent header bar.
+	 *
+	 * @return string
+	 */
+	public static function get_transparent_header_class() : string {
+		/**
+		 * Filters the CSS class applied to make the header bar transparent.
+		 *
+		 * @var string The CSS class.
+		 */
+		return apply_filters( self::TRANSPARENT_HEADER_CLASS_FILTER, 'dark-transparent' );
 	}
 }

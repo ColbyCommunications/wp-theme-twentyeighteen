@@ -15,6 +15,11 @@ use Carbon_Fields\{Container, Field};
  */
 class ThemeOptions {
 	const ANALYTICS_KEY = 'analytics_code';
+	const MENU_TYPE_KEY = 'menu_type';
+	const SUPER_FOOTER_CONTENT_KEY = 'super_footer_content';
+	const SUB_FOOTER_CONTENT_KEY = 'sub_footer_content';
+	const DO_EVENT_LISTINGS_KEY = 'do_event_listings';
+	const DO_SERVICE_CATALOG_KEY = 'do_service_catalog';
 
 	/**
 	 * Adds hooks.
@@ -37,7 +42,7 @@ class ThemeOptions {
 	public function add_plugin_options() {
 		$this->container->add_fields(
 			[
-				Field::make( 'radio', 'menu_type', 'Navigation Display' )
+				Field::make( 'radio', self::MENU_TYPE_KEY, 'Navigation Display' )
 					->add_options(
 						[
 							'none' => 'No site navigation.',
@@ -49,19 +54,19 @@ class ThemeOptions {
 					->set_default_value( 'none' )
 					->set_help_text( 'Choose the type of navigation to display on this site for the main site menu ("Site Menu" under Appearance -> Menus).' ),
 
-				Field::make( 'textarea', 'super_footer_content', 'Content above the footer.' )
+				Field::make( 'textarea', self::SUPER_FOOTER_CONTENT_KEY, 'Content above the footer.' )
 					->set_help_text( 'Add content above the footer.' ),
 
-				Field::make( 'textarea', 'sub_footer_content', 'Content below the footer.' )
+				Field::make( 'textarea', self::SUB_FOOTER_CONTENT_KEY, 'Content below the footer.' )
 					->set_help_text( 'Add content at the very bottom of the page. Useful for fixed items. Shortcodes are allowed.' ),
 
-				Field::make( 'separator', 'crb_style_options', 'Features' ),
+				Field::make( 'separator', 'features_separator', 'Features' ),
 
-				Field::make( 'checkbox', 'do_event_listings', 'Event Listings' )
+				Field::make( 'checkbox', self::DO_EVENT_LISTINGS_KEY, 'Event Listings' )
 					->set_default_value( false )
 					->set_help_text( 'Features enabling the creation of grouped schedules of events.' ),
 
-				Field::make( 'checkbox', 'do_service_catalog', 'Service Catalog' )
+				Field::make( 'checkbox', self::DO_SERVICE_CATALOG_KEY, 'Service Catalog' )
 					->set_default_value( false )
 					->set_help_text( 'Listings of services offered by a department.' ),
 

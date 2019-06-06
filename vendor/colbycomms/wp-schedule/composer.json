@@ -1,0 +1,34 @@
+{
+  "name": "colbycomms/wp-schedule",
+  "description": "A WordPress plugin for creating table-based schedules.",
+  "type": "library",
+  "scripts": {
+    "phpcbf": "phpcbf --extensions=php",
+    "lint": "phpcs --extensions=php -s",
+    "test": "phpunit"
+  },
+  "authors": [
+    {
+      "name": "John Watkins",
+      "email": "john.watkins@colby.edu"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "htmlburger/carbon-fields": "^3.1",
+    "colbycomms/colby-svg": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*",
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "ColbyComms\\Schedules\\": "wp-schedule/"
+    },
+    "files": [
+      "wp-schedule/index.php"
+    ]
+  }
+}

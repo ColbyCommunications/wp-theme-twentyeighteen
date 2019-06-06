@@ -11,7 +11,7 @@ use ColbyComms\TwentyEighteen\TwentyEighteen as T18;
 
 ?>
 <?php T18::super_footer(); ?>
-<footer class="print-none site-footer dark pt-5 pb-6 container-fluid dark">
+<footer class="print-none site-footer dark pt-5 pb-6 container-fluid">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-4 small-4 mb-3">
