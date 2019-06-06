@@ -17,7 +17,7 @@
   "require": {
     "colbycomms/heroic-panel": "^1.0",
     "colbycomms/colby-svg": "^1.0",
-    "htmlburger/carbon-fields": "^3.1",
+    "htmlburger/carbon-fields": "^2.1",
     "colbycomms/whos-coming": "^1.0",
     "sheabunge/visual-term-description-editor": "^1.7",
     "colbycomms/wp-collapsible": "^1.0",

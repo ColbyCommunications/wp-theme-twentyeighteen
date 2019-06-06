@@ -10,6 +10,14 @@ use Carbon_Fields\Value_Set\Value_Set;
  * Allows to create a set of checkboxes where multiple can be selected.
  */
 class Set_Field extends Predefined_Options_Field {
+
+	/**
+	 * The options limit.
+	 *
+	 * @var int
+	 */
+	protected $limit_options = 0;
+
 	/**
 	 * Default field value
 	 *
@@ -57,6 +65,7 @@ class Set_Field extends Predefined_Options_Field {
 		$field_data = array_merge( $field_data, array(
 			'options' => $options,
 			'value' => $value,
+			'limit_options' => $this->limit_options,
 		) );
 
 		return $field_data;

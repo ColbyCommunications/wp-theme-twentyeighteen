@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ef8b3f358cda471ab150435b2811181",
+    "content-hash": "8e60cbd6ec55ef8937d16c4f304f86db",
     "packages": [
         {
             "name": "colbycomms/colby-svg",
@@ -89,24 +89,24 @@
         },
         {
             "name": "colbycomms/whos-coming",
-            "version": "v1.0.3",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/whos-coming.git",
-                "reference": "f558846d2bc5299af48c428e100fa9937c1ce88d"
+                "reference": "32d9193dd613a0190f8479604878a643e7bb6caa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/whos-coming/zipball/f558846d2bc5299af48c428e100fa9937c1ce88d",
-                "reference": "f558846d2bc5299af48c428e100fa9937c1ce88d",
+                "url": "https://api.github.com/repos/ColbyCommunications/whos-coming/zipball/32d9193dd613a0190f8479604878a643e7bb6caa",
+                "reference": "32d9193dd613a0190f8479604878a643e7bb6caa",
                 "shasum": ""
             },
             "require": {
-                "htmlburger/carbon-fields": "^3.1",
-                "php": "^7.1"
+                "htmlburger/carbon-fields": "^2.1",
+                "php": "^7.1",
+                "phpunit/phpunit": "^6.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5",
                 "squizlabs/php_codesniffer": "^3.2",
                 "wp-coding-standards/wpcs": "^0.14.0"
             },
@@ -127,7 +127,7 @@
                 }
             ],
             "description": "A listing of people who have R.S.V.P.'ed to an event, with the list entered in JSON or CSV format.",
-            "time": "2019-05-28T02:22:39+00:00"
+            "time": "2018-03-15T13:35:27+00:00"
         },
         {
             "name": "colbycomms/wp-collapsible",
@@ -175,21 +175,21 @@
         },
         {
             "name": "colbycomms/wp-schedule",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/wp-schedule.git",
-                "reference": "70c11c0b3948e6f2efaa97c4fb5c6509617bd216"
+                "reference": "cc3b717880fc270c41f0562149e297ceab3ff2bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/70c11c0b3948e6f2efaa97c4fb5c6509617bd216",
-                "reference": "70c11c0b3948e6f2efaa97c4fb5c6509617bd216",
+                "url": "https://api.github.com/repos/ColbyCommunications/wp-schedule/zipball/cc3b717880fc270c41f0562149e297ceab3ff2bd",
+                "reference": "cc3b717880fc270c41f0562149e297ceab3ff2bd",
                 "shasum": ""
             },
             "require": {
                 "colbycomms/colby-svg": "^1.0",
-                "htmlburger/carbon-fields": "^3.1"
+                "htmlburger/carbon-fields": "^2.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "*",
@@ -213,7 +213,7 @@
                 }
             ],
             "description": "A WordPress plugin for creating table-based schedules.",
-            "time": "2019-05-28T02:43:32+00:00"
+            "time": "2019-06-06T18:22:07+00:00"
         },
         {
             "name": "composer/installers",
@@ -336,17 +336,73 @@
             "time": "2018-08-27T06:10:37+00:00"
         },
         {
-            "name": "htmlburger/carbon-fields",
-            "version": "v3.1.1",
+            "name": "doctrine/instantiator",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "65bd40b6e70ccbaeb9d0989c5589299f0983de04"
+                "url": "https://github.com/doctrine/instantiator.git",
+                "reference": "a2c590166b2133a4633738648b6b064edae0814a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/65bd40b6e70ccbaeb9d0989c5589299f0983de04",
-                "reference": "65bd40b6e70ccbaeb9d0989c5589299f0983de04",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/a2c590166b2133a4633738648b6b064edae0814a",
+                "reference": "a2c590166b2133a4633738648b6b064edae0814a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "ext-pdo": "*",
+                "ext-phar": "*",
+                "phpbench/phpbench": "^0.13",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpstan/phpstan-shim": "^0.11",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
+            "homepage": "https://www.doctrine-project.org/projects/instantiator.html",
+            "keywords": [
+                "constructor",
+                "instantiate"
+            ],
+            "time": "2019-03-17T17:37:11+00:00"
+        },
+        {
+            "name": "htmlburger/carbon-fields",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/htmlburger/carbon-fields.git",
+                "reference": "f2e7e7b306f872b606b16909d2a2ee906381d5d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/f2e7e7b306f872b606b16909d2a2ee906381d5d1",
+                "reference": "f2e7e7b306f872b606b16909d2a2ee906381d5d1",
                 "shasum": ""
             },
             "require": {
@@ -452,116 +508,11 @@
                     "name": "Viktor Vasilev",
                     "email": "liberalcho@gmail.com",
                     "role": "Developer"
-                },
-                {
-                    "name": "Georgi Georgiev",
-                    "email": "george.georgiev96@gmail.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Atanas Vasilev",
-                    "email": "atanasvasilev91@gmail.com",
-                    "role": "Developer"
                 }
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2019-04-11T09:46:37+00:00"
-        },
-        {
-            "name": "sheabunge/visual-term-description-editor",
-            "version": "v1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ColbyCommunications/visual-term-description-editor.git",
-                "reference": "df077cc67ec46139d3528044db31a7cbbcb90ea7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ColbyCommunications/visual-term-description-editor/zipball/df077cc67ec46139d3528044db31a7cbbcb90ea7",
-                "reference": "df077cc67ec46139d3528044db31a7cbbcb90ea7",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.0",
-                "php": ">=5.4"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "classmap": [
-                    "php/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Shea Bunge",
-                    "email": "info@bungeshea.com"
-                }
-            ],
-            "description": "Replaces the plain-text editor for WordPress taxonomies with a visual WYSIWYG editor",
-            "time": "2017-02-16T13:07:21+00:00"
-        }
-    ],
-    "packages-dev": [
-        {
-            "name": "doctrine/instantiator",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "a2c590166b2133a4633738648b6b064edae0814a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/a2c590166b2133a4633738648b6b064edae0814a",
-                "reference": "a2c590166b2133a4633738648b6b064edae0814a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "ext-pdo": "*",
-                "ext-phar": "*",
-                "phpbench/phpbench": "^0.13",
-                "phpstan/phpstan-phpunit": "^0.11",
-                "phpstan/phpstan-shim": "^0.11",
-                "phpunit/phpunit": "^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com",
-                    "homepage": "http://ocramius.github.com/"
-                }
-            ],
-            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
-            "homepage": "https://www.doctrine-project.org/projects/instantiator.html",
-            "keywords": [
-                "constructor",
-                "instantiate"
-            ],
-            "time": "2019-03-17T17:37:11+00:00"
+            "time": "2018-03-16T09:06:14+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1881,55 +1832,41 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
-            "name": "squizlabs/php_codesniffer",
-            "version": "3.4.2",
+            "name": "sheabunge/visual-term-description-editor",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8"
+                "url": "https://github.com/ColbyCommunications/visual-term-description-editor.git",
+                "reference": "df077cc67ec46139d3528044db31a7cbbcb90ea7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8",
-                "reference": "b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8",
+                "url": "https://api.github.com/repos/ColbyCommunications/visual-term-description-editor/zipball/df077cc67ec46139d3528044db31a7cbbcb90ea7",
+                "reference": "df077cc67ec46139d3528044db31a7cbbcb90ea7",
                 "shasum": ""
             },
             "require": {
-                "ext-simplexml": "*",
-                "ext-tokenizer": "*",
-                "ext-xmlwriter": "*",
-                "php": ">=5.4.0"
+                "composer/installers": "^1.0",
+                "php": ">=5.4"
             },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
-            },
-            "bin": [
-                "bin/phpcs",
-                "bin/phpcbf"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
+            "type": "wordpress-plugin",
+            "autoload": {
+                "classmap": [
+                    "php/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Greg Sherwood",
-                    "role": "lead"
+                    "name": "Shea Bunge",
+                    "email": "info@bungeshea.com"
                 }
             ],
-            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
-            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
-            "keywords": [
-                "phpcs",
-                "standards"
-            ],
-            "time": "2019-04-10T23:49:02+00:00"
+            "description": "Replaces the plain-text editor for WordPress taxonomies with a visual WYSIWYG editor",
+            "time": "2017-02-16T13:07:21+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2079,6 +2016,59 @@
                 "validate"
             ],
             "time": "2018-12-25T11:19:39+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "3.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8",
+                "reference": "b8a7362af1cc1aadb5bd36c3defc4dda2cf5f0a8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "bin": [
+                "bin/phpcs",
+                "bin/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "time": "2019-04-10T23:49:02+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
