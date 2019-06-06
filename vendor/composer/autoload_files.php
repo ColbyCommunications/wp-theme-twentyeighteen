@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     '242e3a0f363e5698681bbb20327c9441' => $vendorDir . '/colbycomms/colby-svg/wp/index.php',
+    '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     'a61bd579f03f8e0773256ddbc044d4b3' => $vendorDir . '/colbycomms/heroic-panel/heroic-panel/index.php',
     '6db8f39525cd1d59e44f42c765ba4b49' => $baseDir . '/wp-content/plugins/whos-coming/whos-coming/index.php',
     'd295ace785b0728c48ea4a22e2194784' => $vendorDir . '/colbycomms/wp-collapsible/wp/index.php',

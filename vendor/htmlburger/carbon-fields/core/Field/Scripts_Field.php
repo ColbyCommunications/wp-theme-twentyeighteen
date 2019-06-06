@@ -46,8 +46,7 @@ abstract class Scripts_Field extends Textarea_Field {
 	 * Display the field value in the front-end header.
 	 */
 	public function print_scripts() {
-		$is_valid_datastore = ( is_a( $this->get_datastore(), 'Carbon_Fields\\Datastore\\Theme_Options_Datastore' ) || is_a( $this->get_datastore(), 'Carbon_Fields\\Datastore\\Network_Datastore' ) );
-		if ( ! $this->get_datastore() || ! $is_valid_datastore ) {
+		if ( ! $this->get_datastore() || ! is_a( $this->get_datastore(), 'Carbon_Fields\\Datastore\\Theme_Options_Datastore' ) ) {
 			return;
 		}
 
