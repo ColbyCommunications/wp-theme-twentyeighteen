@@ -1,41 +1,42 @@
-@import "suitcss-base"; /* Normalize with extra. */
-@import "./root";
-@import "./elements";
-@import "./aria";
-@import "./utils/backgrounds";
-@import "./utils/borders";
-@import "./utils/buttons";
-@import "./utils/display";
-@import "./utils/flex";
-@import "./utils/has-featured-image";
-@import "./utils/lists";
-@import "./utils/position";
-@import "./utils/print";
-@import "./utils/sizing";
-@import "./utils/text";
-@import "./utils/wordpress";
-@import "./items/badge";
-@import "./items/card";
-@import "./items/colby-dn-logos";
-@import "./items/collapsible";
-@import "./items/columned-list";
-@import "./items/list-group";
-@import "./items/search-form";
-@import "./items/sticky-nav";
-@import "shrinkable-menu/src/css/main.css";
-@import "./items/wp-gallery";
-@import "pages/archive.css";
-@import "./blocks/section";
-@import "./blocks/page-header";
-@import "./blocks/site-header";
-@import "./features/directory";
-@import "./features/schedule";
-@import "./calendar";
+@import 'suitcss-base'; /* Normalize with extra. */
+@import './root';
+@import './elements';
+@import './aria';
+@import './utils/backgrounds';
+@import './utils/borders';
+@import './utils/buttons';
+@import './utils/display';
+@import './utils/flex';
+@import './utils/has-featured-image';
+@import './utils/lists';
+@import './utils/position';
+@import './utils/print';
+@import './utils/sizing';
+@import './utils/text';
+@import './utils/wordpress';
+@import './items/badge';
+@import './items/card';
+@import './items/colby-dn-logos';
+@import './items/collapsible';
+@import './items/columned-list';
+@import './items/list-group';
+@import './items/search-form';
+@import './items/sticky-nav';
+@import 'shrinkable-menu/src/css/main.css';
+@import './items/wp-gallery';
+@import 'pages/archive.css';
+@import './blocks/section';
+@import './blocks/page-header';
+@import './blocks/site-header';
+@import './features/directory';
+@import './features/schedule';
+@import './calendar';
+@import './vendor/bootstrap.min.css';
 
 .container {
-  max-width: 1140px !important;
+    max-width: 1140px !important;
 }
 
 .shrinkable__btn {
-  background-color: var(--background-color, #214280);
+    background-color: var(--background-color, #214280);
 }

@@ -266,42 +266,11 @@ process.umask = function () {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(48);
+  module.exports = __webpack_require__(47);
 } else {
-  module.exports = __webpack_require__(49);
+  module.exports = __webpack_require__(48);
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-
-/***/ 14:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var g;
-
-// This works in non-strict mode
-g = function () {
-	return this;
-}();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1, eval)("this");
-} catch (e) {
-	// This works if the window reference is available
-	if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
 
 /***/ }),
 
@@ -312,19 +281,19 @@ module.exports = g;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(21);
+  module.exports = __webpack_require__(20);
 } else {
-  module.exports = __webpack_require__(22);
+  module.exports = __webpack_require__(21);
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 
-/***/ 21:
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.6
+/** @license React v16.9.0
  * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -337,7 +306,7 @@ if (process.env.NODE_ENV === 'production') {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var k = __webpack_require__(3),
+var h = __webpack_require__(3),
     n = "function" === typeof Symbol && Symbol.for,
     p = n ? Symbol.for("react.element") : 60103,
     q = n ? Symbol.for("react.portal") : 60106,
@@ -346,39 +315,30 @@ var k = __webpack_require__(3),
     u = n ? Symbol.for("react.profiler") : 60114,
     v = n ? Symbol.for("react.provider") : 60109,
     w = n ? Symbol.for("react.context") : 60110,
-    x = n ? Symbol.for("react.concurrent_mode") : 60111,
-    y = n ? Symbol.for("react.forward_ref") : 60112,
-    z = n ? Symbol.for("react.suspense") : 60113,
-    aa = n ? Symbol.for("react.memo") : 60115,
-    ba = n ? Symbol.for("react.lazy") : 60116,
-    A = "function" === typeof Symbol && Symbol.iterator;function ca(a, b, d, c, e, g, h, f) {
-  if (!a) {
-    a = void 0;if (void 0 === b) a = Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else {
-      var l = [d, c, e, g, h, f],
-          m = 0;a = Error(b.replace(/%s/g, function () {
-        return l[m++];
-      }));a.name = "Invariant Violation";
-    }a.framesToPop = 1;throw a;
-  }
-}
-function B(a) {
-  for (var b = arguments.length - 1, d = "https://reactjs.org/docs/error-decoder.html?invariant=" + a, c = 0; c < b; c++) {
-    d += "&args[]=" + encodeURIComponent(arguments[c + 1]);
-  }ca(!1, "Minified React error #" + a + "; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ", d);
-}var C = { isMounted: function isMounted() {
+    x = n ? Symbol.for("react.forward_ref") : 60112,
+    y = n ? Symbol.for("react.suspense") : 60113,
+    aa = n ? Symbol.for("react.suspense_list") : 60120,
+    ba = n ? Symbol.for("react.memo") : 60115,
+    ca = n ? Symbol.for("react.lazy") : 60116;n && Symbol.for("react.fundamental");n && Symbol.for("react.responder");var z = "function" === typeof Symbol && Symbol.iterator;
+function A(a) {
+  for (var b = a.message, d = "https://reactjs.org/docs/error-decoder.html?invariant=" + b, c = 1; c < arguments.length; c++) {
+    d += "&args[]=" + encodeURIComponent(arguments[c]);
+  }a.message = "Minified React error #" + b + "; visit " + d + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ";return a;
+}var B = { isMounted: function isMounted() {
     return !1;
   }, enqueueForceUpdate: function enqueueForceUpdate() {}, enqueueReplaceState: function enqueueReplaceState() {}, enqueueSetState: function enqueueSetState() {} },
-    D = {};
-function E(a, b, d) {
-  this.props = a;this.context = b;this.refs = D;this.updater = d || C;
-}E.prototype.isReactComponent = {};E.prototype.setState = function (a, b) {
-  "object" !== (typeof a === "undefined" ? "undefined" : _typeof(a)) && "function" !== typeof a && null != a ? B("85") : void 0;this.updater.enqueueSetState(this, a, b, "setState");
-};E.prototype.forceUpdate = function (a) {
+    C = {};
+function D(a, b, d) {
+  this.props = a;this.context = b;this.refs = C;this.updater = d || B;
+}D.prototype.isReactComponent = {};D.prototype.setState = function (a, b) {
+  if ("object" !== (typeof a === "undefined" ? "undefined" : _typeof(a)) && "function" !== typeof a && null != a) throw A(Error(85));this.updater.enqueueSetState(this, a, b, "setState");
+};D.prototype.forceUpdate = function (a) {
   this.updater.enqueueForceUpdate(this, a, "forceUpdate");
-};function F() {}F.prototype = E.prototype;function G(a, b, d) {
-  this.props = a;this.context = b;this.refs = D;this.updater = d || C;
-}var H = G.prototype = new F();
-H.constructor = G;k(H, E.prototype);H.isPureReactComponent = !0;var I = { current: null },
+};function E() {}E.prototype = D.prototype;function F(a, b, d) {
+  this.props = a;this.context = b;this.refs = C;this.updater = d || B;
+}var G = F.prototype = new E();
+G.constructor = F;h(G, D.prototype);G.isPureReactComponent = !0;var H = { current: null },
+    I = { suspense: null },
     J = { current: null },
     K = Object.prototype.hasOwnProperty,
     L = { key: !0, ref: !0, __self: !0, __source: !0 };
@@ -386,7 +346,7 @@ function M(a, b, d) {
   var c = void 0,
       e = {},
       g = null,
-      h = null;if (null != b) for (c in void 0 !== b.ref && (h = b.ref), void 0 !== b.key && (g = "" + b.key), b) {
+      k = null;if (null != b) for (c in void 0 !== b.ref && (k = b.ref), void 0 !== b.key && (g = "" + b.key), b) {
     K.call(b, c) && !L.hasOwnProperty(c) && (e[c] = b[c]);
   }var f = arguments.length - 2;if (1 === f) e.children = d;else if (1 < f) {
     for (var l = Array(f), m = 0; m < f; m++) {
@@ -394,7 +354,7 @@ function M(a, b, d) {
     }e.children = l;
   }if (a && a.defaultProps) for (c in f = a.defaultProps, f) {
     void 0 === e[c] && (e[c] = f[c]);
-  }return { $$typeof: p, type: a, key: g, ref: h, props: e, _owner: J.current };
+  }return { $$typeof: p, type: a, key: g, ref: k, props: e, _owner: J.current };
 }
 function da(a, b) {
   return { $$typeof: p, type: a.type, key: b, ref: a.ref, props: a.props, _owner: a._owner };
@@ -417,11 +377,11 @@ function S(a, b, d, c) {
   var e = typeof a === "undefined" ? "undefined" : _typeof(a);if ("undefined" === e || "boolean" === e) a = null;var g = !1;if (null === a) g = !0;else switch (e) {case "string":case "number":
       g = !0;break;case "object":
       switch (a.$$typeof) {case p:case q:
-          g = !0;}}if (g) return d(c, a, "" === b ? "." + T(a, 0) : b), 1;g = 0;b = "" === b ? "." : b + ":";if (Array.isArray(a)) for (var h = 0; h < a.length; h++) {
-    e = a[h];var f = b + T(e, h);g += S(e, f, d, c);
-  } else if (null === a || "object" !== (typeof a === "undefined" ? "undefined" : _typeof(a)) ? f = null : (f = A && a[A] || a["@@iterator"], f = "function" === typeof f ? f : null), "function" === typeof f) for (a = f.call(a), h = 0; !(e = a.next()).done;) {
-    e = e.value, f = b + T(e, h++), g += S(e, f, d, c);
-  } else "object" === e && (d = "" + a, B("31", "[object Object]" === d ? "object with keys {" + Object.keys(a).join(", ") + "}" : d, ""));return g;
+          g = !0;}}if (g) return d(c, a, "" === b ? "." + T(a, 0) : b), 1;g = 0;b = "" === b ? "." : b + ":";if (Array.isArray(a)) for (var k = 0; k < a.length; k++) {
+    e = a[k];var f = b + T(e, k);g += S(e, f, d, c);
+  } else if (null === a || "object" !== (typeof a === "undefined" ? "undefined" : _typeof(a)) ? f = null : (f = z && a[z] || a["@@iterator"], f = "function" === typeof f ? f : null), "function" === typeof f) for (a = f.call(a), k = 0; !(e = a.next()).done;) {
+    e = e.value, f = b + T(e, k++), g += S(e, f, d, c);
+  } else if ("object" === e) throw d = "" + a, A(Error(31), "[object Object]" === d ? "object with keys {" + Object.keys(a).join(", ") + "}" : d, "");return g;
 }function U(a, b, d) {
   return null == a ? 0 : S(a, "", b, d);
 }function T(a, b) {
@@ -437,7 +397,7 @@ function fa(a, b, d) {
 }function V(a, b, d, c, e) {
   var g = "";null != d && (g = ("" + d).replace(O, "$&/") + "/");b = Q(b, g, c, e);U(a, fa, b);R(b);
 }function W() {
-  var a = I.current;null === a ? B("321") : void 0;return a;
+  var a = H.current;if (null === a) throw A(Error(321));return a;
 }
 var X = { Children: { map: function map(a, b, d) {
       if (null == a) return a;var c = [];V(a, c, null, b, d);return c;
@@ -452,18 +412,18 @@ var X = { Children: { map: function map(a, b, d) {
         return a;
       });return b;
     }, only: function only(a) {
-      N(a) ? void 0 : B("143");return a;
+      if (!N(a)) throw A(Error(143));return a;
     } }, createRef: function createRef() {
     return { current: null };
-  }, Component: E, PureComponent: G, createContext: function createContext(a, b) {
+  }, Component: D, PureComponent: F, createContext: function createContext(a, b) {
     void 0 === b && (b = null);a = { $$typeof: w, _calculateChangedBits: b,
       _currentValue: a, _currentValue2: a, _threadCount: 0, Provider: null, Consumer: null };a.Provider = { $$typeof: v, _context: a };return a.Consumer = a;
   }, forwardRef: function forwardRef(a) {
-    return { $$typeof: y, render: a };
+    return { $$typeof: x, render: a };
   }, lazy: function lazy(a) {
-    return { $$typeof: ba, _ctor: a, _status: -1, _result: null };
+    return { $$typeof: ca, _ctor: a, _status: -1, _result: null };
   }, memo: function memo(a, b) {
-    return { $$typeof: aa, type: a, compare: void 0 === b ? null : b };
+    return { $$typeof: ba, type: a, compare: void 0 === b ? null : b };
   }, useCallback: function useCallback(a, b) {
     return W().useCallback(a, b);
   }, useContext: function useContext(a, b) {
@@ -482,34 +442,40 @@ var X = { Children: { map: function map(a, b, d) {
     return W().useRef(a);
   }, useState: function useState(a) {
     return W().useState(a);
-  }, Fragment: r, StrictMode: t, Suspense: z, createElement: M, cloneElement: function cloneElement(a, b, d) {
-    null === a || void 0 === a ? B("267", a) : void 0;var c = void 0,
-        e = k({}, a.props),
+  }, Fragment: r, Profiler: u, StrictMode: t, Suspense: y, unstable_SuspenseList: aa, createElement: M, cloneElement: function cloneElement(a, b, d) {
+    if (null === a || void 0 === a) throw A(Error(267), a);var c = void 0,
+        e = h({}, a.props),
         g = a.key,
-        h = a.ref,
+        k = a.ref,
         f = a._owner;if (null != b) {
-      void 0 !== b.ref && (h = b.ref, f = J.current);void 0 !== b.key && (g = "" + b.key);var l = void 0;a.type && a.type.defaultProps && (l = a.type.defaultProps);for (c in b) {
+      void 0 !== b.ref && (k = b.ref, f = J.current);void 0 !== b.key && (g = "" + b.key);var l = void 0;a.type && a.type.defaultProps && (l = a.type.defaultProps);for (c in b) {
         K.call(b, c) && !L.hasOwnProperty(c) && (e[c] = void 0 === b[c] && void 0 !== l ? l[c] : b[c]);
       }
     }c = arguments.length - 2;if (1 === c) e.children = d;else if (1 < c) {
       l = Array(c);for (var m = 0; m < c; m++) {
         l[m] = arguments[m + 2];
       }e.children = l;
-    }return { $$typeof: p, type: a.type, key: g, ref: h, props: e, _owner: f };
+    }return { $$typeof: p, type: a.type, key: g, ref: k, props: e, _owner: f };
   }, createFactory: function createFactory(a) {
-    var b = M.bind(null, a);b.type = a;return b;
-  }, isValidElement: N, version: "16.8.6",
-  unstable_ConcurrentMode: x, unstable_Profiler: u, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: { ReactCurrentDispatcher: I, ReactCurrentOwner: J, assign: k } },
+    var b = M.bind(null, a);
+    b.type = a;return b;
+  }, isValidElement: N, version: "16.9.0", unstable_withSuspenseConfig: function unstable_withSuspenseConfig(a, b) {
+    var d = I.suspense;I.suspense = void 0 === b ? null : b;try {
+      a();
+    } finally {
+      I.suspense = d;
+    }
+  }, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: { ReactCurrentDispatcher: H, ReactCurrentBatchConfig: I, ReactCurrentOwner: J, IsSomeRendererActing: { current: !1 }, assign: h } },
     Y = { default: X },
     Z = Y && X || Y;module.exports = Z.default || Z;
 
 /***/ }),
 
-/***/ 22:
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/** @license React v16.8.6
+/* WEBPACK VAR INJECTION */(function(process) {/** @license React v16.9.0
  * react.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -531,7 +497,7 @@ if (process.env.NODE_ENV !== "production") {
 
     // TODO: this is special because it gets imported during build.
 
-    var ReactVersion = '16.8.6';
+    var ReactVersion = '16.9.0';
 
     // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
     // nor polyfill, then a plain number is used for performance.
@@ -544,12 +510,17 @@ if (process.env.NODE_ENV !== "production") {
     var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
     var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
     var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+    // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    // (unstable) APIs that have been removed. Can we remove the symbols?
 
     var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
     var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
     var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
     var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
     var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
 
     var MAYBE_ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
     var FAUX_ITERATOR_SYMBOL = '@@iterator';
@@ -565,6 +536,19 @@ if (process.env.NODE_ENV !== "production") {
       return null;
     }
 
+    // Do not require this module directly! Use normal `invariant` calls with
+    // template literal strings. The messages will be converted to ReactError during
+    // build, and in production they will be minified.
+
+    // Do not require this module directly! Use normal `invariant` calls with
+    // template literal strings. The messages will be converted to ReactError during
+    // build, and in production they will be minified.
+
+    function ReactError(error) {
+      error.name = 'Invariant Violation';
+      return error;
+    }
+
     /**
      * Use invariant() to assert state which your program assumes to be true.
      *
@@ -575,40 +559,6 @@ if (process.env.NODE_ENV !== "production") {
      * The invariant message will be stripped in production, but the invariant
      * will remain to ensure logic does not differ in production.
      */
-
-    var validateFormat = function validateFormat() {};
-
-    {
-      validateFormat = function validateFormat(format) {
-        if (format === undefined) {
-          throw new Error('invariant requires an error message argument');
-        }
-      };
-    }
-
-    function invariant(condition, format, a, b, c, d, e, f) {
-      validateFormat(format);
-
-      if (!condition) {
-        var error = void 0;
-        if (format === undefined) {
-          error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
-        } else {
-          var args = [a, b, c, d, e, f];
-          var argIndex = 0;
-          error = new Error(format.replace(/%s/g, function () {
-            return args[argIndex++];
-          }));
-          error.name = 'Invariant Violation';
-        }
-
-        error.framesToPop = 1; // we don't care about invariant's own frame
-        throw error;
-      }
-    }
-
-    // Relying on the `invariant()` implementation lets us
-    // preserve the format and params in the www builds.
 
     /**
      * Forked from fbjs/warning:
@@ -842,7 +792,13 @@ if (process.env.NODE_ENV !== "production") {
      * @protected
      */
     Component.prototype.setState = function (partialState, callback) {
-      !((typeof partialState === 'undefined' ? 'undefined' : _typeof(partialState)) === 'object' || typeof partialState === 'function' || partialState == null) ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : void 0;
+      (function () {
+        if (!((typeof partialState === 'undefined' ? 'undefined' : _typeof(partialState)) === 'object' || typeof partialState === 'function' || partialState == null)) {
+          {
+            throw ReactError(Error('setState(...): takes an object of state variables to update or a function which returns an object of state variables.'));
+          }
+        }
+      })();
       this.updater.enqueueSetState(this, partialState, callback, 'setState');
     };
 
@@ -932,6 +888,14 @@ if (process.env.NODE_ENV !== "production") {
     };
 
     /**
+     * Keeps track of the current batch's configuration such as how long an update
+     * should suspend for if it needs to.
+     */
+    var ReactCurrentBatchConfig = {
+      suspense: null
+    };
+
+    /**
      * Keeps track of the current owner.
      *
      * The current owner is the component who should own any components that are
@@ -1001,8 +965,6 @@ if (process.env.NODE_ENV !== "production") {
         return type;
       }
       switch (type) {
-        case REACT_CONCURRENT_MODE_TYPE:
-          return 'ConcurrentMode';
         case REACT_FRAGMENT_TYPE:
           return 'Fragment';
         case REACT_PORTAL_TYPE:
@@ -1013,6 +975,8 @@ if (process.env.NODE_ENV !== "production") {
           return 'StrictMode';
         case REACT_SUSPENSE_TYPE:
           return 'Suspense';
+        case REACT_SUSPENSE_LIST_TYPE:
+          return 'SuspenseList';
       }
       if ((typeof type === 'undefined' ? 'undefined' : _typeof(type)) === 'object') {
         switch (type.$$typeof) {
@@ -1031,6 +995,7 @@ if (process.env.NODE_ENV !== "production") {
               if (resolvedThenable) {
                 return getComponentName(resolvedThenable);
               }
+              break;
             }
         }
       }
@@ -1071,9 +1036,19 @@ if (process.env.NODE_ENV !== "production") {
       };
     }
 
+    /**
+     * Used by act() to track whether you're inside an act() scope.
+     */
+
+    var IsSomeRendererActing = {
+      current: false
+    };
+
     var ReactSharedInternals = {
       ReactCurrentDispatcher: ReactCurrentDispatcher,
+      ReactCurrentBatchConfig: ReactCurrentBatchConfig,
       ReactCurrentOwner: ReactCurrentOwner,
+      IsSomeRendererActing: IsSomeRendererActing,
       // Used by renderers to avoid bundling object-assign twice in UMD bundles:
       assign: _assign
     };
@@ -1187,8 +1162,10 @@ if (process.env.NODE_ENV !== "production") {
      * if something is a React Element.
      *
      * @param {*} type
+     * @param {*} props
      * @param {*} key
      * @param {string|object} ref
+     * @param {*} owner
      * @param {*} self A *temporary* helper to detect places where `this` is
      * different from the `owner` when React.createElement is called, so that we
      * can warn. We want to get rid of owner and replace string `ref`s with arrow
@@ -1196,8 +1173,6 @@ if (process.env.NODE_ENV !== "production") {
      * change in behavior.
      * @param {*} source An annotation object (added by a transpiler or otherwise)
      * indicating filename, line number, and/or other information.
-     * @param {*} owner
-     * @param {*} props
      * @internal
      */
     var ReactElement = function ReactElement(type, key, ref, self, source, owner, props) {
@@ -1255,6 +1230,72 @@ if (process.env.NODE_ENV !== "production") {
 
       return element;
     };
+
+    /**
+     * https://github.com/reactjs/rfcs/pull/107
+     * @param {*} type
+     * @param {object} props
+     * @param {string} key
+     */
+
+    /**
+     * https://github.com/reactjs/rfcs/pull/107
+     * @param {*} type
+     * @param {object} props
+     * @param {string} key
+     */
+    function jsxDEV(type, config, maybeKey, source, self) {
+      var propName = void 0;
+
+      // Reserved names are extracted
+      var props = {};
+
+      var key = null;
+      var ref = null;
+
+      if (hasValidRef(config)) {
+        ref = config.ref;
+      }
+
+      if (hasValidKey(config)) {
+        key = '' + config.key;
+      }
+
+      // Remaining properties are added to a new props object
+      for (propName in config) {
+        if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
+          props[propName] = config[propName];
+        }
+      }
+
+      // intentionally not checking if key was set above
+      // this key is higher priority as it's static
+      if (maybeKey !== undefined) {
+        key = '' + maybeKey;
+      }
+
+      // Resolve default props
+      if (type && type.defaultProps) {
+        var defaultProps = type.defaultProps;
+        for (propName in defaultProps) {
+          if (props[propName] === undefined) {
+            props[propName] = defaultProps[propName];
+          }
+        }
+      }
+
+      if (key || ref) {
+        var displayName = typeof type === 'function' ? type.displayName || type.name || 'Unknown' : type;
+        if (key) {
+          defineKeyPropWarningGetter(props, displayName);
+        }
+        if (ref) {
+          defineRefPropWarningGetter(props, displayName);
+        }
+      }
+
+      return ReactElement(type, key, ref, self, source, ReactCurrentOwner.current, props);
+    }
 
     /**
      * Create and return a new ReactElement of the given type.
@@ -1346,7 +1387,13 @@ if (process.env.NODE_ENV !== "production") {
      * See https://reactjs.org/docs/react-api.html#cloneelement
      */
     function cloneElement(element, config, children) {
-      !!(element === null || element === undefined) ? invariant(false, 'React.cloneElement(...): The argument must be a React element, but you passed %s.', element) : void 0;
+      (function () {
+        if (!!(element === null || element === undefined)) {
+          {
+            throw ReactError(Error('React.cloneElement(...): The argument must be a React element, but you passed ' + element + '.'));
+          }
+        }
+      })();
 
       var propName = void 0;
 
@@ -1566,7 +1613,13 @@ if (process.env.NODE_ENV !== "production") {
             addendum = ' If you meant to render a collection of children, use an array ' + 'instead.' + ReactDebugCurrentFrame.getStackAddendum();
           }
           var childrenString = '' + children;
-          invariant(false, 'Objects are not valid as a React child (found: %s).%s', childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString, addendum);
+          (function () {
+            {
+              {
+                throw ReactError(Error('Objects are not valid as a React child (found: ' + (childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString) + ').' + addendum));
+              }
+            }
+          })();
         }
       }
 
@@ -1741,7 +1794,13 @@ if (process.env.NODE_ENV !== "production") {
      * structure.
      */
     function onlyChild(children) {
-      !isValidElement(children) ? invariant(false, 'React.Children.only expected to receive a single React element child.') : void 0;
+      (function () {
+        if (!isValidElement(children)) {
+          {
+            throw ReactError(Error('React.Children.only expected to receive a single React element child.'));
+          }
+        }
+      })();
       return children;
     }
 
@@ -1923,7 +1982,7 @@ if (process.env.NODE_ENV !== "production") {
     function isValidElementType(type) {
       return typeof type === 'string' || typeof type === 'function' ||
       // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || (typeof type === 'undefined' ? 'undefined' : _typeof(type)) === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
+      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || (typeof type === 'undefined' ? 'undefined' : _typeof(type)) === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE);
     }
 
     function memo(type, compare) {
@@ -1941,7 +2000,13 @@ if (process.env.NODE_ENV !== "production") {
 
     function resolveDispatcher() {
       var dispatcher = ReactCurrentDispatcher.current;
-      !(dispatcher !== null) ? invariant(false, 'Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.') : void 0;
+      (function () {
+        if (!(dispatcher !== null)) {
+          {
+            throw ReactError(Error('Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.'));
+          }
+        }
+      })();
       return dispatcher;
     }
 
@@ -2012,6 +2077,30 @@ if (process.env.NODE_ENV !== "production") {
       }
     }
 
+    var emptyObject$1 = {};
+
+    function useResponder(responder, listenerProps) {
+      var dispatcher = resolveDispatcher();
+      {
+        if (responder == null || responder.$$typeof !== REACT_RESPONDER_TYPE) {
+          warning$1(false, 'useResponder: invalid first argument. Expected an event responder, but instead got %s', responder);
+          return;
+        }
+      }
+      return dispatcher.useResponder(responder, listenerProps || emptyObject$1);
+    }
+
+    // Within the scope of the callback, mark all updates as being allowed to suspend.
+    function withSuspenseConfig(scope, config) {
+      var previousConfig = ReactCurrentBatchConfig.suspense;
+      ReactCurrentBatchConfig.suspense = config === undefined ? null : config;
+      try {
+        scope();
+      } finally {
+        ReactCurrentBatchConfig.suspense = previousConfig;
+      }
+    }
+
     /**
      * ReactElementValidator provides a wrapper around a element factory
      * which validates the props passed to the element. This is intended to be
@@ -2035,12 +2124,18 @@ if (process.env.NODE_ENV !== "production") {
       return '';
     }
 
-    function getSourceInfoErrorAddendum(elementProps) {
-      if (elementProps !== null && elementProps !== undefined && elementProps.__source !== undefined) {
-        var source = elementProps.__source;
+    function getSourceInfoErrorAddendum(source) {
+      if (source !== undefined) {
         var fileName = source.fileName.replace(/^.*[\\\/]/, '');
         var lineNumber = source.lineNumber;
         return '\n\nCheck your code at ' + fileName + ':' + lineNumber + '.';
+      }
+      return '';
+    }
+
+    function getSourceInfoErrorAddendumForProps(elementProps) {
+      if (elementProps !== null && elementProps !== undefined) {
+        return getSourceInfoErrorAddendum(elementProps.__source);
       }
       return '';
     }
@@ -2205,6 +2300,90 @@ if (process.env.NODE_ENV !== "production") {
       setCurrentlyValidatingElement(null);
     }
 
+    function jsxWithValidation(type, props, key, isStaticChildren, source, self) {
+      var validType = isValidElementType(type);
+
+      // We warn in this case but don't throw. We expect the element creation to
+      // succeed and there will likely be errors in render.
+      if (!validType) {
+        var info = '';
+        if (type === undefined || (typeof type === 'undefined' ? 'undefined' : _typeof(type)) === 'object' && type !== null && Object.keys(type).length === 0) {
+          info += ' You likely forgot to export your component from the file ' + "it's defined in, or you might have mixed up default and named imports.";
+        }
+
+        var sourceInfo = getSourceInfoErrorAddendum(source);
+        if (sourceInfo) {
+          info += sourceInfo;
+        } else {
+          info += getDeclarationErrorAddendum();
+        }
+
+        var typeString = void 0;
+        if (type === null) {
+          typeString = 'null';
+        } else if (Array.isArray(type)) {
+          typeString = 'array';
+        } else if (type !== undefined && type.$$typeof === REACT_ELEMENT_TYPE) {
+          typeString = '<' + (getComponentName(type.type) || 'Unknown') + ' />';
+          info = ' Did you accidentally export a JSX literal instead of a component?';
+        } else {
+          typeString = typeof type === 'undefined' ? 'undefined' : _typeof(type);
+        }
+
+        warning$1(false, 'React.jsx: type is invalid -- expected a string (for ' + 'built-in components) or a class/function (for composite ' + 'components) but got: %s.%s', typeString, info);
+      }
+
+      var element = jsxDEV(type, props, key, source, self);
+
+      // The result can be nullish if a mock or a custom function is used.
+      // TODO: Drop this when these are no longer allowed as the type argument.
+      if (element == null) {
+        return element;
+      }
+
+      // Skip key warning if the type isn't valid since our key validation logic
+      // doesn't expect a non-string/function type and can throw confusing errors.
+      // We don't want exception behavior to differ between dev and prod.
+      // (Rendering will throw with a helpful message and as soon as the type is
+      // fixed, the key warnings will appear.)
+      if (validType) {
+        var children = props.children;
+        if (children !== undefined) {
+          if (isStaticChildren) {
+            for (var i = 0; i < children.length; i++) {
+              validateChildKeys(children[i], type);
+            }
+          } else {
+            validateChildKeys(children, type);
+          }
+        }
+      }
+
+      if (props.key !== undefined) {
+        warning$1(false, 'React.jsx: Spreading a key to JSX is a deprecated pattern. ' + 'Explicitly pass a key after spreading props in your JSX call. ' + 'E.g. <ComponentName {...props} key={key} />');
+      }
+
+      if (type === REACT_FRAGMENT_TYPE) {
+        validateFragmentProps(element);
+      } else {
+        validatePropTypes(element);
+      }
+
+      return element;
+    }
+
+    // These two functions exist to still get child warnings in dev
+    // even with the prod transform. This means that jsxDEV is purely
+    // opt-in behavior for better messages but that we won't stop
+    // giving you warnings if you use production apis.
+    function jsxWithValidationStatic(type, props, key) {
+      return jsxWithValidation(type, props, key, true);
+    }
+
+    function jsxWithValidationDynamic(type, props, key) {
+      return jsxWithValidation(type, props, key, false);
+    }
+
     function createElementWithValidation(type, props, children) {
       var validType = isValidElementType(type);
 
@@ -2216,7 +2395,7 @@ if (process.env.NODE_ENV !== "production") {
           info += ' You likely forgot to export your component from the file ' + "it's defined in, or you might have mixed up default and named imports.";
         }
 
-        var sourceInfo = getSourceInfoErrorAddendum(props);
+        var sourceInfo = getSourceInfoErrorAddendumForProps(props);
         if (sourceInfo) {
           info += sourceInfo;
         } else {
@@ -2295,6 +2474,73 @@ if (process.env.NODE_ENV !== "production") {
       return newElement;
     }
 
+    var hasBadMapPolyfill = void 0;
+
+    {
+      hasBadMapPolyfill = false;
+      try {
+        var frozenObject = Object.freeze({});
+        var testMap = new Map([[frozenObject, null]]);
+        var testSet = new Set([frozenObject]);
+        // This is necessary for Rollup to not consider these unused.
+        // https://github.com/rollup/rollup/issues/1771
+        // TODO: we can remove these if Rollup fixes the bug.
+        testMap.set(0, 0);
+        testSet.add(0);
+      } catch (e) {
+        // TODO: Consider warning about bad polyfills
+        hasBadMapPolyfill = true;
+      }
+    }
+
+    function createFundamentalComponent(impl) {
+      // We use responder as a Map key later on. When we have a bad
+      // polyfill, then we can't use it as a key as the polyfill tries
+      // to add a property to the object.
+      if (true && !hasBadMapPolyfill) {
+        Object.freeze(impl);
+      }
+      var fundamantalComponent = {
+        $$typeof: REACT_FUNDAMENTAL_TYPE,
+        impl: impl
+      };
+      {
+        Object.freeze(fundamantalComponent);
+      }
+      return fundamantalComponent;
+    }
+
+    function createEventResponder(displayName, responderConfig) {
+      var getInitialState = responderConfig.getInitialState,
+          onEvent = responderConfig.onEvent,
+          onMount = responderConfig.onMount,
+          onUnmount = responderConfig.onUnmount,
+          onOwnershipChange = responderConfig.onOwnershipChange,
+          onRootEvent = responderConfig.onRootEvent,
+          rootEventTypes = responderConfig.rootEventTypes,
+          targetEventTypes = responderConfig.targetEventTypes;
+
+      var eventResponder = {
+        $$typeof: REACT_RESPONDER_TYPE,
+        displayName: displayName,
+        getInitialState: getInitialState || null,
+        onEvent: onEvent || null,
+        onMount: onMount || null,
+        onOwnershipChange: onOwnershipChange || null,
+        onRootEvent: onRootEvent || null,
+        onUnmount: onUnmount || null,
+        rootEventTypes: rootEventTypes || null,
+        targetEventTypes: targetEventTypes || null
+      };
+      // We use responder as a Map key later on. When we have a bad
+      // polyfill, then we can't use it as a key as the polyfill tries
+      // to add a property to the object.
+      if (true && !hasBadMapPolyfill) {
+        Object.freeze(eventResponder);
+      }
+      return eventResponder;
+    }
+
     // Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
 
 
@@ -2326,13 +2572,53 @@ if (process.env.NODE_ENV !== "production") {
     // Only used in www builds.
 
 
+    // Disable javascript: URL strings in href for XSS protection.
+
+
     // React Fire: prevent the value and checked attributes from syncing
     // with their related DOM properties
 
 
     // These APIs will no longer be "unstable" in the upcoming 16.7 release,
     // Control this behavior with a flag to support 16.6 minor releases in the meanwhile.
-    var enableStableConcurrentModeAPIs = false;
+
+
+    // See https://github.com/react-native-community/discussions-and-proposals/issues/72 for more information
+    // This is a flag so we can fix warnings in RN core before turning it on
+
+
+    // Experimental React Flare event system and event components support.
+    var enableFlareAPI = false;
+
+    // Experimental Host Component support.
+    var enableFundamentalAPI = false;
+
+    // New API for JSX transforms to target - https://github.com/reactjs/rfcs/pull/107
+    var enableJSXTransformAPI = false;
+
+    // We will enforce mocking scheduler with scheduler/unstable_mock at some point. (v17?)
+    // Till then, we warn about the missing mock, but still fallback to a sync mode compatible version
+
+    // Temporary flag to revert the fix in #15650
+
+
+    // For tests, we flush suspense fallbacks in an act scope;
+    // *except* in some of our own tests, where we test incremental loading states.
+
+
+    // Changes priority of some events like mousemove to user-blocking priority,
+    // but without making them discrete. The flag exists in case it causes
+    // starvation problems.
+
+
+    // Add a callback property to suspense to notify which promises are currently
+    // in the update queue. This allows reporting and tracing of what is causing
+    // the user to see a loading state.
+
+
+    // Part of the simplification of React.createElement so we can eventually move
+    // from React.createElement to React.jsx
+    // https://github.com/reactjs/rfcs/blob/createlement-rfc/text/0000-create-element-changes.md
 
     var React = {
       Children: {
@@ -2364,8 +2650,10 @@ if (process.env.NODE_ENV !== "production") {
       useState: useState,
 
       Fragment: REACT_FRAGMENT_TYPE,
+      Profiler: REACT_PROFILER_TYPE,
       StrictMode: REACT_STRICT_MODE_TYPE,
       Suspense: REACT_SUSPENSE_TYPE,
+      unstable_SuspenseList: REACT_SUSPENSE_LIST_TYPE,
 
       createElement: createElementWithValidation,
       cloneElement: cloneElementWithValidation,
@@ -2374,22 +2662,31 @@ if (process.env.NODE_ENV !== "production") {
 
       version: ReactVersion,
 
-      unstable_ConcurrentMode: REACT_CONCURRENT_MODE_TYPE,
-      unstable_Profiler: REACT_PROFILER_TYPE,
+      unstable_withSuspenseConfig: withSuspenseConfig,
 
       __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: ReactSharedInternals
     };
+
+    if (enableFlareAPI) {
+      React.unstable_useResponder = useResponder;
+      React.unstable_createResponder = createEventResponder;
+    }
+
+    if (enableFundamentalAPI) {
+      React.unstable_createFundamental = createFundamentalComponent;
+    }
 
     // Note: some APIs are added with feature flags.
     // Make sure that stable builds for open source
     // don't modify the React object to avoid deopts.
     // Also let's not expose their names in stable builds.
 
-    if (enableStableConcurrentModeAPIs) {
-      React.ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
-      React.Profiler = REACT_PROFILER_TYPE;
-      React.unstable_ConcurrentMode = undefined;
-      React.unstable_Profiler = undefined;
+    if (enableJSXTransformAPI) {
+      {
+        React.jsxDEV = jsxWithValidation;
+        React.jsx = jsxWithValidationDynamic;
+        React.jsxs = jsxWithValidationStatic;
+      }
     }
 
     var React$2 = Object.freeze({
@@ -2409,7 +2706,7 @@ if (process.env.NODE_ENV !== "production") {
 
 /***/ }),
 
-/***/ 23:
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2422,7 +2719,7 @@ exports.__DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS = exports.StyleShee
 
 var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _hyphenateStyleName = __webpack_require__(43);
+var _hyphenateStyleName = __webpack_require__(42);
 
 var _hyphenateStyleName2 = _interopRequireDefault(_hyphenateStyleName);
 
@@ -2430,19 +2727,19 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _stylis = __webpack_require__(45);
+var _stylis = __webpack_require__(44);
 
 var _stylis2 = _interopRequireDefault(_stylis);
 
-var _stylisRuleSheet = __webpack_require__(46);
+var _stylisRuleSheet = __webpack_require__(45);
 
 var _stylisRuleSheet2 = _interopRequireDefault(_stylisRuleSheet);
 
-var _propTypes = __webpack_require__(47);
+var _propTypes = __webpack_require__(46);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _hoistNonReactStatics = __webpack_require__(52);
+var _hoistNonReactStatics = __webpack_require__(51);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -4760,13 +5057,13 @@ exports.__DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS = __DO_NOT_USE_OR_Y
 
 /***/ }),
 
-/***/ 24:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var color = __webpack_require__(53);
+var color = __webpack_require__(52);
 
 module.exports = {
   defaultTheme: 'light',
@@ -4819,7 +5116,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 25:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4848,7 +5145,7 @@ module.exports = function (a, b, str) {
 
 /***/ }),
 
-/***/ 26:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4857,7 +5154,7 @@ module.exports = function (a, b, str) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /* MIT license */
-var _clone = __webpack_require__(55);
+var _clone = __webpack_require__(54);
 var convert = __webpack_require__(60);
 var string = __webpack_require__(62);
 
@@ -5312,14 +5609,14 @@ module.exports = Color;
 
 /***/ }),
 
-/***/ 27:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 /* MIT license */
-var cssKeywords = __webpack_require__(28);
+var cssKeywords = __webpack_require__(27);
 
 // NOTE: conversions should only return primitive values (i.e. arrays, or
 //       values that give correct `typeof` results).
@@ -6166,7 +6463,7 @@ convert.rgb.gray = function (rgb) {
 
 /***/ }),
 
-/***/ 28:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6325,29 +6622,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 281:
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(41);
-module.exports = __webpack_require__(282);
-
-
-/***/ }),
-
-/***/ 282:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 29:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var balanced = __webpack_require__(25);
+var balanced = __webpack_require__(24);
 var debug = __webpack_require__(63)('css-color-function:parse');
 
 /**
@@ -6538,6 +6819,22 @@ function parse(string) {
 
 /***/ }),
 
+/***/ 281:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(40);
+module.exports = __webpack_require__(282);
+
+
+/***/ }),
+
+/***/ 282:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6635,19 +6932,19 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
-/***/ 41:
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(42);
+__webpack_require__(41);
 
 __webpack_require__(67);
 
 /***/ }),
 
-/***/ 42:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6660,11 +6957,11 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = __webpack_require__(23);
+var _styledComponents = __webpack_require__(22);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _cssThemes = __webpack_require__(24);
+var _cssThemes = __webpack_require__(23);
 
 var _cssThemes2 = _interopRequireDefault(_cssThemes);
 
@@ -6767,7 +7064,7 @@ registerBlockType('colbycomms/divider', {
 
 /***/ }),
 
-/***/ 43:
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6782,7 +7079,7 @@ registerBlockType('colbycomms/divider', {
 
 
 
-var hyphenate = __webpack_require__(44);
+var hyphenate = __webpack_require__(43);
 
 var msPattern = /^ms-/;
 
@@ -6810,7 +7107,7 @@ module.exports = hyphenateStyleName;
 
 /***/ }),
 
-/***/ 44:
+/***/ 43:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6847,7 +7144,7 @@ module.exports = hyphenate;
 
 /***/ }),
 
-/***/ 45:
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8676,7 +8973,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ }),
 
-/***/ 46:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8734,7 +9031,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ }),
 
-/***/ 47:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8753,21 +9050,21 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(50)(ReactIs.isElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(49)(ReactIs.isElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(51)();
+  module.exports = __webpack_require__(50)();
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 
-/***/ 48:
+/***/ 47:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.6
+/** @license React v16.9.0
  * react-is.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -8793,57 +9090,60 @@ var b = "function" === typeof Symbol && Symbol.for,
     m = b ? Symbol.for("react.concurrent_mode") : 60111,
     n = b ? Symbol.for("react.forward_ref") : 60112,
     p = b ? Symbol.for("react.suspense") : 60113,
-    q = b ? Symbol.for("react.memo") : 60115,
-    r = b ? Symbol.for("react.lazy") : 60116;function t(a) {
+    q = b ? Symbol.for("react.suspense_list") : 60120,
+    r = b ? Symbol.for("react.memo") : 60115,
+    t = b ? Symbol.for("react.lazy") : 60116,
+    v = b ? Symbol.for("react.fundamental") : 60117,
+    w = b ? Symbol.for("react.responder") : 60118;function x(a) {
   if ("object" === (typeof a === "undefined" ? "undefined" : _typeof(a)) && null !== a) {
     var u = a.$$typeof;switch (u) {case c:
         switch (a = a.type, a) {case l:case m:case e:case g:case f:case p:
             return a;default:
             switch (a = a && a.$$typeof, a) {case k:case n:case h:
                 return a;default:
-                return u;}}case r:case q:case d:
+                return u;}}case t:case r:case d:
         return u;}
   }
-}function v(a) {
-  return t(a) === m;
-}exports.typeOf = t;exports.AsyncMode = l;exports.ConcurrentMode = m;exports.ContextConsumer = k;exports.ContextProvider = h;exports.Element = c;exports.ForwardRef = n;
-exports.Fragment = e;exports.Lazy = r;exports.Memo = q;exports.Portal = d;exports.Profiler = g;exports.StrictMode = f;exports.Suspense = p;exports.isValidElementType = function (a) {
-  return "string" === typeof a || "function" === typeof a || a === e || a === m || a === g || a === f || a === p || "object" === (typeof a === "undefined" ? "undefined" : _typeof(a)) && null !== a && (a.$$typeof === r || a.$$typeof === q || a.$$typeof === h || a.$$typeof === k || a.$$typeof === n);
+}function y(a) {
+  return x(a) === m;
+}exports.typeOf = x;exports.AsyncMode = l;
+exports.ConcurrentMode = m;exports.ContextConsumer = k;exports.ContextProvider = h;exports.Element = c;exports.ForwardRef = n;exports.Fragment = e;exports.Lazy = t;exports.Memo = r;exports.Portal = d;exports.Profiler = g;exports.StrictMode = f;exports.Suspense = p;
+exports.isValidElementType = function (a) {
+  return "string" === typeof a || "function" === typeof a || a === e || a === m || a === g || a === f || a === p || a === q || "object" === (typeof a === "undefined" ? "undefined" : _typeof(a)) && null !== a && (a.$$typeof === t || a.$$typeof === r || a.$$typeof === h || a.$$typeof === k || a.$$typeof === n || a.$$typeof === v || a.$$typeof === w);
 };exports.isAsyncMode = function (a) {
-  return v(a) || t(a) === l;
-};exports.isConcurrentMode = v;exports.isContextConsumer = function (a) {
-  return t(a) === k;
+  return y(a) || x(a) === l;
+};exports.isConcurrentMode = y;exports.isContextConsumer = function (a) {
+  return x(a) === k;
+};exports.isContextProvider = function (a) {
+  return x(a) === h;
 };
-exports.isContextProvider = function (a) {
-  return t(a) === h;
-};exports.isElement = function (a) {
+exports.isElement = function (a) {
   return "object" === (typeof a === "undefined" ? "undefined" : _typeof(a)) && null !== a && a.$$typeof === c;
 };exports.isForwardRef = function (a) {
-  return t(a) === n;
+  return x(a) === n;
 };exports.isFragment = function (a) {
-  return t(a) === e;
+  return x(a) === e;
 };exports.isLazy = function (a) {
-  return t(a) === r;
+  return x(a) === t;
 };exports.isMemo = function (a) {
-  return t(a) === q;
+  return x(a) === r;
 };exports.isPortal = function (a) {
-  return t(a) === d;
+  return x(a) === d;
 };exports.isProfiler = function (a) {
-  return t(a) === g;
+  return x(a) === g;
 };exports.isStrictMode = function (a) {
-  return t(a) === f;
-};
-exports.isSuspense = function (a) {
-  return t(a) === p;
+  return x(a) === f;
+};exports.isSuspense = function (a) {
+  return x(a) === p;
 };
 
 /***/ }),
 
-/***/ 49:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/** @license React v16.8.6
+/* WEBPACK VAR INJECTION */(function(process) {/** @license React v16.9.0
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -8873,17 +9173,22 @@ if (process.env.NODE_ENV !== "production") {
     var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
     var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
     var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+    // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    // (unstable) APIs that have been removed. Can we remove the symbols?
     var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
     var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
     var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
     var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
     var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
     var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
 
     function isValidElementType(type) {
       return typeof type === 'string' || typeof type === 'function' ||
       // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || (typeof type === 'undefined' ? 'undefined' : _typeof(type)) === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
+      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || (typeof type === 'undefined' ? 'undefined' : _typeof(type)) === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE);
     }
 
     /**
@@ -9074,26 +9379,7 @@ if (process.env.NODE_ENV !== "production") {
 
 /***/ }),
 
-/***/ 5:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-/***/ }),
-
-/***/ 50:
+/***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9672,7 +9958,26 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
 
 /***/ }),
 
-/***/ 51:
+/***/ 5:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+/***/ }),
+
+/***/ 50:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9739,7 +10044,7 @@ module.exports = function () {
 
 /***/ }),
 
-/***/ 52:
+/***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9817,14 +10122,14 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ 53:
+/***/ 52:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var convert = __webpack_require__(54);
-var parse = __webpack_require__(29);
+var convert = __webpack_require__(53);
+var parse = __webpack_require__(28);
 
 /**
  * Expose `convert`.
@@ -9840,15 +10145,15 @@ exports.parse = parse;
 
 /***/ }),
 
-/***/ 54:
+/***/ 53:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var balanced = __webpack_require__(25);
-var Color = __webpack_require__(26);
-var parse = __webpack_require__(29);
+var balanced = __webpack_require__(24);
+var Color = __webpack_require__(25);
+var parse = __webpack_require__(28);
 var adjusters = __webpack_require__(66);
 
 /**
@@ -9908,7 +10213,7 @@ function toRGB(ast) {
 
 /***/ }),
 
-/***/ 55:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10077,11 +10382,11 @@ var clone = function () {
 if (( false ? 'undefined' : _typeof(module)) === 'object' && module.exports) {
   module.exports = clone;
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(56).Buffer, __webpack_require__(8)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(55).Buffer, __webpack_require__(8)(module)))
 
 /***/ }),
 
-/***/ 56:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11822,7 +12127,38 @@ function blitBuffer(src, dst, offset, length) {
 function isnan(val) {
   return val !== val; // eslint-disable-line no-self-compare
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(56)))
+
+/***/ }),
+
+/***/ 56:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var g;
+
+// This works in non-strict mode
+g = function () {
+	return this;
+}();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
+	// This works if the window reference is available
+	if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
 
 /***/ }),
 
@@ -11893,7 +12229,8 @@ function toByteArray(b64) {
   // if there are placeholders, only get up to the last complete 4 chars
   var len = placeHoldersLen > 0 ? validLen - 4 : validLen;
 
-  for (var i = 0; i < len; i += 4) {
+  var i;
+  for (i = 0; i < len; i += 4) {
     tmp = revLookup[b64.charCodeAt(i)] << 18 | revLookup[b64.charCodeAt(i + 1)] << 12 | revLookup[b64.charCodeAt(i + 2)] << 6 | revLookup[b64.charCodeAt(i + 3)];
     arr[curByte++] = tmp >> 16 & 0xFF;
     arr[curByte++] = tmp >> 8 & 0xFF;
@@ -12069,7 +12406,7 @@ module.exports = Array.isArray || function (arr) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var conversions = __webpack_require__(27);
+var conversions = __webpack_require__(26);
 var route = __webpack_require__(61);
 
 var convert = {};
@@ -12156,7 +12493,7 @@ module.exports = convert;
 "use strict";
 
 
-var conversions = __webpack_require__(27);
+var conversions = __webpack_require__(26);
 
 /*
 	this function routes a model to all other models.
@@ -12262,7 +12599,7 @@ module.exports = function (fromModel) {
 
 
 /* MIT license */
-var colorNames = __webpack_require__(28);
+var colorNames = __webpack_require__(27);
 
 module.exports = {
    getRgba: getRgba,
@@ -12957,7 +13294,7 @@ module.exports = function (val, options) {
   var type = typeof val === 'undefined' ? 'undefined' : _typeof(val);
   if (type === 'string' && val.length > 0) {
     return parse(val);
-  } else if (type === 'number' && isNaN(val) === false) {
+  } else if (type === 'number' && isFinite(val)) {
     return options.long ? fmtLong(val) : fmtShort(val);
   }
   throw new Error('val is not a non-empty string or a valid number. val=' + JSON.stringify(val));
@@ -12976,7 +13313,7 @@ function parse(str) {
   if (str.length > 100) {
     return;
   }
-  var match = /^((?:\d+)?\-?\d?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(str);
+  var match = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(str);
   if (!match) {
     return;
   }
@@ -13093,7 +13430,7 @@ function plural(ms, msAbs, n, name) {
 "use strict";
 
 
-var Color = __webpack_require__(26);
+var Color = __webpack_require__(25);
 
 /**
  * Basic RGBA adjusters.
@@ -13316,11 +13653,11 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = __webpack_require__(23);
+var _styledComponents = __webpack_require__(22);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _cssThemes = __webpack_require__(24);
+var _cssThemes = __webpack_require__(23);
 
 var _cssThemes2 = _interopRequireDefault(_cssThemes);
 
