@@ -37,6 +37,10 @@
     max-width: 1140px !important;
 }
 
+.body {
+    font-size: 1rem;
+}
+
 .shrinkable__btn {
     background-color: var(--background-color, #214280);
 }
