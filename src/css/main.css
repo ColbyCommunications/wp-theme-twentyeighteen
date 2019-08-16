@@ -41,6 +41,13 @@ body {
     font-size: 18px !important;
 }
 
+.table tr td:first-of-type {
+    width: 20%;
+}
+.table-striped td {
+    padding: 1.5rem 1rem;
+}
+
 .shrinkable__btn {
     background-color: var(--background-color, #214280);
 }
