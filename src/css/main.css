@@ -45,7 +45,7 @@ body {
     width: 20%;
 }
 .table-striped td {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1rem !important;
 }
 
 .shrinkable__btn {
