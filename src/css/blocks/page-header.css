@@ -1,11 +1,11 @@
-.page-header {
+.page-header1 {
   padding-top: 7.5rem;
   padding-bottom: 3rem;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  .page-header.has-featured-image {
+  .page-header1.has-featured-image {
     padding-top: 10.5rem;
     padding-bottom: 8rem;
   }
