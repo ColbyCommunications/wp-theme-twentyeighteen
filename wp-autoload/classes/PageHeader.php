@@ -103,7 +103,7 @@ class PageHeader {
 
 		?>
 		<header
-			class="page-header container-fluid largest primary <?php self::extra_classes( ! ! $featured_image_style ); ?>"
+			class="page-header1 container-fluid largest primary <?php self::extra_classes( ! ! $featured_image_style ); ?>"
 			<?php echo $featured_image_style; ?>>
 			<?php if ( empty( $options['header_content'] ) ) : ?>
 				<?php self::default_page_header_content( $options ); ?>

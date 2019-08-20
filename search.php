@@ -16,7 +16,7 @@ PageHeader::show(
 		'do_background_image' => false,
 		'width' => 'md',
 		'header_content' => '
-			<div class="page-header container-lg">
+			<div class="page-header1 container-lg">
 				<h1 class="text-white">Search results for <i>' . get_search_query() . '</i></h1>'
 				. get_search_form( false ) .
 			'</div>',
