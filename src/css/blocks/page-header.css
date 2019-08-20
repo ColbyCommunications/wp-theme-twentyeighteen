@@ -1,12 +1,12 @@
 .page-header1 {
-  padding-top: 7.5rem;
-  padding-bottom: 3rem;
-  text-align: center;
+    padding-top: 7.5rem;
+    padding-bottom: 3rem;
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  .page-header1.has-featured-image {
-    padding-top: 10.5rem;
-    padding-bottom: 8rem;
-  }
+    .page-header1.has-featured-image {
+        padding-top: 22.5rem;
+        padding-bottom: 22rem;
+    }
 }
